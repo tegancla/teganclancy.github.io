@@ -1,0 +1,436 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Element G: Construction of a Testable Prototype | Tegan Clancy</title>
+<meta name="description" content="Digital Green Reader capstone - Element G: Construction of a Testable Prototype">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+function imgFallback(el) {
+  var tries = ["png", "jpeg", "webp"], n = +(el.dataset.try || 0);
+  if (n < tries.length) { el.dataset.try = n + 1; el.src = el.src.replace(/\.[a-z]+$/, "." + tries[n]); return; }
+  var d = el.dataset, ph = document.createElement("div"); ph.className = "ph";
+  ph.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 17-5-5-9 8"/></svg>'
+    + '<strong>Add image here</strong>'
+    + (d.pdf ? '<span class="ph-row"><em>From PDF</em>' + d.pdf + '</span>' : '')
+    + (d.cap ? '<span class="ph-row"><em>Figure</em>' + d.cap + '</span>' : '')
+    + '<span class="ph-row"><em>Save as</em><code>' + d.img + '.jpg</code></span>';
+  el.replaceWith(ph);
+}
+</script>
+</head>
+<body>
+<header class="topbar"><div class="topbar-inner">
+  <a class="brand" href="index.html">Tegan <span>Clancy</span></a>
+  <nav class="topnav">
+    <a href="index.html">Home</a>
+    <a href="project.html" class="active">Capstone</a>
+  </nav>
+</div></header>
+<div class="layout">
+<aside class="sidebar">
+<a class="back" href="project.html">&larr; Project overview</a>
+<p class="label">Project elements</p>
+<ol>
+<li><a href="element-a.html"><span class="letter">A</span><span class="name">The Problem</span></a></li>
+<li><a href="element-b.html"><span class="letter">B</span><span class="name">Prior Solutions</span></a></li>
+<li><a href="element-c.html"><span class="letter">C</span><span class="name">Requirements</span></a></li>
+<li><a href="element-d.html"><span class="letter">D</span><span class="name">Concept Selection</span></a></li>
+<li><a href="element-ef.html"><span class="letter">E/F</span><span class="name">STEM &amp; Market</span></a></li>
+<li><a href="element-g.html" class="current" aria-current="page"><span class="letter">G</span><span class="name">Prototype Build</span></a></li>
+<li><a href="element-h.html"><span class="letter">H</span><span class="name">Test Plan</span></a></li>
+<li><a href="element-i.html"><span class="letter">I</span><span class="name">Results</span></a></li>
+</ol>
+</aside>
+<article class="page-g">
+<p class="eyebrow">Element G</p>
+<h1>Construction of a Testable Prototype</h1>
+<h2>I. Introduction</h2>
+<h3>Problem Statement</h3>
+<div class="callout">
+<p>In the United States, 44.13% of amateur golfers have 14.9+ handicaps and experience difficulty when reading the slopes of greens.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> This difficulty arises from novice golfers lacking experience with reading breaks and from courses having different types of cuts for the greens. This problem leaves high-handicap golfers unsatisfied with themselves, as these individuals consistently average four to five three-putts per 18 holes and end up shooting high scores. Addressing this issue requires that golf stakeholders, performance criteria, and functional requirements be accounted for. These different pieces of criteria ensure that the solution is extremely accurate, consistently reliable, and applicable to a large portion of the golfing industry. Additionally, several different designs were sketched and analyzed with the goal of finding a singular concept that will outcompete the current solutions on the market. Therefore, to create a testable prototype, it is essential to construct a device through resource planning, detailed/measurability assembly procedures, and specific functional requirements.</p>
+</div>
+<h2>II. Bill of Materials</h2>
+<p>The Bill of Materials (BOM) shows all the needed parts for the green reading device. This shows each individual part, the quantity needed, the price, and the vendor from which it will be purchased. After the research done in the Design Concepts Generation, Analysis, and Selection phase, it was determined which parts were needed. These parts will ensure a device that accurately determines slope in the putting surface, solving the problem statement. The total cost for all parts came to $112.50 plus $25.98 for shipping.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>QTY</th>
+<th>Description</th>
+<th>Vendor</th>
+<th>Cost</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arduino</td>
+<td>1</td>
+<td>Arduino Uno R4 Minima - ABX00080. 32 Bit Microcontroller</td>
+<td>Microcenter</td>
+<td>$19.99</td>
+<td>Potentially used from school, but taking the Microcenter one</td>
+</tr>
+<tr>
+<td>Servo Motor</td>
+<td>1</td>
+<td>Inland KS0209 Blue 9g Servo Motor</td>
+<td>Microcenter</td>
+<td>$6.99</td>
+<td>Potentially used from school, but taking the Microcenter one</td>
+</tr>
+<tr>
+<td>LED DISPLAY</td>
+<td>1</td>
+<td>ELEGOO 3 PCS 0.96 Inch OLED display screen module.</td>
+<td>Amazon</td>
+<td>$10.00</td>
+<td>3 OLED Displays/box. Shipping is free if using Amazon Prime or spending over $35.</td>
+</tr>
+<tr>
+<td>Base</td>
+<td>1</td>
+<td>Green Putting Aid Device Outer Shell</td>
+<td>NVHS</td>
+<td>$0.00</td>
+<td>Will be 3D-printing the base of our product, costing close to nothing.</td>
+</tr>
+<tr>
+<td>Accelerometer</td>
+<td>1</td>
+<td>SHILLEHTEK ADXL345 Accelerometer Sensor Module &#124; Pre-Soldered High-Precision ADXL345 Accelerometer for Arduino Projects. Measures tilt/dynamic accelerations. Functions with Arduino</td>
+<td>Amazon</td>
+<td>$9.00</td>
+<td>Sold by ShillehTek, Business address in Chicago. Shipping is free if using Amazon Prime or spending over $35.</td>
+</tr>
+<tr>
+<td>Button</td>
+<td>1</td>
+<td>Chanzon Tact Switch Tactile Push Button Micro Momentary Switch 6x6 mm x 6mm 2 pin 20 pcs</td>
+<td>Amazon</td>
+<td>$6.99</td>
+<td>Button for user inputs. Shipping is free if using Amazon Prime or spending over $35.</td>
+</tr>
+<tr>
+<td>Battery Pack</td>
+<td>1</td>
+<td>ZRM&amp;E 6V Power Box 4xAA Battery Holder Case with DC 5.5x2.1 Connector Mate with Barrel Jack Connector on Arduino</td>
+<td>Amazon</td>
+<td>$6.99</td>
+<td>Battery packs 6 volts. Shipping is free if using Amazon Prime or spending over $35.</td>
+</tr>
+<tr>
+<td>Laser</td>
+<td>1</td>
+<td>520nm Laser Module Industrial Green Laser Line Diode adjustable focus 5mw Line</td>
+<td>Amazon</td>
+<td>$16.99</td>
+<td>Great ratings, wireless, and quick delivery. Shipping is free if using Amazon Prime or spending over $35.</td>
+</tr>
+<tr>
+<td>On/off switch</td>
+<td>1</td>
+<td>Mini Micro Slide Switch - 12pt 2 Position - 20pcs SPDT Toggle Switch</td>
+<td>Amazon</td>
+<td>$5.99</td>
+<td>Switch used to turn off devices. Shipping is free if using amazon prime or spending over $35.</td>
+</tr>
+<tr>
+<td>Mini Breadboard kit</td>
+<td>1</td>
+<td>BOJACK 1Pcs 803 Tie points and 1 Pcs 400 Tie Points Solderless Breadboard and 65 Pcs Flexible Breadboard Jumper Wires and 6PCS 170 Points Mini Solderless Breadboard</td>
+<td>Amazon</td>
+<td>$8.99</td>
+<td>Shipping is free if using Amazon Prime or spending over $35. Breadboards are necessary for Arduino coding.</td>
+</tr>
+<tr>
+<td>5 Volt Regulator</td>
+<td>1</td>
+<td>BOJACK 10 Values 50 Pcs LM317 L7805 L7806 L7808 L7809 L7810 L7812 L7815 L7818 L7824 TO-220 Package High Current Positive Voltage Regulator Assortment Kit</td>
+<td>Amazon</td>
+<td>$12.99</td>
+<td>Shipping is free if using Amazon Prime or spending over $35. Regulators are necessary to keep only 5 volts going through arduino.</td>
+</tr>
+<tr>
+<td>Screws and Spacers kit</td>
+<td>1</td>
+<td>260 Pcs M3 Male Female Nylon Hex Spacer Standoffs Screws Nuts, Nylon Hex Threaded Pillar Spacer Standoffs Screws Nuts Assortment Kit for PCB Motherboard Circuit Board - Black</td>
+<td>Amazon</td>
+<td>$7.58</td>
+<td>Shipping is free if using Amazon Prime or spending over $35. Screw kit necessary to hold parts in place</td>
+</tr>
+</tbody>
+</table></div>
+<h2>III. Tools and Equipment</h2>
+<p>This section consists of all the equipment necessary for the construction of the device. The chart specifies if the item is in the lab and the source of the item. If it does not, as well as outside source notes that will be helpful during the creation of the prototype. Each specific item/tool is required within the assembly construction and ensures the proper use of the device. Additionally, having some sort of understanding/familiarity with the different tools/equipment will reduce any sort of potential error during the assembly process and ensure that the prototype operates with efficiency and accuracy.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Exists in Lab (Y/N)</th>
+<th>Source if not in Lab</th>
+<th>Outside Source Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3D Printer</td>
+<td>Y</td>
+<td>NVHS</td>
+<td>Will be used very frequently for creating the base model of the device and holding the electrical parts within.</td>
+</tr>
+<tr>
+<td>Philips Screwdriver</td>
+<td>Y</td>
+<td>NVHS</td>
+<td>Used to piece the 3D printed parts together and to allow the servo motor to be structured to indicate the direction.</td>
+</tr>
+<tr>
+<td>Asus Zenbook Laptop with Arduino Software</td>
+<td>Y</td>
+<td>NVHS</td>
+<td>Required for coding the Arduino microcontroller and used to show the output from the accelerometer.</td>
+</tr>
+<tr>
+<td>Soldering Iron (If permanent connections required)</td>
+<td>Y</td>
+<td>NVHS</td>
+<td>Used to secure the loose wiring components and overall wiring incorporated into the final design.</td>
+</tr>
+<tr>
+<td>Hot Glue Gun (Maybe non-electrical components)</td>
+<td>Y</td>
+<td>NVHS</td>
+<td>Used when connecting small components inside the 3D printed base and to prevent any sort of movement when the green assisting device is being used.</td>
+</tr>
+<tr>
+<td>Safety Glasses</td>
+<td>Y</td>
+<td>NVHS</td>
+<td>Necessary to wear it while working with a soldering iron as the point is being heated up with the use of tin.</td>
+</tr>
+<tr>
+<td>Multimeter</td>
+<td>Y</td>
+<td>NVHS</td>
+<td>Required to measure the voltage of the battery pack in the system to ensure power is being supplied, with the optional ability to measure current/continuity (if needed).</td>
+</tr>
+<tr>
+<td>Ruler/ Measuring Tape</td>
+<td>Y</td>
+<td>NVHS</td>
+<td>Used to measure the distances of the components within the device to ensure everything fits inside a 3D printed base.</td>
+</tr>
+<tr>
+<td>USB Cable (Arduino compatible)</td>
+<td>N</td>
+<td>Home</td>
+<td>Extremely important for the code/debugging aspect of the Arduino device, as it is used to connect to the laptop and then allows for code to be uploaded.</td>
+</tr>
+<tr>
+<td>Electrical Tape (Optional)</td>
+<td>N</td>
+<td>Home</td>
+<td>Used while focusing on wire management to prevent the wires from interfering with one another, thus causing the Arduino to malfunction and create issues.</td>
+</tr>
+</tbody>
+</table></div>
+<h2>IV. Needed Knowledge</h2>
+<p>Throughout the process of constructing a prototype, it is extremely crucial to have quick access to different knowledge of disciplines such as electronics, programming, designing, and building. The table below indicates which forms of knowledge are already known by the lead developers and the overall needs for a successful final prototype. Also highlights the sources of each specific piece of knowledge alongside whether or not additional individuals may need to be contacted in order to minimize any potential delays in the design process, whilst creating a prototype that meets the functional requirements.</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Need Outside Assistance (Y/N)</th>
+<th>Source</th>
+<th>Outside Source Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arduino Programming / Coding and Debugging</td>
+<td>N</td>
+<td>Team Experience</td>
+<td>The members of the group both have some form of coding experience in the past few years.</td>
+</tr>
+<tr>
+<td>Understanding of Golf Green Physics and Correct Reading of Slope</td>
+<td>N</td>
+<td>Team Experience</td>
+<td>The members of the group both have an understanding of where the golf ball would roll on a putting green based on years and years of experience.</td>
+</tr>
+<tr>
+<td>3D Cad/Fusion Modeling</td>
+<td>N</td>
+<td>Team Experience</td>
+<td>The group members have prior experience in using fusion to 3d model the prototype designs and to create a successful device.</td>
+</tr>
+<tr>
+<td>Accelerometer Calibration / Interpretation of Readings</td>
+<td>Y</td>
+<td>Online Sources/ PLTW Faculty</td>
+<td>These sources/individuals can give great insight into how to construct the accelerometer aspect of this design.</td>
+</tr>
+<tr>
+<td>Power Distribution from Battery Pack</td>
+<td>N</td>
+<td>Team Experience</td>
+<td>All group members have an understanding of how to use double AA batteries and measure the power coming from the battery pack.</td>
+</tr>
+<tr>
+<td>Servo Motor Placement and Functionality</td>
+<td>N</td>
+<td>Team Experience</td>
+<td>The group members have prior experience with the use of servo motors and their compatibility with Arduino.</td>
+</tr>
+<tr>
+<td>Circuit Recognition and Wiring</td>
+<td>N</td>
+<td>Team Experience</td>
+<td>Everybody in the group has taken some form of digital electronics class in the past and has knowledge of using circuits and wiring arduinos/breadboards.</td>
+</tr>
+<tr>
+<td>Adding Display on an OLED Screen</td>
+<td>Y</td>
+<td>Online Sources/ PLTW Faculty</td>
+<td>Members of the source listed to the left can assist in describing how to use an OLED display and how to show the output from the Arduino/accelerometer.</td>
+</tr>
+<tr>
+<td>Data Collection and Performance Evaluation</td>
+<td>N</td>
+<td>Team Experience</td>
+<td>These members of the group understand how to collect the data from the finalized prototype and recognize how well the device is performing.</td>
+</tr>
+<tr>
+<td>Knowledge of Greens Changing Via Course</td>
+<td>N</td>
+<td>Team Experience</td>
+<td>Everybody apart of the project has the knowledge of the different types of greens, changing the direction the ball rolls, and the impact on the device usability.</td>
+</tr>
+<tr>
+<td>Soldering/Wiring</td>
+<td>N</td>
+<td>Team Experience</td>
+<td>Members of this group have knowledge of soldering and creating permanent wiring. There is also knowledge of wiring the components of this design.</td>
+</tr>
+</tbody>
+</table></div>
+<h2>V. Build Procedure</h2>
+<p>Below is the build procedure, a step-by-step guide to constructing this device. This provides detailed instructions on how each component is put together, how each tool is used, and how everything is connected. This allows manufacturers to understand how this device is assembled.</p>
+<h3>1. Installation of Buttons and OLED Display onto PCB Board</h3>
+<figure class="fig" id="img-g-5-1">
+<div class="frame"><img src="g-5-1.jpg" data-img="g-5-1" data-pdf="Element G Outline - NPC" data-cap="Figure 5.1: Button Diagram with OLED Display" alt="Figure 5.1: Button Diagram with OLED Display" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 5.1: Button Diagram with OLED Display</figcaption>
+</figure>
+<ol>
+<li>Align the OLED display module with the holes near the top of the PCB, ensuring the screen is properly attached and facing downward, and that the PCB holes are holding the device in place.</li>
+<li>Solder the pins on the OLED display to make sure that the display is not movable.</li>
+<li>Next, align the buttons to properly sit in the PCB holes to the left of the OLED display, aligned with each other, as shown in the figure above.</li>
+<li>Solder the pins on the push buttons to make sure that the display is not able to move.</li>
+<li>Inspect for bridging that could have occurred during soldering and check that the devices are properly connected and secure.</li>
+</ol>
+<h3>2. Installation of Arduino and Gyroscope onto PCB Board</h3>
+<figure class="fig" id="img-g-5-2">
+<div class="frame"><img src="g-5-2.jpg" data-img="g-5-2" data-pdf="Element G Outline - NPC" data-cap="Figure 5.2: Arduino Diagram Alongside Gyroscope" alt="Figure 5.2: Arduino Diagram Alongside Gyroscope" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 5.2: Arduino Diagram Alongside Gyroscope</figcaption>
+</figure>
+<ol>
+<li>Mount the Arduino Nano to the PCB Board, making sure there is correct alignment and support.</li>
+<li>Solder the pins of the Arduino Nano in place using a soldering iron so that the Arduino is not able to move around.</li>
+<li>Install the MPU-6050 Gyroscope on the PCB in the correct orientation to the right of the Arduino, as shown in Figure 5.2 above.</li>
+<li>Solder the pins of the Gyroscope onto the PCB board so that the device is not able to move freely, and make sure that the ground and VCC are connected well.</li>
+<li>Verify that there is spacing between the Arduino and the Gyroscope for clearance and wiring.</li>
+</ol>
+<h3>3. Connection of Servo Motor with Laser Transmitter Device</h3>
+<figure class="fig" id="img-g-5-3">
+<div class="frame"><img src="g-5-3.jpg" data-img="g-5-3" data-pdf="Element G Outline - NPC" data-cap="Figure 5.3: Servo Motor Diagram with Laser Aim Indicator" alt="Figure 5.3: Servo Motor Diagram with Laser Aim Indicator" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 5.3: Servo Motor Diagram with Laser Aim Indicator</figcaption>
+</figure>
+<ol>
+<li>Attach the laser module to the servo using epoxy. Wait for the epoxy to properly dry and securely attach the two devices.</li>
+<li>Make sure that the laser is properly aligned with the shaft axis of the servo so that the laser will be able to rotate as intended.</li>
+<li>Next, attach the signal wire of the servo to the output pin of the Arduino so that the Arduino can control the device.</li>
+<li>Test the rotation of the servo to ensure that the laser is able to move properly by using simple code.</li>
+</ol>
+<h3>4. Power Component of Device (Battery Pack)</h3>
+<figure class="fig" id="img-g-5-4">
+<div class="frame"><img src="g-5-4.jpg" data-img="g-5-4" data-pdf="Element G Outline - NPC" data-cap="Figure 5.4: Battery Pack Diagram with 2:1 Scale" alt="Figure 5.4: Battery Pack Diagram with 2:1 Scale" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 5.4: Battery Pack Diagram with 2:1 Scale</figcaption>
+</figure>
+<ol>
+<li>Insert the AA batteries into the holder, making sure that the batteries are turned in the correct orientation.</li>
+<li>Attach the back wall of the holder to the holder and screw on 2 M2 screws into the respective holes on the bottom side of the holder.</li>
+<li>Verify the voltage from the battery pack using a voltmeter.</li>
+<li>Connect the ground lead of the battery pack with the ground rail of the other components.</li>
+</ol>
+<h3>5. Place all separate Sub-Units into their Respective Section on the Devices Shell</h3>
+<figure class="fig" id="img-g-5-5">
+<div class="frame"><img src="g-5-5.jpg" data-img="g-5-5" data-pdf="Element G Outline - NPC" data-cap="Figure 5.5: All Separate Components Added to One Image" alt="Figure 5.5: All Separate Components Added to One Image" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 5.5: All Separate Components Added to One Image</figcaption>
+</figure>
+<ol>
+<li>Insert the assembled PCB board from step 1 into the upper right section of the device shell, sitting at the top of the shell.</li>
+<li>Secure this PCB board using M2 screws to keep the device from moving or taking up too much space.</li>
+<li>Insert the assembled PCB board from step 2, which contains the Arduino and Gyroscope, into the floor of the top left corner of the shell, as shown in the figure above.</li>
+<li>Secure this PCB board using M2 screws to keep the device from moving or taking up too much space.</li>
+<li>Install the battery pack into the floor of the bottom left corner of the shell, securing it with hot glue adhesive.</li>
+<li>Position the servo motor into its mounting position so that the laser module sticks out of the hole in the shell of the device shown in the figure above.</li>
+<li>Close the shell enclosure and fasten it securely with M2 screws.</li>
+</ol>
+<h3>6. Wiring the Device (Diagram of Multism)</h3>
+<figure class="fig" id="img-g-5-6">
+<div class="frame"><img src="g-5-6.jpg" data-img="g-5-6" data-pdf="Element G Outline - NPC" data-cap="Figure 5.6: Electrical Components (wiring) Diagram" alt="Figure 5.6: Electrical Components (wiring) Diagram" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 5.6: Electrical Components (wiring) Diagram</figcaption>
+</figure>
+<ol>
+<li>Most wires can be connected through male/female connections<ol>
+<li>Wires must be soldered to the battery pack*</li>
+</ol>
+</li>
+<li>Wiring begins from the power source (battery pack)</li>
+<li>A power wire must flow to both buttons, the Arduino, the servo, the Gyroscope, and the OLED display</li>
+<li>Ground wires are attached to all components: (buttons/Arduino/Gyroscope/OLED/servo), which feed back to the negative terminal in the battery pack.</li>
+<li>The Arduino must have all its inputs wired into the correct ports (Gyroscope/Button Outputs)</li>
+<li>Arduino Outputs must be wired to the OLED display (Clk/D1/DC/CS/RESET)</li>
+<li>Wire the last Arduino Output to the servo motor’s final port</li>
+</ol>
+<h3>7. Coding the Arduino</h3>
+<ol>
+<li>Connect an equipped device with Arduino software to the Arduino</li>
+<li>Code takes in inputs from buttons/Gyroscope to perform output tasks on both the OLED display and the servo motor</li>
+<li>Code takes into account the tilt of the device (from the Gyroscope) and distance to the hole (from buttons), to find the ideal putt line</li>
+<li>Code finally constructs the angle at which the servo must rotate the laser.</li>
+</ol>
+<h3>8. Final Device Product</h3>
+<figure class="fig" id="img-g-5-7">
+<div class="frame"><img src="g-5-7.jpg" data-img="g-5-7" data-pdf="Element G Outline - NPC" data-cap="Figure 5.7: Completed Diagram of Putting Aid" alt="Figure 5.7: Completed Diagram of Putting Aid" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 5.7: Completed Diagram of Putting Aid</figcaption>
+</figure>
+<ol>
+<li>This fully assembled golf putting aid uses an Arduino Nano, MPU-6050 Gyroscope, OLED display, push button inputs, laser module, servo motor, and battery power system all inside of a 3D printed shell.</li>
+<li>Once this build procedure is completed, all components within this device will be securely mounted and wired properly, creating a reliable slope reading device.</li>
+<li>Test this device through powering it on and making sure that every component of the device works properly and then continue on to the next stages of the design.</li>
+</ol>
+<h2>VI. Conclusion</h2>
+<p>To ensure a successful build of this device’s first prototype and any future prototypes, clear instructions must be provided for assembly. First, a Bill of Materials was developed. This lists out every needed part, where it can be bought/found, and both its cost to buy and ship. This ensures all pieces are acquired before the building process begins. Second, all tools and equipment needed in the build process were listed. Within this list, it is explained whether these tools are already available in the build lab, and if not, where the tools can be acquired. Third, it is listed where all the different types of expertise are needed in the build process. It is explained what is needed, who can perform this task, and who might need to assist if the team does not already have this knowledge. Finally, a full build plan is provided. This gives step-by-step instructions on how to assemble each piece of this device, where in the device it goes, and how it connects to other components in this device. The build plan is clear and easy to follow, allowing for a simple building process. Additionally, the plan incorporates many different diagrams both from 3D modeling and multisim visuals to precisely represent and describe the assembly process. Overall, all of this ensures a successful development of the prototype.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Cunningham, Kevin. “Here’s How Your Handicap Index Stacks up against Golfers in the United States.” <em>Golf</em>, 9 Sept. 2020, <a href="https://golf.com/news/how-your-handicap-index-compares/">golf.com/news/how-your-handicap-index-compares/</a>.&#160;<a class="footnote-backref" href="#fnref:1" title="Back to text">&#8617;</a></p>
+</li>
+</ol>
+</div><nav class="pager"><a class="prev" href="element-ef.html"><small>&larr; Previous</small>Element E/F: STEM &amp; Market</a><a class="next" href="element-h.html"><small>Next &rarr;</small>Element H: Test Plan</a></nav>
+</article>
+</div>
+<footer class="site"><div class="inner">
+  <span>&copy; 2026 Tegan Clancy</span>
+  <span>Neuqua Valley High School &middot; PLTW Engineering Design &amp; Development</span>
+</div></footer>
+</body>
+</html>

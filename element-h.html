@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Element H: Prototype Testing and Data Collection Plan | Tegan Clancy</title>
+<meta name="description" content="Digital Green Reader capstone - Element H: Prototype Testing and Data Collection Plan">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+function imgFallback(el) {
+  var tries = ["png", "jpeg", "webp"], n = +(el.dataset.try || 0);
+  if (n < tries.length) { el.dataset.try = n + 1; el.src = el.src.replace(/\.[a-z]+$/, "." + tries[n]); return; }
+  var d = el.dataset, ph = document.createElement("div"); ph.className = "ph";
+  ph.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 17-5-5-9 8"/></svg>'
+    + '<strong>Add image here</strong>'
+    + (d.pdf ? '<span class="ph-row"><em>From PDF</em>' + d.pdf + '</span>' : '')
+    + (d.cap ? '<span class="ph-row"><em>Figure</em>' + d.cap + '</span>' : '')
+    + '<span class="ph-row"><em>Save as</em><code>' + d.img + '.jpg</code></span>';
+  el.replaceWith(ph);
+}
+</script>
+</head>
+<body>
+<header class="topbar"><div class="topbar-inner">
+  <a class="brand" href="index.html">Tegan <span>Clancy</span></a>
+  <nav class="topnav">
+    <a href="index.html">Home</a>
+    <a href="project.html" class="active">Capstone</a>
+  </nav>
+</div></header>
+<div class="layout">
+<aside class="sidebar">
+<a class="back" href="project.html">&larr; Project overview</a>
+<p class="label">Project elements</p>
+<ol>
+<li><a href="element-a.html"><span class="letter">A</span><span class="name">The Problem</span></a></li>
+<li><a href="element-b.html"><span class="letter">B</span><span class="name">Prior Solutions</span></a></li>
+<li><a href="element-c.html"><span class="letter">C</span><span class="name">Requirements</span></a></li>
+<li><a href="element-d.html"><span class="letter">D</span><span class="name">Concept Selection</span></a></li>
+<li><a href="element-ef.html"><span class="letter">E/F</span><span class="name">STEM &amp; Market</span></a></li>
+<li><a href="element-g.html"><span class="letter">G</span><span class="name">Prototype Build</span></a></li>
+<li><a href="element-h.html" class="current" aria-current="page"><span class="letter">H</span><span class="name">Test Plan</span></a></li>
+<li><a href="element-i.html"><span class="letter">I</span><span class="name">Results</span></a></li>
+</ol>
+</aside>
+<article class="page-h">
+<p class="eyebrow">Element H</p>
+<h1>Prototype Testing and Data Collection Plan</h1>
+<h2>I. Introduction</h2>
+<h3>Problem Statement</h3>
+<div class="callout">
+<p>In the United States, 44.13% of amateur golfers have 14.9+ handicaps and experience difficulty when reading the slopes of greens.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> This difficulty arises from novice golfers lacking experience with reading breaks and from courses having different types of cuts for the greens. This problem leaves high-handicap golfers unsatisfied with themselves, as they consistently average four to five three-putts per 18 holes and end up shooting high scores. Addressing this issue requires that golf stakeholders, performance criteria, and functional requirements be accounted for. These different pieces of criteria ensure that the solution is extremely accurate, consistently reliable, and applicable to a large portion of the golfing industry. Additionally, several different designs were sketched and analyzed with the goal of finding a singular concept that will outcompete the current solutions on the market. Further completing the ideal objective of creating a fully functional and efficient test plan that is thoroughly put into action, with a result of a large collection of data to be used for analysis.</p>
+</div>
+<h2>II. Test Specifications</h2>
+<p>Below is a completed list of the design specifications that will be incorporated during the testing phase. The requirements are all explicitly listed in order from most important to least important. Another thing to mention is that not every criterion will be tested (such as aesthetics and cost) due to these having the ability to be verified through things such as market analysis and inspection rather than examination. Further explanations of the criteria that will or will not be tested is detailed in this section and will highlight the key requirements for a successful &amp; testable putting device.</p>
+<details class="appendix">
+<summary>Design Specifications (all 14)</summary>
+<div class="inner">
+<h4>1. Accuracy</h4>
+<p><strong>Specification:</strong> Angle accuracy shall have ± 2 degrees maximum error.</p>
+<p><strong>Rationale (self-imposed):</strong> As shown in Figure 3.1, a survey of golf players found that a large majority of respondents rated accuracy as the most critical aspect of a putting assistance device. Therefore, when creating a solution for golf green readers, it is essential to make sure that the product is accurate and has minimal error.</p>
+<figure class="fig" id="img-c-3-1">
+<div class="frame"><img src="c-3-1.jpg" data-img="c-3-1" data-pdf="Element C Outline - NPC" data-cap="Figure 3.1: Results of Surveyors&#x27; Ranking for Aspects" alt="Figure 2.1: Results of Surveyors&#x27; Ranking for Aspects" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.1: Results of Surveyors' Ranking for Aspects</figcaption>
+</figure>
+<h4>2. Size</h4>
+<p><strong>Specification:</strong> The golf green reading device must not exceed 700 cubic centimeters in volume.</p>
+<p><strong>Rationale:</strong> The device must be convenient for golfers to carry; therefore, a compact, portable form factor is a primary criterion. This keeps it relatively portable for golfers, giving them the ability to keep the putting device in their golf bag or golf cart.</p>
+<h4>3. Price</h4>
+<p><strong>Specification:</strong> The build price shall not exceed $100</p>
+<p><strong>Rationale:</strong> A survey found that about 70% of respondents want a product under $100. This is shown in Figure 3.2 below.</p>
+<figure class="fig" id="img-c-3-2">
+<div class="frame"><img src="c-3-2.jpg" data-img="c-3-2" data-pdf="Element C Outline - NPC" data-cap="Figure 3.2: Results of Surveyors&#x27; Choosing Prices" alt="Figure 2.2: Results of Surveyors&#x27; Choosing Prices" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.2: Results of Surveyors' Choosing Prices</figcaption>
+</figure>
+<h4>4. Weight</h4>
+<p><strong>Specification:</strong> The device shall have a maximum weight of 400 grams.</p>
+<p><strong>Rationale:</strong> Existing products, such as the BreakMaster Digital Green Reader, have a mass of approximately 130 grams.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> These devices, however, are much less complex than the technological components the solution being created will have. To account for the multitude of extra components, the device must be around 400 grams, keeping it relatively light.</p>
+<h4>5. Range</h4>
+<p><strong>Specification:</strong> This device shall work for putts 20 ft or less.</p>
+<p><strong>Rationale:</strong> It is recommended that golfers spend the majority of their time practicing putts 20ft and in, with an emphasis on putts around 10ft.<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></p>
+<h4>6. Includes Digital Display</h4>
+<p><strong>Specification:</strong> This device shall include a digital display.</p>
+<p><strong>Rationale:</strong> A digital display allows for a better user interface and experience. This leads to an easier-to-understand device and can also increase the performance of our device. Additionally, many current products have digital displays.<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
+<h4>7. Operating Environment</h4>
+<p><strong>Specification:</strong> This device shall be able to withstand light rain and any outdoor temperatures (-35 °C to 50 °C)</p>
+<p><strong>Rationale:</strong> This device is being used outside and therefore must be able to withstand the elements. Being water-resistant ensures accurate and safe usage in all weather conditions, thereby maintaining the device's quality.</p>
+<h4>8. Product Life</h4>
+<p><strong>Specification:</strong> The device shall have a lifespan of at least 3 years under normal outdoor conditions: wind, rain, cold, heat, etc.</p>
+<p><strong>Rationale:</strong> Most golf-related products on the market have a specified 3-year warranty on electronics.<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup> To keep up with competitors, the solution shall be able to keep up with the expectations that competitors set.</p>
+<h4>9. Material</h4>
+<p><strong>Specification:</strong> The solution shall have no sharp points that can lead to injury and utilize a rubberized material.</p>
+<p><strong>Rationale:</strong> Using a rubberized material around the edges of the solution will smooth out the edges and reduce the chance of dropping the device during use.</p>
+<h4>10. Aesthetics</h4>
+<p><strong>Specification:</strong> The device shall have a professional appearance, similar to other golf products, in a neutral color.</p>
+<p><strong>Rationale:</strong> Similar products have a minimalist design, making them appealing to professionals and increasing the usability, meaning there is an industry expecting aesthetic design.</p>
+<h4>11. Maintenance</h4>
+<p><strong>Specification:</strong> This device shall require no maintenance</p>
+<p><strong>Rationale:</strong> Requiring maintenance severely diminishes the value of the product, deterring customers from purchasing.</p>
+<h4>12. Battery Life</h4>
+<p><strong>Specification:</strong> The battery life shall last at least 3 hours and be able to recharge in 1 hour or less</p>
+<p><strong>Rationale:</strong> This ensures the device can last for a golfer's entire practice routine and can be quickly recharged for continued use.</p>
+<h4>13. Global Environment</h4>
+<p><strong>Specification:</strong> The device shall not cause harm to a putting surface, any part of a golf course, or the surrounding environment.</p>
+<p><strong>Rationale:</strong> Being able to function without damage to a course would ensure golfers can use it anywhere. This results in a larger customer base and less deterring from purchasing.</p>
+<h4>14. Carrying Case</h4>
+<p><strong>Specification:</strong> This device shall have a carrying case</p>
+<p><strong>Rationale:</strong> A carrying case will provide both protection and ease of transportation. Additionally, as shown in Figure 3.3, only a few prior products include a carrying case, giving the device an advantage over the competition.</p>
+</div>
+</details>
+<h3>Criteria Being Tested</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Criteria/Benchmark</th>
+<th>Description of Data Needed</th>
+<th>Quantitative or Qualitative</th>
+<th>Degree of Accuracy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Criteria #1: Accuracy</td>
+<td>Primarily will be tested by visualizing both the reference angle of the device and how well it reads the putt compared to a graphing angle (maybe protractor) with correct lined putt.</td>
+<td>Quantitative</td>
+<td>+/- 2°</td>
+</tr>
+<tr>
+<td>Criteria #2: Size</td>
+<td>Overall, determined by the general volume calculation for the final designed prototype, specifically through the units of cm³.</td>
+<td>Quantitative</td>
+<td>+/- 3 cm³ &amp; UNDER 700cm³</td>
+</tr>
+<tr>
+<td>Criteria #4: Weight</td>
+<td>Simply take into consideration the total mass of the putting aid device in specific units of grams (goal aimed towards lightweight).</td>
+<td>Quantitative</td>
+<td>+/- 3 grams &amp; UNDER 400 grams</td>
+</tr>
+<tr>
+<td>Criteria #5: Range</td>
+<td>Tested through the outputted angle readings from the device between putt lengths of one to twenty feet.</td>
+<td>Quanitative</td>
+<td>+/- 2° &amp; UNDER 20 feet</td>
+</tr>
+<tr>
+<td>Criteria #7: Operating Environment</td>
+<td>Must be tested under different weather conditions and especially temperatures due to golfing having the ability to be played both in the summer heat and winter chill. Not only device functionality but appearance (functionality) in these environments.</td>
+<td>Both</td>
+<td>-35°C to 50°C</td>
+</tr>
+<tr>
+<td>Criteria #12: Battery Life</td>
+<td>Strictly tested through the total runtime during a round with the addition of the impact on double AA batteries on usage of device.</td>
+<td>Quantitative</td>
+<td>Double AA Battery Life Length</td>
+</tr>
+<tr>
+<td>Criteria #9 &amp; Criteria #13: General Material / Safety Protection</td>
+<td>Overall, it will be tested through inspecting the device (materials condition) after usage and the impact the prototype has on the putting green surface. Either passes or fails the damage &amp; material health test.</td>
+<td>Qualitative</td>
+<td>Passes or Fails</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Criteria Not Tested</h3>
+<p>All of the different types of criteria listed below are the requirements that will not be taken into consideration when testing and evaluating the device due to the lack of impact on functionality of the device during usage.</p>
+<ul>
+<li><strong>Criteria #3 Price:</strong> This will not be considered when doing the testing for the prototype with the main reason being that the cost of the prototype can be determined based on analyzing the materials used rather than physically testing performance.</li>
+<li><strong>Criteria #6 Digital Display:</strong> Due to the putting aid prototype already including a digital display in the final design, this criteria has absolutely no need for time to be spent on any physical testing.</li>
+<li><strong>Criteria #8 Product Life:</strong> The criteria regarding how long the functionality of the device will last for has absolutely no chance in being tested due to the prototype operation not being long enough to measure a lifespan of over 6+ months.</li>
+<li><strong>Criteria #10 Aesthetics:</strong> This criteria won’t be taken into consideration during the testing procedures since the main appearance of the device has no impact on the functionality and rather is more subjective to users opinions.</li>
+<li><strong>Criteria #11 Maintenance:</strong> Once again, due to the time constraints, maintenance will not be viable in a testing procedure with the reason being that there isn’t enough time for analysis of the data that comes from individuals using the product for months upon months.</li>
+<li><strong>Criteria #14 Carrying Case:</strong> Lastly, the criteria listed here doesn’t need to be tested since a case for the prototype has zero impact on both the functionality and efficiency of the putting aid.</li>
+</ul>
+<h2>III. Test Procedures</h2>
+<p>This section consists of all of the different test procedures for the criteria that was carefully chosen to be fully tested. Each individual specification that is being tested will look at multiple different scenarios and categories for analysis. These will consist of the overall purpose of the testing, the specific criteria, where the location of testing will occur, the materials needed, whether or not the criteria passes or fails the test, the precise/detailed procedure steps, the safety considerations, and especially the type of data with data collection. All of these procedures will begin on the page below.</p>
+<h3>Criteria #1: Accuracy</h3>
+<div class="facts">
+<div><b>Your Name</b>Tegan Clancy</div>
+<div style="grid-column: span 2"><b>Team Members</b>Zach Nelson, Ryan Prusak, Tegan Clancy</div>
+</div>
+<p><strong>Incremental Testing Summary:</strong> The main piece of incremental testing will be implemented during the building phase, specifically with the electronic components. This is because these components are extremely important but can also create issues in the final design if one of the electronics isn’t working properly. This will be tested by individually checking each component (battery pack, accelerometer, digital display, Arduino) and will ensure that any early electronic issues will not appear in the final prototype design.</p>
+<p><strong>Testing Location:</strong> Local golf course and electronics at school</p>
+<p><strong>Purpose:</strong> The test that will be conducted here is going to help determine whether or not the putting aid has the ability to measure the slopes of greens accurately. Specifically between +/- 2 degrees of the actual slope angle on the putting green. By testing this criterion, a conclusion can be made if the device has the ability to provide reliable feedback to golfers and if it meets the high expectation of having precise accuracy. The overall purpose of this testing procedure is extremely significant to the final device.</p>
+<p><strong>Initial Conditions:</strong> The prototype is partially assembled, together with the electronics shown, and the battery is fully charged. This provides the ability for the electronics to be tested individually first before going out to the course and using it on the green. Then the prototype is fully assembled and enclosed in the 3d printed case. The Arduino is fully functional/operational, along with the output from the digital display.</p>
+<p><strong>Materials:</strong> Fully functional prototype, iPhone with digital angle app, protractor, measuring tape, data recording paper sheet or online Excel sheet, and a physical putting green that has a significant slope (not flat).</p>
+<p><strong>Pass or Fail Criteria:</strong> Overall device must have the ability to measure the slope angle within the 2 degree reference point. Specifically will pass if it measures within the output of both the protractor and the digital angle finder on the iPhone. However, if during more than 20% of the trials the prototype exceeds this requirement then the testing will be considered as a failure.</p>
+<p><strong>Procedures:</strong></p>
+<ol>
+<li>Locate the putting green and either the iPhone angle finder or the backup protractor, and locate 6 locations on the green where the slope angle differs.</li>
+<li>Pinpoint each location using some sort of golf tee and record the specific angles at each location.</li>
+<li>Place the prototype flat on each specific slope and record the angle that is output on the digital display.</li>
+<li>Collect the total data from all 6 locations (ranging from 2 degrees to 10 degrees of slope on the green) and input it into a spreadsheet.</li>
+<li>Perform minimum 3 trials at each slope location to find the average number that can be used to compare to the iPhone angle finder.</li>
+<li>Repeat process at separate golf courses to ensure data variability and record everything in one singular spreadsheet (physical or electronic).</li>
+</ol>
+<p><strong>Safety Precautions:</strong></p>
+<ol>
+<li>Ensure that the prototype is placed firmly on the green and doesn’t have the possibility to slip while being tested.</li>
+<li>Avoid testing on any surfaces (such as wet greens) as these can harm the greens when the device is being used.</li>
+<li>After testing, ensure that no damage has been done to the putting greens and avoid dropping the device due to the potential harm on the electronic components within the prototype.</li>
+</ol>
+<p><strong>Data:</strong> Quantitative data includes the reference angle (degrees) from the iPhone app, the actual output from the device in degrees, the amount of degrees of potential error, along with the specific percent error. Qualitative data includes additional observational notes during testing and whether or not the device passes or fails.</p>
+<h3>Criteria #2: Size</h3>
+<div class="facts">
+<div><b>Your Name</b>Zach Nelson</div>
+<div style="grid-column: span 2"><b>Team Members</b>Zach Nelson, Ryan Prusak, Tegan Clancy</div>
+</div>
+<p><strong>Incremental Testing Summary:</strong> The dimensions of the device must be tested at the very start of the building plan and throughout the design process. This is important as it is extremely important to the stakeholders that the product remains small, but the team must also periodically make sure that the internal components can fit inside the shell correctly. Throughout the building process it is likely that the shell will slightly change shape and dimensions and when this occurs it is important to maintain a volume smaller than 700 cubic centimeters.</p>
+<p><strong>Testing Location:</strong> Neuqua Valley EDD classroom</p>
+<p><strong>Purpose:</strong> This test is done to determine if the entire device takes up less space than 700 cubic centimeters. This is extremely important because maintaining a small size will ensure that the product is portable, making it easy for novice users to carry around during casual golf practice. Exceeding this volume would lead to a larger than expected product, making it less desirable for stakeholders, therefore testing periodically that it meets this criteria is very important.</p>
+<p><strong>Initial Conditions:</strong> The outer shell is fully completed and secured with all intended external components already attached to the device. The device is turned off on a flat surface.</p>
+<p><strong>Materials:</strong> Shell of device, device/tool to measure length(tape measure/meter stick), calculator, paper to document findings.</p>
+<p><strong>Pass or Fail Criteria:</strong> The device passes if the outer dimensions of the product do not exceed a volume of 700 cubic centimeters. If the device exceeds this volume that it has failed the testing and needs to be made smaller.</p>
+<p><strong>Procedures:</strong></p>
+<ol>
+<li>Gather measuring and documentation tools as well as the shell of the device</li>
+<li>Grab the measuring device and measure the outer length of the device in centimeters and note it down</li>
+<li>Use the same measuring device and measure the width of the device in centimeters and note it down</li>
+<li>Use this measuring device and measure the height of the device in centimeters and note it down</li>
+<li>Grab the calculator and find the product of these three numbers and document that volume down</li>
+</ol>
+<p><strong>Safety Precautions:</strong></p>
+<ol>
+<li>Ensure that the measuring device is handled safely and with care, especially if using a tape measure to find the volume.</li>
+<li>Make sure that the device is safely placed away from the edges of a surface, preventing the device from falling.</li>
+<li>Ensure no scratches or damage is done during testing due to scraping from the measuring device.</li>
+</ol>
+<p><strong>Data:</strong> Quantitative data including the 3 different dimensions of the device and the overall volume of the device. Qualitative data including other observations notes and if the device passed or failed the test.</p>
+<h3>Criteria #4: Weight</h3>
+<div class="facts">
+<div><b>Your Name</b>Zach Nelson</div>
+<div style="grid-column: span 2"><b>Team Members</b>Zach Nelson, Ryan Prusak, Tegan Clancy</div>
+</div>
+<p><strong>Incremental Testing Summary:</strong> The weight of the device is tested at the beginning of the build process and every time a new component is added to the device. This ensures that the device stays under the expected mass and helps the group know which modifications are necessary to either low or increase the mass. Maintaining this light design is important as it will keep the device easily carryable for the golfing users.</p>
+<p><strong>Testing Location:</strong> Neuqua Valley EDD classroom</p>
+<p><strong>Purpose:</strong> This test is completed to ensure that the mass of the overall design does not exceed 400 grams. This is vital in ensuring a portable lightweight design that pleases the stakeholders interested in the device. Doing the testing of the mass will help gauge what components can and cannot be used to maintain a mass light enough to be used during a golfers’ practice.</p>
+<p><strong>Initial Conditions:</strong> The prototype must be fully completed to properly confirm if the device does or does not exceed the maximum allowable mass of 400 grams. Therefore, all components that will be used must be included in the prototype to ensure an estimate of the overall mass is obtained properly.</p>
+<p><strong>Materials:</strong> Device fully assembled, paper to document findings, digital scale that is properly set to grams.</p>
+<p><strong>Pass or Fail Criteria:</strong> The device passes if the reading on the scale states a mass that is smaller than the maximum mass that was set of 400 grams. If the mass exceeds this mass criteria then the product fails and needs to be revised so that it passes testing.</p>
+<p><strong>Procedures:</strong></p>
+<ol>
+<li>Gather the scale and the prototype of the green reading device.</li>
+<li>Place the scale on a flat surface, turn it on, and ensure it is set to grams.</li>
+<li>Zero the scale and make sure that it reads a mass of 0 grams.</li>
+<li>Place the green reading device carefully in the center of the scale.</li>
+<li>Write down the mass of the product on your documentation sheet.</li>
+<li>Note whether or not the device failed or passed the test.</li>
+</ol>
+<p><strong>Safety Precautions:</strong></p>
+<ol>
+<li>Ensure that the scale is placed in a safe location that does not risk it or the device falling or tipping over.</li>
+<li>Carefully place and remove the device on the scale to prevent damage of the scale or the device.</li>
+</ol>
+<p><strong>Data:</strong> Quantitative data measured in this testing procedure is the mass in grams of the device. Qualitative data includes any other notes written within the documentation sheet as well as whether or not the product passed the weight test.</p>
+<h3>Criteria #5: Range</h3>
+<div class="facts">
+<div><b>Your Name</b>Ryan Prusak</div>
+<div style="grid-column: span 2"><b>Team Members</b>Zach Nelson, Ryan Prusak, Tegan Clancy</div>
+</div>
+<p><strong>Incremental Testing Summary:</strong> It’s important that all issues are ironed out during the build process. Especially when it comes to the laser, it’s important that it is powerful enough to read the green over the required distance (20ft). It must be ensured that there are no problems with all readings, like the accelerometer, as if issues are not caught soon enough, it could hinder the future performance of the device.</p>
+<p><strong>Testing Location:</strong> Local golf course and electronics at school</p>
+<p><strong>Purpose:</strong> This test will determine whether the device operates to the desired range of 20ft. This ensures the range requirement is successfully met and the device can provide accurate readings over a large distance. This allows for a more diverse realm of green reading, allowing for more potential feedback to golfers. Overall, this piece of testing is significant to the success of the final prototype.</p>
+<p><strong>Initial Conditions:</strong> The prototype is partially completed. Electronic components are connected, most importantly, the laser and accelerometer. Components must be connected to a power source to be functional. All components are connected to the Arduino, fitted with the adequate code.</p>
+<p><strong>Materials:</strong> Functional prototype, device/tool to measure distance (tape measure/meter stick/range finder), sheet or doc to document data, and finally a putting surface with at least a 20ft diameter to allow for adequate testing.</p>
+<p><strong>Pass or Fail Criteria:</strong> The device must meet the given error criteria (of ±2 degrees) among distances ranging from 0-20ft. After multiple trials at these different increments, the device must obtain at least 80% accuracy (meaning the ball rolled on the intended line and went in the hole) to be considered a success.</p>
+<p><strong>Procedures:</strong></p>
+<ol>
+<li>Gather necessary measuring and documentation tools/materials and find a putting surface of adequate size (20ft diameter)</li>
+<li>Pick out a target (hole or tee in the green) and keep this target consistent</li>
+<li>Work in 5ft increments (0ft, 5ft, 10ft, 15ft, 20ft) from the target</li>
+<li>Set up the device at each of these increments and have it find the ideal line, roll a ball along the instructed line at each spot 3 times</li>
+<li>If a ball strikes the target (or gets within the ±2 degree allowed error) count it as a success.</li>
+<li>Repeat this at each increment until finished</li>
+<li>Document the success vs. failure rate</li>
+</ol>
+<p><strong>Safety Precautions:</strong></p>
+<ol>
+<li>Ensure the device is placed on the green and causes no harm to the putting surface. Additionally, ensure that it does not slip or move during the testing process (this could lead to inconsistencies).</li>
+<li>Ensure testing is done on a putting surface suitable for putting (no dead patches of grass/holes/divots/spike marks)</li>
+<li>After testing, ensure no damage was done and ensure the device remains intact and remains functional.</li>
+</ol>
+<p><strong>Data:</strong> Quantitative data includes all numerical values, like the distances to the hole, fail/success rate, the number of trials done, and the amount of error at each spot. Qualitative data includes additional observations, like the roll of the ball on the green (is it smooth or not), how the laser is displaying along the ground, and the overall visual accuracy of the ball in relation to its intended target.</p>
+<h3>Criteria #7: Operating Environment</h3>
+<div class="facts">
+<div><b>Your Name</b>Ryan Prusak</div>
+<div style="grid-column: span 2"><b>Team Members</b>Zach Nelson, Ryan Prusak, Tegan Clancy</div>
+</div>
+<p><strong>Incremental Testing Summary:</strong> It must be ensured that the different components in this device can successfully operate during the specified operating environment (including temperature and other weather conditions). This ensures that the end prototype can function as intended in a large variety of environments.</p>
+<p><strong>Testing Location:</strong> Local golf course, school lab, and home testing location</p>
+<p><strong>Purpose:</strong> This test is to determine whether the device can operate in the necessary operating environments. This ensures that the device can provide the correct and accurate readings promised in the previous criteria. This ensures feedback for the golfer, no matter their location of use.</p>
+<p><strong>Initial Conditions:</strong> The whole prototype must be completed in order to achieve information about its ability to function in the intended operating environment. All components must be connected and function. Additionally, the outer plastic case must be fully secure and put together.</p>
+<p><strong>Materials:</strong> Functional prototype, something to document data (engineering notebook or a doc), and finally, something to simulate the different operating environments. This can be natural outdoor weather conditions or manufactured weather conditions (heater/freezer/water source).</p>
+<p><strong>Pass or Fail Criteria:</strong> Simply, the device must be able to obtain its functionality after being exposed to the different environments. If any part of the device breaks, fails, or becomes unusable post-testing, it is considered to be a failure.</p>
+<p><strong>Procedures:</strong></p>
+<ol>
+<li>Test the 3 main extremes (cold, heat, and rain)</li>
+<li>To simulate cold, place the device in a freezer for 30 mins. After the 30 mins, take the device out and check for any damage or failed components. Document results.</li>
+<li>To simulate heat, put the device in front of a heater or inside a heat source that can simulate the max heat of 50 °C for 30 mins. After the 30 mins, take the device out and check for any damage or failed components. Document the results.</li>
+<li>To simulate rain, place the device under running water. Find a sink/faucet and leave room temperature water running over the device for 1.5 mins. After this time is up, turn off the water, dry the device, and check for any damage or failed components. Document results</li>
+</ol>
+<p><strong>Safety Precautions:</strong></p>
+<ol>
+<li>Ensure the individual running the test is not directly exposed to any dangerous temperatures or weather conditions.</li>
+<li>Ensure the cold/hot environments are handled with care and that nothing that could cause physical harm comes in contact with the tester.</li>
+<li>Ensure the water is at a safe temperature to use.</li>
+<li>Ensure that there are no exposed electrical components that could cause electrocution during exposure to water.</li>
+</ol>
+<p><strong>Data:</strong> Quantitative data includes those of the independent variables (measuring temperatures). Additionally, it is important to keep track of the time the device is in each environment. For qualitative data, this is any observation. How the device changes while being in the different environments, and the damage or failed components after testing.</p>
+<h3>Criteria #12: Battery Life</h3>
+<div class="facts">
+<div><b>Your Name</b>Zach Nelson</div>
+<div style="grid-column: span 2"><b>Team Members</b>Zach Nelson, Ryan Prusak, Tegan Clancy</div>
+</div>
+<p><strong>Incremental Testing Summary:</strong> The incremental testing will be done throughout the building phase. This is important because testing if the battery is able to properly power the components early will be important in creating the overall design of the product. If the product is not able to power just a few components for a long time, it won’t be able to power the whole system.</p>
+<p><strong>Testing Location:</strong> Local golf course and electronics at school</p>
+<p><strong>Purpose:</strong> This test is completed to make sure that the device will be able to work for a long period of time so that it can be used throughout a whole golfing session without needing replacement mid way through. If it was not able to last for 3 hours it would not meet the expectations of the interested buyers and will not perform as well on the market. Testing will ensure that this is not the case.</p>
+<p><strong>Initial Conditions:</strong> The device is assembled and the battery pack is properly connected so that all internal components are properly receiving power from it. All batteries are installed and new so that the running time can properly be assessed. All wires are hooked up correctly and no hazards are visible.</p>
+<p><strong>Materials:</strong> Device fully assembled and created, iphone stopwatch, sheet to document results.</p>
+<p><strong>Pass or Fail Criteria:</strong> The device passes if every component of the device is still running and working as intended past the 3 hour mark. If any component of the device stops working before 3 hours of casual use then the device fails and requires adjustments.</p>
+<p><strong>Procedures:</strong></p>
+<ol>
+<li>Place all materials on the table including the stopwatch, the device, and the materials used for documentation.</li>
+<li>Insert brand new AA batteries into the battery pack to ensure that they are new to ensure best results.</li>
+<li>Turn on the device while another group member starts a stopwatch.</li>
+<li>Use and leave the device on under operating conditions consistent with casual golf use.</li>
+<li>Stop the timer once the device fails due to a component not working properly.</li>
+<li>Record the time on the documentation sheet.</li>
+<li>Record whether that time means the device passed or failed and what the reason was for the failure.</li>
+</ol>
+<p><strong>Safety Precautions:</strong></p>
+<ol>
+<li>Make sure that the batteries are installed in the correct direction, are new, and work as desired.</li>
+<li>Watch over the device to make sure no component begins overheating to an unsafe standpoint, and remove the batteries if it does get too hot.</li>
+<li>Make sure testing is done in a safe dry area.</li>
+</ol>
+<p><strong>Data:</strong> The quantitative data that is received as a result of this test is the time that the device is able to consecutively run for. The qualitative data received from testing the battery life is any notes written about what caused the battery to shut off and whether or not the device passed or failed the test.</p>
+<h3>Criteria #9 &amp; #13: General Material / Safety Protection</h3>
+<div class="facts">
+<div><b>Your Name</b>Ryan Prusak</div>
+<div style="grid-column: span 2"><b>Team Members</b>Zach Nelson, Ryan Prusak, Tegan Clancy</div>
+</div>
+<p><strong>Incremental Testing Summary:</strong> It is important that all materials and components are put together in a safe manner during the build process. To ensure the safety of materials and components in this prototype, it must be evaluated throughout the build, preventing any future potential harm to developers or users.</p>
+<p><strong>Testing Location:</strong> Build lab/school</p>
+<p><strong>Purpose:</strong> This test determines the safety of the device. It is necessary that the device causes no harm to the developer, the operating environment, and especially the user. This allows for trust in the product and a product that people want to be around. Overall, this ensures a product that is safe and enjoyable for all.</p>
+<p><strong>Initial Conditions:</strong> Components are gathered, and the prototype is currently being developed. Components must have the ability to be connected to a power source.</p>
+<p><strong>Materials:</strong> Functional electronic components, finished 3D printed outer shell, and an engineering notebook or doc to document findings.</p>
+<p><strong>Pass or Fail Criteria:</strong> Simply, the device fails if it causes any harm to an individual or has the potential to cause harm in the future.</p>
+<p><strong>Procedures:</strong></p>
+<ol>
+<li>Check the electronic components. Ensure there is no exposed wiring, anything too close together that could overheat, and that batteries are secured.</li>
+<li>Check the outer shell. Ensure there are no sharp edges. Additionally, make sure there are no cracked/chipped pieces that could develop into sharp edges in the future.</li>
+<li>Check that everything is sturdy and put together in a professional manner. Ensure there is no potential for components to break and cause physical harm to builders or users in the future.</li>
+<li>Check that there is nothing sticking out that could cause harm to the putting surface.</li>
+<li>Finally, ensure the laser is safe for human use. Potentially add a “keep away from eyes” sign.</li>
+<li>Document all findings.</li>
+</ol>
+<p><strong>Safety Precautions:</strong></p>
+<ol>
+<li>Ensure the person checking these components is doing so with care.</li>
+<li>Proceed with caution when conducting these tests.</li>
+<li>After testing, ensure the device is put back together with care and ensure no harm was caused to the testing environment.</li>
+</ol>
+<p><strong>Data:</strong> There is no quantitative data. Qualitative data includes simply human interaction with the prototype. Qualitative observations include the condition of the prototype, potential areas that could cause future harm, and any areas that currently cause harm.</p>
+<h2>IV. Conclusion</h2>
+<p>A strong test plan ensures this device achieves all the design requirements stated above. This allows for a better understanding of where this device stands when it comes to its accuracy, reliability, safety, longevity, and how user-friendly it is. These tests ensure the device functions as intended, reaching a standard ensuring it accurately reads a putting surface. They also ensure a design that attracts potential users, measuring the weight, size, and materials used, taking into account both safety for those involved and the comfort of those using it. Testing is backed up by qualitative observations. These observations will be documented so that the results are understandable by anyone who looks at them. Additionally, testing will be backed up by quantitative data, measuring the success of this device and its potential areas for improvement. This allows any potential issues to be caught early enough so that they can be avoided. Overall, this testing plan ensures the success of an initial prototype and proves the accuracy and usability of this product.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Cunningham, Kevin. “Here’s How Your Handicap Index Stacks up against Golfers in the United States.” <em>Golf</em>, 9 Sept. 2020, <a href="https://golf.com/news/how-your-handicap-index-compares/">golf.com/news/how-your-handicap-index-compares/</a>.&#160;<a class="footnote-backref" href="#fnref:1" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Shops, Worldwide Golf. “Breakmaster Digital Green Reader - Worldwide Golf Shops - Your Golf Store for Golf Clubs, Golf Shoes &amp; More.” <em>Worldwide Golf Shops</em>, <a href="https://www.worldwidegolfshops.com/breakmaster-digital-green-reader-10535144/p">www.worldwidegolfshops.com/breakmaster-digital-green-reader-10535144/p</a>. Accessed 16 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:2" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Marksbury, Jessica. "This is the optimal putt length to practice, according to a golf analytics expert." <em>Golf.com</em>, 19 Dec. 2021, <a href="https://golf.com/instruction/putting/optimal-putt-length-to-practice-lou-stagner/">golf.com/instruction/putting/optimal-putt-length-to-practice-lou-stagner/</a>.&#160;<a class="footnote-backref" href="#fnref:3" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>"Digital Green Reading." <em>Old Duffer Golf</em>, <a href="https://oldduffergolf.com/digital-green-reading/">oldduffergolf.com/digital-green-reading/</a>.&#160;<a class="footnote-backref" href="#fnref:4" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>“NX10 Slope Rangefinder.” <em>Precision Pro Golf</em>, <a href="https://precisionprogolf.com/products/nx10-slope-rangefinder">precisionprogolf.com/products/nx10-slope-rangefinder</a>. Accessed 16 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:5" title="Back to text">&#8617;</a></p>
+</li>
+</ol>
+</div><nav class="pager"><a class="prev" href="element-g.html"><small>&larr; Previous</small>Element G: Prototype Build</a><a class="next" href="element-i.html"><small>Next &rarr;</small>Element I: Results</a></nav>
+</article>
+</div>
+<footer class="site"><div class="inner">
+  <span>&copy; 2026 Tegan Clancy</span>
+  <span>Neuqua Valley High School &middot; PLTW Engineering Design &amp; Development</span>
+</div></footer>
+</body>
+</html>

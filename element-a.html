@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Element A: Presentation and Justification of the Problem | Tegan Clancy</title>
+<meta name="description" content="Digital Green Reader capstone - Element A: Presentation and Justification of the Problem">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+function imgFallback(el) {
+  var tries = ["png", "jpeg", "webp"], n = +(el.dataset.try || 0);
+  if (n < tries.length) { el.dataset.try = n + 1; el.src = el.src.replace(/\.[a-z]+$/, "." + tries[n]); return; }
+  var d = el.dataset, ph = document.createElement("div"); ph.className = "ph";
+  ph.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 17-5-5-9 8"/></svg>'
+    + '<strong>Add image here</strong>'
+    + (d.pdf ? '<span class="ph-row"><em>From PDF</em>' + d.pdf + '</span>' : '')
+    + (d.cap ? '<span class="ph-row"><em>Figure</em>' + d.cap + '</span>' : '')
+    + '<span class="ph-row"><em>Save as</em><code>' + d.img + '.jpg</code></span>';
+  el.replaceWith(ph);
+}
+</script>
+</head>
+<body>
+<header class="topbar"><div class="topbar-inner">
+  <a class="brand" href="index.html">Tegan <span>Clancy</span></a>
+  <nav class="topnav">
+    <a href="index.html">Home</a>
+    <a href="project.html" class="active">Capstone</a>
+  </nav>
+</div></header>
+<div class="layout">
+<aside class="sidebar">
+<a class="back" href="project.html">&larr; Project overview</a>
+<p class="label">Project elements</p>
+<ol>
+<li><a href="element-a.html" class="current" aria-current="page"><span class="letter">A</span><span class="name">The Problem</span></a></li>
+<li><a href="element-b.html"><span class="letter">B</span><span class="name">Prior Solutions</span></a></li>
+<li><a href="element-c.html"><span class="letter">C</span><span class="name">Requirements</span></a></li>
+<li><a href="element-d.html"><span class="letter">D</span><span class="name">Concept Selection</span></a></li>
+<li><a href="element-ef.html"><span class="letter">E/F</span><span class="name">STEM &amp; Market</span></a></li>
+<li><a href="element-g.html"><span class="letter">G</span><span class="name">Prototype Build</span></a></li>
+<li><a href="element-h.html"><span class="letter">H</span><span class="name">Test Plan</span></a></li>
+<li><a href="element-i.html"><span class="letter">I</span><span class="name">Results</span></a></li>
+</ol>
+</aside>
+<article class="page-a">
+<p class="eyebrow">Element A</p>
+<h1>Presentation and Justification of the Problem</h1>
+<h2>I. Introduction</h2>
+<h3>Problem Statement</h3>
+<div class="callout">
+<p>In the United States, 44.13% of amateur golfers have 14.9+ handicaps (not including players who don’t keep score) and experience difficulties when reading the slopes of greens.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> These difficulties arise from novice golfers lacking experience with reading breaks and from courses having different types of cuts for the greens. This problem leaves high-handicap golfers unsatisfied with themselves, as they consistently average four to five three-putts per 18 holes and end up shooting high scores. Introducing a way to help golfers better understand green contours can and will significantly improve their rounds.</p>
+</div>
+<h2>II. Supporting Research</h2>
+<h3>2.1: Context</h3>
+<p>Several different variations of slope, putting speeds, and green cuts make it extremely difficult for golfers to judge both the direction and distance of putts.</p>
+<h3>2.2: Current Putting Drill Aids and Their Concerns</h3>
+<p>Golfers currently use many golf aids. With there being some better than others, many flaws need to be addressed with these aids.</p>
+<h4>2.2.1: Putting Mirror/String aid</h4>
+<p>A putting mirror and string are training aids commonly seen among tour pros. Both tools allow pros to ensure an accurate posture over the ball while also maintaining a smooth and accurate swing path.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+<h4>2.2.2: Flaws with a putting Mirror/String aid</h4>
+<p>While mirrors and strings help maintain a correct setup and help to maintain a consistent swing, they don’t help to develop a good feel on the greens. One of the biggest aspects of putting is ensuring reasonable speed control, which these tools don’t help with.</p>
+<h3>2.3: Aimpoint</h3>
+<p>Aimpoint is a putting method that has grown in popularity in the golf world. It is used as a safety net for amateur golfers to provide consistent results in their rounds. With Aimpoint’s recent surge among golfers, it remains a difficult concept to learn. Some golf instructors need to undergo a certification process to ensure they are adequately informed on this topic.<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></p>
+<h4>2.3.1: The Concept of Aimpoint</h4>
+<p>Aimpoint is broken down into three main steps.<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup> First, as seen in Figure 1, the golfer straddles the putt line and feels the weight difference between their two feet (this is done halfway between the ball and the hole). Second, the golfer uses this feel in their feet to determine the percent slope in the green.</p>
+<figure class="fig" id="img-a-2-1">
+<div class="frame"><img src="a-2-1.jpg" data-img="a-2-1" data-pdf="Element A Outline - NPC" data-cap="Figure 2.1: Golfer Keegan Bradley Determines the Percent Slope" alt="Figure 2.1: Golfer Keegan Bradley Determines the Percent Slope" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.1: Golfer Keegan Bradley Determines the Percent Slope<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup></figcaption>
+</figure>
+<p>As shown in Figure 2.1, the professional golfer straddles his putt line to calculate and estimate the slope of the greens.</p>
+<figure class="fig" id="img-a-2-2">
+<div class="frame"><img src="a-2-2.jpg" data-img="a-2-2" data-pdf="Element A Outline - NPC" data-cap="Figure 2.2: Golfer Viktor Hovland Uses Fingers to Determine Aim Location" alt="Figure 2.2: Golfer Viktor Hovland Uses Fingers to Determine Aim Location" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.2: Golfer Viktor Hovland Uses Fingers to Determine Aim Location<sup id="fnref2:4"><a class="footnote-ref" href="#fn:4">4</a></sup></figcaption>
+</figure>
+<p>The golfer must pick the correct percentage of slope, a number ranging from one percent to five percent. Once this percentage is chosen, the golfer moves on to the final step. As seen in Figure 2.1, the golfer then stands behind their ball, closes one eye, lifts their hand so that their pointer finger is just outside the hole. The number of fingers a golfer must hold up is directly related to the amount of slope they feel. See Figure 2.2. The golfer must now aim at the point that their outermost finger is pointing. With a high level of accuracy, the ball will then roll right into the hole.</p>
+<p><strong>Figure 2.3: Key to Number of Fingers for the Equivalent Percent Slope</strong></p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Slope severity</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1% (1 finger)</td>
+<td>Gentle slope, barely noticeable.</td>
+</tr>
+<tr>
+<td>2% (2 finger)</td>
+<td>Moderate slope, easily felt underfoot.</td>
+</tr>
+<tr>
+<td>3% (3 finger)</td>
+<td>A strong slope requires clear adjustment.</td>
+</tr>
+<tr>
+<td>4% (4 finger)</td>
+<td>Very steep slope, challenging to compensate.</td>
+</tr>
+<tr>
+<td>5% (5 finger)</td>
+<td>Extreme slope, rare but possible in unique situations.</td>
+</tr>
+</tbody>
+</table></div>
+<h4>2.3.2: The Credibility of Aimpoint</h4>
+<p>Aimpoint is considered one of the most reliable methods for reading greens. Many pro golfers have had great success with this method: Collin Morikawa, Viktor Hovland, Keegan Bradley, Adam Scott, and Ludvig Aberg, to name a few.<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup> Research has concluded Aimpoint to be nearly 99% accurate.<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup></p>
+<h4>2.3.3: Linear putters</h4>
+<p>Aimpoint is used for those who are considered linear putters.<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup> A linear putter is someone who likes to aim directly at the apex of the putt line rather than aiming along the arc.<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup> A linear putter aims at an intermediate target, a concept very similar to that of Aimpoint.</p>
+<h4>2.3.4: Stimp</h4>
+<p>With the concept of aimpoint comes the necessary idea of Stimp (speed of the green). When it comes to determining the adequate line of a putt, the speed at which a golfer needs to roll the putt is critical.<sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup> The faster a green is, the more break someone would have to play in their putt, requiring a more in-depth calibration of their Aimpoint process.</p>
+<h2>III. Market Analysis</h2>
+<h3>3.1: Market Competitors and Barriers to Entry</h3>
+<p>There is a range of products that address green reading, with notable examples including SurePuttLite Golf Reader, SurePuttPro Green Reader, and Progidora SlopeMaster ProGreenReader. All of these products are very basic slope reading disks with a price tag of around 25 dollars. The solution being created would be able to compete with these devices, as, instead of just showing the slope, it would compute the exact aimpoint and maintain a higher accuracy due to more complex technology. Current devices are very limited in precision on actual greens, require manual input, and have a long setup time. Entry into the market will be moderately hard due to the established trust of long-standing cheap green readers and the USGA rule restrictions forcing the green reader to be more of a practice-only tool. The main barrier, however, would be the difficulty of gaining precise slope measurements while maintaining competitiveness with the price of the cheaper low-tech options.</p>
+<figure class="fig" id="img-a-3-1">
+<div class="frame"><img src="a-3-1.jpg" data-img="a-3-1" data-pdf="Element A Outline - NPC" data-cap="Figure 3.1: Current Simple Slope Reading Disks on the Market" alt="Figure 3.1: Current Simple Slope Reading Disks on the Market" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 3.1: Current Simple Slope Reading Disks on the Market<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">11</a></sup></figcaption>
+</figure>
+<p>An example of a modern day product that incorporates portability through the use of a level to measure the slope.</p>
+<h3>3.2: Market Size and Trends</h3>
+<p>The Global Golf training aids market was evaluated at $1.5 billion as of 2024 and is expected to reach $4.6 billion by 2033.<sup id="fnref:12"><a class="footnote-ref" href="#fn:12">12</a></sup> The market has a forecasted Compound Annual Growth Rate of 5.7% over the period 2024-2033.<sup id="fnref2:12"><a class="footnote-ref" href="#fn:12">12</a></sup> Lately, there has been a growing emphasis on integrating technology into training aids, primarily through sensors and data analytics. A strong emphasis has been placed on the portability of these training aids, enabling them to be used anywhere, as well as on their sustainability.<sup id="fnref3:12"><a class="footnote-ref" href="#fn:12">12</a></sup></p>
+<figure class="fig" id="img-a-3-2">
+<div class="frame"><img src="a-3-2.jpg" data-img="a-3-2" data-pdf="Element A Outline - NPC" data-cap="Figure 3.2: Global Golf Training Aids Projected Market Growth 2023-2033" alt="Figure 3.2: Global Golf Training Aids Projected Market Growth 2023-2033" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 3.2: Global Golf Training Aids Projected Market Growth 2023-2033<sup id="fnref4:12"><a class="footnote-ref" href="#fn:12">12</a></sup></figcaption>
+</figure>
+<h3>3.3: Users and Buyers</h3>
+<div class="proscons">
+<div class="col">
+<h4>Users</h4>
+<ul>
+<li>Amateur Golfers</li>
+<li>Golf Coaches/Instructors</li>
+<li>Indoor golf studio players</li>
+</ul>
+</div>
+<div class="col">
+<h4>Buyers</h4>
+<ul>
+<li>Individual golfers</li>
+<li>Parents of Junior Golfers</li>
+<li>Golf coaches</li>
+<li>Golf courses and practice facilities</li>
+</ul>
+</div>
+</div>
+<p>Users and buyers mostly overlap, but in some cases, the buyer is not the user. These cases include parents, coaches, and practice facilities.</p>
+<h2>IV. Survey Results</h2>
+<p>In total (at time of writing this report), there are 90 responses. The rest of the survey section will be based on the responses (male &amp; female golfers) that were collected.</p>
+<figure class="fig" id="img-a-4-1">
+<div class="frame"><img src="a-4-1.jpg" data-img="a-4-1" data-pdf="Element A Outline - NPC" data-cap="Figure 4.1: Survey Data for Golf Frequency" alt="Figure 4.1: Survey Data for Golf Frequency" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 4.1: Survey Data for Golf Frequency</figcaption>
+</figure>
+<p>Figure 4.1 shows that the amount of time respondents spend per month is highly varied: 26.7 percent play 1-3 times, while 31.1 percent play 10+ times. It also makes it clear that golfers across all skill levels are impacted by the problem and interested in a solution.</p>
+<figure class="fig" id="img-a-4-2">
+<div class="frame"><img src="a-4-2.jpg" data-img="a-4-2" data-pdf="Element A Outline - NPC" data-cap="Figure 4.2: Survey Data of Respondents&#x27; Confidence" alt="Figure 4.2: Survey Data of Respondents&#x27; Confidence" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 4.2: Survey Data of Respondents' Confidence</figcaption>
+</figure>
+<p>Figure 4.2 was used to assess individual golfers' expertise and to provide insight into the practicality of the solution. The survey results provided that only 14.7 percent of respondents are fully confident in their ability to read greens. This indicates that the problem is widespread within the golfing community and that the solution would be helpful to a large majority of golfers.</p>
+<figure class="fig" id="img-a-4-3">
+<div class="frame"><img src="a-4-3.jpg" data-img="a-4-3" data-pdf="Element A Outline - NPC" data-cap="Figure 4.3: Survey Data of 3-putt Frequency in 9-Hole Round" alt="Figure 4.3: Survey Data of 3-putt Frequency in 9-Hole Round" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 4.3: Survey Data of 3-putt Frequency in 9-Hole Round</figcaption>
+</figure>
+<p>As seen in Figure 4.3, 88.9% of golfers who completed the survey 3-putted at least once during a 9-hole round. This indicates that nearly all respondents would benefit from a product that helps read greens, thereby decreasing their average number of 3-putts.</p>
+<figure class="fig" id="img-a-4-4">
+<div class="frame"><img src="a-4-4.jpg" data-img="a-4-4" data-pdf="Element A Outline - NPC" data-cap="Figure 4.4: Survey Data Respondents&#x27; Use of Training Aids" alt="Figure 4.4: Survey Data Respondents&#x27; Use of Training Aids" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 4.4: Survey Data Respondents' Use of Training Aids</figcaption>
+</figure>
+<p>The results of Figure 4.4 show that some training aids are used more frequently than others, providing insight into the effectiveness and popularity of some existing aids over others. The data from Figure 4.4 makes it clear that putting mirrors and alignment rods is used most frequently. Analyzing why this is the case will guide the path to creating the best viable solution to reading greens.</p>
+<figure class="fig" id="img-a-4-5">
+<div class="frame"><img src="a-4-5.jpg" data-img="a-4-5" data-pdf="Element A Outline - NPC" data-cap="Figure 4.5: Survey Data Familiarity with AimPoint" alt="Figure 4.5: Survey Data Familiarity with AimPoint" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 4.5: Survey Data Familiarity with AimPoint</figcaption>
+</figure>
+<p>Figure 4.5 clarifies that the majority of respondents, specifically 78.9%, have heard of or are very familiar with AimPoint, suggesting that most golfers are already familiar with green-reading tools. The figure above makes it evident that golfers view green reading as essential and are actively seeking solutions to the problem, reinforcing the notion that creating a device to help with green reading would be accepted and valuable to most golfers.</p>
+<figure class="fig" id="img-a-4-6">
+<div class="frame"><img src="a-4-6.jpg" data-img="a-4-6" data-pdf="Element A Outline - NPC" data-cap="Figure 4.6: Survey Data of Ranking Putting Assistance Devices" alt="Figure 4.6: Survey Data of Ranking Putting Assistance Devices" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 4.6: Survey Data of Ranking Putting Assistance Devices</figcaption>
+</figure>
+<p>As shown in Figure 4.6, a high majority of respondents found accuracy to be the most crucial aspect of a putting-assistance device and portability to be the least essential factor. This data makes it clear that when developing a solution, the primary focus should be on creating an accurate, cost-effective solution.</p>
+<figure class="fig" id="img-a-4-7">
+<div class="frame"><img src="a-4-7.jpg" data-img="a-4-7" data-pdf="Element A Outline - NPC" data-cap="Figure 4.7: Survey Data for Respondents&#x27; Potential Costs" alt="Figure 4.7: Survey Data for Respondents&#x27; Potential Costs" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 4.7: Survey Data for Respondents' Potential Costs</figcaption>
+</figure>
+<p>As shown in Figure 4.7, 41.1% of respondents are willing to spend $0-$50, while 30% are willing to pay $51-$100. This indicates that most respondents would prefer the solution to be on the cheaper side ($0 - $100), suggesting it would be good practice to keep the solution’s price relatively low so that a large number of golfers will be interested in the product.</p>
+<h2>V. Stakeholders</h2>
+<h3>5.1: Golfers</h3>
+<ul>
+<li>Amateur golfers who struggle with putting</li>
+<li>High school golfers</li>
+<li>Recreational players</li>
+</ul>
+<p>Amateur recreational golfers are the primary target market, as these players would benefit most from a high-tech green reader. The device will improve their ability to putt at close distances and create a better golf experience.</p>
+<h3>5.2: Golf Courses and Practice Facilities</h3>
+<ul>
+<li>Driving ranges that have putting greens</li>
+<li>Country clubs</li>
+<li>Putting studios</li>
+</ul>
+<p>Practice facilities are primary stakeholders of the product. If the product is of interest to the club or range, then the facility might purchase or promote it, helping it gain traction amongst golfers.</p>
+<h3>5.3: Golf Coaches and Instructors</h3>
+<ul>
+<li>High School golf coaches</li>
+<li>Putting Coaches</li>
+</ul>
+<p>Coaches are required to improve students' skills. Tools that will help students learn to read greens better would be helpful and appealing to all golf coaches.</p>
+<h3>5.4: Golf Retailers</h3>
+<ul>
+<li>Dick Sporting Goods</li>
+<li>PGA Superstore</li>
+<li>Online golf stores</li>
+</ul>
+<p>Essential stakeholders, such as stores like these, decide whether to carry and promote the item. The support of major golf retailers is essential in creating a large market for the solution being developed.</p>
+<h3>5.5: Professional Golf Organizations</h3>
+<ul>
+<li>PGA</li>
+<li>USGA</li>
+<li>NCAA</li>
+</ul>
+<p>Support from major organizations such as these is essential to the product's success. It is important to abide by the rules and regulations set by these companies to ensure the legality of the product use.</p>
+<h2>VI. Conclusion</h2>
+<p>Through the analysis of various statistics such as golfers' performance, existing green reading products, and overall conditions of the golfing industry, it is clear that there currently is not a significant method that can determine the two variables in ball rollout: slope direction and magnitude. This widespread issue amongst golfers in the United States leads to players experiencing relatively high three-putt rates and inconsistent scores. These high percentages were evident across surveys conducted among amateur golfers across America. Specifically, out of 90 different golfers, over 58.8% of respondents three-putt more than one time during a nine-hole round of golf. In addition, the survey results indicated that while some golfers had moderate confidence, very few responses truly had full confidence in their putting, which was clearly shown by the left-skewed graph, not to mention the existing consumer products, which, in recent years, have only been able to offer partial help towards reading green slopes and the magnitude of putts with Stimp values. Overall, a solution that is not only reliable but precise is necessary to address the limitations of modern-day green reading methods. As a result, not only will novice players’ scores improve throughout rounds of golf, but they will also gain the confidence they need to enhance their putting abilities.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Cunningham, Kevin. “Here’s How Your Handicap Index Stacks up against Golfers in the United States.” <em>Golf</em>, 9 Sept. 2020, <a href="https://golf.com/news/how-your-handicap-index-compares/">golf.com/news/how-your-handicap-index-compares/</a>.&#160;<a class="footnote-backref" href="#fnref:1" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Berhow, Joshua. “Why Do So Many Players Use These Two Things to Practice Their Putting?” <em>Golf</em>, 5 May 2022, <a href="https://golf.com/gear/mirrors-string-pros-practice-putting/">golf.com/gear/mirrors-string-pros-practice-putting/</a>.&#160;<a class="footnote-backref" href="#fnref:2" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>“AimPoint Certified Instructor Program.” <em>Aimpoint Instructor Certification</em>, <a href="https://aimpointgolf.com/certification">aimpointgolf.com/certification</a>. Accessed 23 Nov. 2025.&#160;<a class="footnote-backref" href="#fnref:3" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>Frank, Jean. “The Basics of AimPoint Green Reading, Explained in 30 Seconds.” <em>Golf</em>, 2 Oct. 2020, <a href="https://golf.com/instruction/putting/aimpoint-green-reading-basics-30-seconds/">golf.com/instruction/putting/aimpoint-green-reading-basics-30-seconds/</a>.&#160;<a class="footnote-backref" href="#fnref:4" title="Back to text">&#8617;</a><a class="footnote-backref" href="#fnref2:4" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>Olizarowicz, Brittany. “Aimpoint Explained | MyGolfSpy.” <em>AimPoint Explained</em>, MyGolfSpy, 21 Nov. 2024, <a href="https://mygolfspy.com/news-opinion/aimpoint-explained/">mygolfspy.com/news-opinion/aimpoint-explained/</a>.&#160;<a class="footnote-backref" href="#fnref:5" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>Cradock, Matt. “Which Professional Golfers Use Aimpoint?” <em>Golf Monthly</em>, 24 Feb. 2025, <a href="https://www.golfmonthly.com/tour/which-professional-golfers-use-aimpoint">www.golfmonthly.com/tour/which-professional-golfers-use-aimpoint</a>.&#160;<a class="footnote-backref" href="#fnref:6" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p>Olizarowicz, Brittany. “Aimpoint Explained | MyGolfSpy.” <em>AimPoint Explained</em>, MyGolfSpy, 21 Nov. 2024, <a href="https://mygolfspy.com/news-opinion/aimpoint-explained/">mygolfspy.com/news-opinion/aimpoint-explained/</a>.&#160;<a class="footnote-backref" href="#fnref:7" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p>Gollwitzer, Zach. “Aimpoint Express for Beginners.” <em>The DIY Golfer</em>, 21 Sept. 2025, <a href="https://www.thediygolfer.com/blog/aimpoint-express-for-beginners">www.thediygolfer.com/blog/aimpoint-express-for-beginners</a>.&#160;<a class="footnote-backref" href="#fnref:8" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p>Gollwitzer, Zach. “Putting Tips: Are You Linear or Non-Linear?” <em>The DIY Golfer</em>, 21 Sept. 2025, <a href="https://www.thediygolfer.com/blog/putting-tips-are-you-linear-or-non-linear">www.thediygolfer.com/blog/putting-tips-are-you-linear-or-non-linear</a>.&#160;<a class="footnote-backref" href="#fnref:9" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p>Austin, John. “A Comprehensive Guide to Aimpoint Golf Putting.” <em>Skillest Blog</em>, 31 May 2023, <a href="https://skillest.com/blog/a-comprehensive-guide-to-aimpoint-golf-putting/">skillest.com/blog/a-comprehensive-guide-to-aimpoint-golf-putting/</a>.&#160;<a class="footnote-backref" href="#fnref:10" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:11">
+<p>Usher, David. “How a Simple $14 Gadget Has Transformed My Short Range Putting.” <em>Golf Monthly</em>, 21 Dec. 2023, <a href="https://www.golfmonthly.com/gear/how-a-simple-dollar14-gadget-has-transformed-my-short-range-putting">www.golfmonthly.com/gear/how-a-simple-dollar14-gadget-has-transformed-my-short-range-putting</a>.&#160;<a class="footnote-backref" href="#fnref:11" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:12">
+<p>Kharrati, Katelin. “Custom Market Insights.” <em>Custom Market Insights</em>, 26 Mar. 2024, <a href="https://www.custommarketinsights.com/press-releases/golf-training-aids-market-size/">www.custommarketinsights.com/press-releases/golf-training-aids-market-size/</a>.&#160;<a class="footnote-backref" href="#fnref:12" title="Back to text">&#8617;</a><a class="footnote-backref" href="#fnref2:12" title="Back to text">&#8617;</a><a class="footnote-backref" href="#fnref3:12" title="Back to text">&#8617;</a><a class="footnote-backref" href="#fnref4:12" title="Back to text">&#8617;</a></p>
+</li>
+</ol>
+</div><nav class="pager"><a class="prev" href="project.html"><small>&larr; Back</small>Project overview</a><a class="next" href="element-b.html"><small>Next &rarr;</small>Element B: Prior Solutions</a></nav>
+</article>
+</div>
+<footer class="site"><div class="inner">
+  <span>&copy; 2026 Tegan Clancy</span>
+  <span>Neuqua Valley High School &middot; PLTW Engineering Design &amp; Development</span>
+</div></footer>
+</body>
+</html>

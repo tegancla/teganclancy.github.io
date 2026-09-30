@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Element D: Design Concepts Generation, Analysis, and Selection | Tegan Clancy</title>
+<meta name="description" content="Digital Green Reader capstone - Element D: Design Concepts Generation, Analysis, and Selection">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+function imgFallback(el) {
+  var tries = ["png", "jpeg", "webp"], n = +(el.dataset.try || 0);
+  if (n < tries.length) { el.dataset.try = n + 1; el.src = el.src.replace(/\.[a-z]+$/, "." + tries[n]); return; }
+  var d = el.dataset, ph = document.createElement("div"); ph.className = "ph";
+  ph.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 17-5-5-9 8"/></svg>'
+    + '<strong>Add image here</strong>'
+    + (d.pdf ? '<span class="ph-row"><em>From PDF</em>' + d.pdf + '</span>' : '')
+    + (d.cap ? '<span class="ph-row"><em>Figure</em>' + d.cap + '</span>' : '')
+    + '<span class="ph-row"><em>Save as</em><code>' + d.img + '.jpg</code></span>';
+  el.replaceWith(ph);
+}
+</script>
+</head>
+<body>
+<header class="topbar"><div class="topbar-inner">
+  <a class="brand" href="index.html">Tegan <span>Clancy</span></a>
+  <nav class="topnav">
+    <a href="index.html">Home</a>
+    <a href="project.html" class="active">Capstone</a>
+  </nav>
+</div></header>
+<div class="layout">
+<aside class="sidebar">
+<a class="back" href="project.html">&larr; Project overview</a>
+<p class="label">Project elements</p>
+<ol>
+<li><a href="element-a.html"><span class="letter">A</span><span class="name">The Problem</span></a></li>
+<li><a href="element-b.html"><span class="letter">B</span><span class="name">Prior Solutions</span></a></li>
+<li><a href="element-c.html"><span class="letter">C</span><span class="name">Requirements</span></a></li>
+<li><a href="element-d.html" class="current" aria-current="page"><span class="letter">D</span><span class="name">Concept Selection</span></a></li>
+<li><a href="element-ef.html"><span class="letter">E/F</span><span class="name">STEM &amp; Market</span></a></li>
+<li><a href="element-g.html"><span class="letter">G</span><span class="name">Prototype Build</span></a></li>
+<li><a href="element-h.html"><span class="letter">H</span><span class="name">Test Plan</span></a></li>
+<li><a href="element-i.html"><span class="letter">I</span><span class="name">Results</span></a></li>
+</ol>
+</aside>
+<article class="page-d">
+<p class="eyebrow">Element D</p>
+<h1>Design Concepts Generation, Analysis, and Selection</h1>
+<h2>I. Introduction</h2>
+<h3>Problem Statement</h3>
+<div class="callout">
+<p>In the United States, 44.13% of amateur golfers have 14.9+ handicaps and experience difficulty when reading the slopes of greens.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> This difficulty arises from novice golfers lacking experience with reading breaks and from courses having different types of cuts for the greens. This problem leaves high-handicap golfers unsatisfied with themselves, as they consistently average four to five three-putts per 18 holes and end up shooting high scores. Addressing this issue requires that golf stakeholders, performance criteria, and functional requirements be accounted for. These different pieces of criteria ensure that the solution is extremely accurate, consistently reliable, and applicable to a large portion of the golfing industry. Additionally, several different designs were sketched and analyzed with the goal of finding a singular concept that will outcompete the current solutions on the market.</p>
+</div>
+<h2>II. Brainstorming</h2>
+<p>An extremely thorough selection based on the designs in the brainstorming stage was taken into account and chosen through finalization. By finding a design that would represent the entirety of the consumers in the targeted golf market and through conducting research/survey responses, an overall ideal design was decided.</p>
+<h3>Requirements</h3>
+<p>There were several different specifications that were considered when drafting designs for the green interpreting device. Below are the top five design requirements, whilst the rest of the specifications can be found in Appendix A - Design Specifications.</p>
+<ul>
+<li><strong>Accuracy</strong> - Angle validity shall have ± 2 degrees maximum error (Shown in Figure 2.1)</li>
+<li><strong>Size</strong> - Green golf reading device must not exceed 700 cubic centimeters in volume</li>
+<li><strong>Price</strong> - Build price shall not exceed the budget of $100</li>
+<li><strong>Weight</strong> - Device shall have a maximum weight of 400 grams</li>
+<li><strong>Range</strong> - Design shall work for putts of twenty feet or less</li>
+</ul>
+<figure class="fig" id="img-c-3-2">
+<div class="frame"><img src="c-3-2.jpg" data-img="c-3-2" data-pdf="Element C Outline - NPC" data-cap="Figure 3.2: Results of Surveyors&#x27; Choosing Prices" alt="Figure 2.1: Results of Surveyors&#x27; Choosing Prices" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.1: Results of Surveyors' Choosing Prices</figcaption>
+</figure>
+<h3>Sketches</h3>
+<p>Overall, many different sketches were drawn and designed with the intended goal of understanding the key features and operations of the device. The ideal design is indicated in the sketches below, with the other brainstormed sketches being located in Appendix B - Brainstorming Sketches.</p>
+<div class="fig-grid">
+<figure class="fig" id="img-d-2-2">
+<div class="frame"><img src="d-2-2.jpg" data-img="d-2-2" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 2.2: Brainstormed Sketch of Ideal Green Reader with Laser Leveler" alt="Figure 2.2: Brainstormed Sketch of Ideal Green Reader with Laser Leveler" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.2: Brainstormed Sketch of Ideal Green Reader with Laser Leveler</figcaption>
+</figure>
+<figure class="fig" id="img-d-b03">
+<div class="frame"><img src="d-b03.jpg" data-img="d-b03" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 2.3: Rectangular Design with Elevated Border" alt="Figure 2.3: Rectangular Design with Elevated Border" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.3: Rectangular Design with Elevated Border</figcaption>
+</figure>
+<figure class="fig" id="img-d-b08">
+<div class="frame"><img src="d-b08.jpg" data-img="d-b08" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 2.4: Attachable Clip-on Mount for Device" alt="Figure 2.4: Attachable Clip-on Mount for Device" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.4: Attachable Clip-on Mount for Device</figcaption>
+</figure>
+<figure class="fig" id="img-d-b29">
+<div class="frame"><img src="d-b29.jpg" data-img="d-b29" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B29: Both Accelerometer/Secondary Device Calculates Distance (Radio Waves)" alt="Figure Appendix B29: Both Accelerometer/Secondary Device Calculates Distance (Radio Waves)" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B29: Both Accelerometer/Secondary Device Calculates Distance (Radio Waves)</figcaption>
+</figure>
+<figure class="fig" id="img-d-b18">
+<div class="frame"><img src="d-b18.jpg" data-img="d-b18" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B18: Sleek Grey Design for Device" alt="Figure Appendix B18: Sleek Grey Design for Device" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B18: Sleek Grey Design for Device</figcaption>
+</figure>
+</div>
+<h3>Decision Matrix</h3>
+<p>The decision matrix below shows the analysis of every single specified solution and design. There were several different pieces of criteria that were taken into account that led to the final decision as to what the best solution/design was. Based on the rankings for each specification, the design that ended up having the highest score was Design (D1) (5437626), which ranked the highest in the category known as “product life” and consistently scored 4’s in “ease to build, ease of use, accuracy, range, weather condition, green protection”. All specified are key notes that will provide the future product to stand out across the rest of the golf market.</p>
+<figure class="fig" id="img-d-e1">
+<div class="frame"><img src="d-e1.jpg" data-img="d-e1" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 2: Decision Matrix Chart of Potential Designs Ranked" alt="Figure 2: Decision Matrix Chart of Potential Designs Ranked" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2: Decision Matrix Chart of Potential Designs Ranked</figcaption>
+</figure>
+<h3>Concepts</h3>
+<p>The potential designs shown below consist of design #1 (D1), design #2 (D2), design #3 (D3), and design #4 (D4). Based on the highest ranking from the decision matrix, these four designs were chosen, analyzed, and introduced to the targeted market. Specifically, by being incorporated into the survey, where the potential individual users choose between the four designs to comprehend which would be ideal for the golf market. Below are short summaries/analyses of the different concepts, along with the sketches that belong to each diagram/design.</p>
+<h4>Design #1 (D1) (5437625) - Ryan</h4>
+<figure class="fig" id="img-d-c5">
+<div class="frame"><img src="d-c5.jpg" data-img="d-c5" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 2: Design (D1) (5437625) with Puck Distance Measurer" alt="Figure 2: Design (D1) (5437625) with Puck Distance Measurer" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2: Design (D1) (5437625) with Puck Distance Measurer</figcaption>
+</figure>
+<p>The (D1) (5437625) design consists of a simplistic rectangular frame that holds two things: the brain device and the laser leveler. Another thing to mention is that the design incorporates a puck-like device that uses an Ultra-Wideband to measure the distance between the device and the puck. This puck is then placed next to the hole on the putting green to provide the distance for the device to then use calculations to find the correct aim. Inside the (D1) (5437625) device, an accelerometer is provided, which is merely a digital leveler that then outputs the exact percentage of slope of the green. Overall, everything in the design is powered by AA batteries and automates without any necessary input for the individual golfer using the device. Further detailed image/information for design can be found in Appendix C - Product Concepts.</p>
+<h4>Design #2 (D2) (5437626) - Ryan</h4>
+<figure class="fig" id="img-d-c6">
+<div class="frame"><img src="d-c6.jpg" data-img="d-c6" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 2: (D2) (5427626) Design with Laser Leveler and Input Keyboard" alt="Figure 2: (D2) (5427626) Design with Laser Leveler and Input Keyboard" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2: (D2) (5427626) Design with Laser Leveler and Input Keyboard</figcaption>
+</figure>
+<p>The (D2) (5427626) design is very similar to design #1, but with the main differences being that the design does not require the puck distance measurer and rather uses the input from the golfer. The design uses a keypad at the very top of the rectangular frame and gives the user the ability to input the estimated distance in feet between the device and the hole. This then provides a laser leveler (via servo motor), indicating the direction of aim by incorporating a similar accelerator device inside the actual design. Again, all powered by single-use AA batteries. With the addition of accomplishing accuracy and ease of use through a very handheld portable device that can and will function in different weather conditions. Further explained detail for (D2) (5437626) is shown in the appendices, specifically Appendix C.</p>
+<h4>Design #3 (D3) (TRID2P2) - Zach</h4>
+<figure class="fig" id="img-d-c4">
+<div class="frame"><img src="d-c4.jpg" data-img="d-c4" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 2: (D3) (TRID2P2) Design with USB Slot and Carrying Loop" alt="Figure 2: (D3) (TRID2P2) Design with USB Slot and Carrying Loop" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2: (D3) (TRID2P2) Design with USB Slot and Carrying Loop</figcaption>
+</figure>
+<p>The (D3) (TRID2P2) design is a slim, triangular green reading device designed to provide a visual aid to golfers during putting and to help predict the slope of the green. The device has a durable black plastic shell, designed to look both professional and sleek. The center of the product features a display screen that includes percent slope, distance from the hole, and an arrow indicating which direction to aim the putt. The power button is to the right of the display screen, with the USB being on the outer side, allowing it to easily be recharged. This device also includes small legs at the bottom to prevent damage and ensure the calculated percent slope is as accurate as possible. Overall, a very solid brainstormed design that takes into account several different variables on the putting green and provides an output useful for the individual golfer. View Appendix C below for the rest of the justification and operation of the concept.</p>
+<h4>Design #4 (D4) (DF2) - Tegan</h4>
+<figure class="fig" id="img-d-c2">
+<div class="frame"><img src="d-c2.jpg" data-img="d-c2" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 2: (D4) (DF2) Cubic Design with Slider and Digital Displays" alt="Figure 2: (D4) (DF2) Cubic Design with Slider and Digital Displays" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2: (D4) (DF2) Cubic Design with Slider and Digital Displays</figcaption>
+</figure>
+<p>The final design (D4) (DF2) is a square-sized dedicated training box which, similarly to the previous designs, takes the manually inputted distances by the golfer and the bubble level sensor to provide an output of the intended aim for putting. Has many different features, with one of the key ones being that the corners are gel-like, meaning that any sort of placement onto the putting green would prevent all forms of damage/harm to the grass. Another one of the features not mentioned is the unit slider. This slider is found below the digital input display and can be used to change the units that the device takes in based on the distance between the square green assistance device and the putting green hole. The options consist of feet, meters, and yards, thus making it very feasible for the individual golfer to use the slider. The bubble level is another part and one of the key components of the input aspect of the device. Specifically, the leveler automatically interprets the slope of the green by using gravity to position the air bubble at the highest point in the circle diagram. Lastly, at the very top of the diagram, there are direction indicators that are outputs based on both the distance number input into the display screen and the readings from the illuminated circular leveler. These direction indicators are the main visual aspect that golfers would be looking at when the device is being used on a putting green. Ultimately, any other additional information about the concept can be found in Appendix C.</p>
+<h3>Survey Results</h3>
+<p>For the aspects of the final design, a survey was conducted among the golf market with the intention of finding several different preferences of the consumers. These preferences were then discovered through the use of non-biased questions for the golfers to answer. The key preferences that the survey offered to the market were: to learn the ideal unit of measurement for the device, to find the preference between manual and automatic input, to understand the consumers preferences between the four different concepts/designs, to learn which is the preferred shape for the design, to find the ideal power method, and lastly to see again how much the consumer would be willing to spend on this proposed solution. The majority of these answers from the survey respondents can be found below here, with the addition of any other survey questions (not mentioned here) being able to be found at the very bottom in Appendix D - Survey Data.</p>
+<figure class="fig" id="img-d-d5">
+<div class="frame"><img src="d-d5.jpg" data-img="d-d5" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 2: Ideal Measurement based on Golfers&#x27; Preference" alt="Figure 2: Ideal Measurement based on Golfers&#x27; Preference" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2: Ideal Measurement based on Golfers' Preference</figcaption>
+</figure>
+<p><strong>Analysis:</strong> The survey question regarding the ideal unit of measurement for the distance between the hole and the putting device impacts the final design selected. The 71 individuals who met the respondents' golfing requirement had provided the data that feet were much more ideal / favored compared to the other units, such as yards, meters, and paces.</p>
+<figure class="fig" id="img-d-d6">
+<div class="frame"><img src="d-d6.jpg" data-img="d-d6" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 2: Pie Chart of Manual or Automatic Input" alt="Figure 2: Pie Chart of Manual or Automatic Input" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2: Pie Chart of Manual or Automatic Input</figcaption>
+</figure>
+<p><strong>Analysis:</strong> The survey question here indicates that the targeted golfing market prefers to manually input the given distance between the hole and the putting device rather than having the device automatically measure it. Meaning that the selected final concept requires some form of input option for the individual using it.</p>
+<figure class="fig" id="img-d-d7">
+<div class="frame"><img src="d-d7.jpg" data-img="d-d7" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 2.1: Respondents&#x27; Chart of Ranked Design Based on Suitability" alt="Figure 2.1: Respondents&#x27; Chart of Ranked Design Based on Suitability" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.1: Respondents' Chart of Ranked Design Based on Suitability</figcaption>
+</figure>
+<p><strong>Analysis:</strong> This chart is based on a ranking between the designs D1, D2, D3, and D4 regarding one specific aspect of the final selected design, known as suitability. By quite a bit of data, the 71 respondents indicated that the best sketch/concept/diagram was (D2) (5427626) based on incorporating the aspect of the diagram into training and practice. In addition, across the respondents data, it can be interpreted that the next highest ranked design based on usage opinions was (D1) (5437625). Additionally, all other rankings between the four designs based on other factors/criteria can be located in Appendix C.</p>
+<figure class="fig" id="img-d-d10">
+<div class="frame"><img src="d-d10.jpg" data-img="d-d10" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 2.1: Pie Chart of Respondents&#x27; Preferred Shape of the Frame" alt="Figure 2.1: Pie Chart of Respondents&#x27; Preferred Shape of the Frame" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.1: Pie Chart of Respondents' Preferred Shape of the Frame</figcaption>
+</figure>
+<p><strong>Analysis:</strong> The pie chart of this survey question highlighted the targeted golf market’s preference as to what the shape of the golf green reading device should be. A substantial portion of the responses preferred a rectangular design with rounded edges compared to the triangular and rectangular design shapes.</p>
+<figure class="fig" id="img-d-d11">
+<div class="frame"><img src="d-d11.jpg" data-img="d-d11" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 2.1: Chart of Respondents Preferred Power Method" alt="Figure 2.1: Chart of Respondents Preferred Power Method" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.1: Chart of Respondents Preferred Power Method</figcaption>
+</figure>
+<p><strong>Analysis:</strong> The last survey question uses a bar chart to offer the data from the respondents as to what the best power method for the device would be. The data clearly shows that the ranking was for best being double A batteries, then good being a USB cable charger, and worst being a detachable battery that could have been recharged if taken off from the device.</p>
+<h2>III. Final Design</h2>
+<p>The final designs come from both the collaboration of the decision matrix and survey results. This final design is currently being developed to be put in the hands of golfers and individuals alike very soon. Below are the main schematics for this design. See Appendix F for a full list of design images.</p>
+<h3>Components Diagrams</h3>
+<p>Figure 3.1 represents a schematic diagram of the electrical components for the green reading device, with the use of the software known as Multisim. The wiring diagram indicates the flow of power, all inputs/outputs, and the electrical locations for each component, such as the OLED display, servo, Arduino, and MPU 6050 gyroscope/accelerometer. Each small component has a major significance in the final selected device due to the impact that the parts may have on the accuracy of the device. These are all things taken into consideration when designing a device that meets the targeted market's expectations.</p>
+<figure class="fig" id="img-d-f1">
+<div class="frame"><img src="d-f1.jpg" data-img="d-f1" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 3.1: Wiring Diagram For All Electronic Components" alt="Figure 3.1: Wiring Diagram For All Electronic Components" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 3.1: Wiring Diagram For All Electronic Components</figcaption>
+</figure>
+<p>Figures 3.2 and 3.3 are elaborate Fusion360 drawings of the final design. Figure 3.2 features the design fully put together, consisting of a personalized shell, oled display, and inner components that tell the laser what to do. This Fusion design will be used in the future to help with the construction of the physical device and the purchasing of components. Figure 3.3 is an exploded Isometric drawing of the design to clarify where all the components are and how the components interact with one another.</p>
+<div class="fig-grid">
+<figure class="fig" id="img-d-f2">
+<div class="frame"><img src="d-f2.jpg" data-img="d-f2" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 3.2: Fusion Diagram for Green Reading Device" alt="Figure 3.2: Fusion Diagram for Green Reading Device" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 3.2: Fusion Diagram for Green Reading Device</figcaption>
+</figure>
+<figure class="fig" id="img-d-f3">
+<div class="frame"><img src="d-f3.jpg" data-img="d-f3" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 3.3: Exploded View of Different Parts in Device" alt="Figure 3.3: Exploded View of Different Parts in Device" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 3.3: Exploded View of Different Parts in Device</figcaption>
+</figure>
+</div>
+<p>Figure 3.4 consists of a list of all parts used in the construction of the device as well as the dimensions of the outer shell of the device (drawings and dimensions of every single component are listed within Appendix F). This list will be useful during the purchasing process.</p>
+<figure class="fig" id="img-d-f4">
+<div class="frame"><img src="d-f4.jpg" data-img="d-f4" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 3.4: Material / Parts List with Sketch" alt="Figure 3.4: Material / Parts List with Sketch" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 3.4: Material / Parts List with Sketch</figcaption>
+</figure>
+<h3>Description</h3>
+<p>This product is to help golfers better understand and interpret the slopes of a putting green surface. This device autonomously measures the percent slope in the green while also taking into account distance, accurately measuring the ideal putt line a golfer must aim along in order to putt the ball into the hole. This simplistic design includes a rectangular frame to hold the brain of the device and its laser level, which showcases the putt line. Additionally, the top of the device contains a keypad that allows the user to manually input the distance(ft) to help measure this ideal putt line.</p>
+<h3>Operation</h3>
+<p>First, the user must manually input the putt distance, which is measured in feet. This is the distance from the ball to the hole, which is displayed on a digital OLED screen. The inside of the device contains an MPU6050 Gyroscope/Accelerometer, which automatically finds the slope in the green, similar to a digital level. After the distance and percent slope are found, the device can accurately calculate the ideal putt line at that given spot via a coded Arduino. A laser level can then turn via a servo motor to the correct angle that shows the putt line that the golfer should aim along. All of this is powered by single-use AA batteries.</p>
+<h3>Justification</h3>
+<p>This device allows amateur golfers to better understand how the slopes of greens affect the roll of a putt, and allows them to learn how to better take slope/distance into account when they are playing their rounds. This device accomplishes both accuracy and ease of use. This design was chosen for both the previous reasons and the ability to easily develop this product, given the current situation. This device saves time as it requires minimal setup compared to other current putting training aids. This design also reduces hassle by having a simplistic design and a straightforward procedure to use. This device also achieves the design requirements by being accurate, being less than 700cm3, being less than $150 to produce, being small and lightweight, being functional for putts of 20ft or less, including digital components, being functional outdoors, having an extended product life of 3+ years, having rounded edges for safety, being a neutral color for aesthetics, requiring no maintenance, having batteries that allow for a a battery life of up to 3+ hours, not harming the operating environment, and has potential for a carrying case to make transport easier.</p>
+<h2>IV. Conclusion</h2>
+<p>In order to develop a successful green reading device, an adequate process must be used to develop a design that meets all design requirements. Extensive sketches and ideas were brainstormed to find a variety of options that are all suitable for a solution to this green reading problem. After the use of a decision matrix and a public survey put out to those in the golf community, an idea of a successful design was formed. Decision matrices ensure the device's ability to meet all design requirements. Additionally, survey data provides an understanding of both the customers' wants and needs in a green reading tool. This ensures a product that can be successful on the market. Developing this design and producing final sketches and schematics, including 3D modeling and wiring diagrams, allows for the ease of future development. 3D modeling allows for a better understanding of the appearance of this device, the function of this device, and the materials needed for the build process. Additionally, the wiring map allows for a better understanding of the logic behind the electronics’ functions in this device. Overall, the detail put into the design process allows for a final solution that meets all the wants and needs of the customers and all the wants and needs of the developers.</p>
+<h2>Appendices</h2>
+<details class="appendix">
+<summary>Appendix A. Design Specifications</summary>
+<div class="inner">
+<h4>1. Accuracy</h4>
+<p><strong>Specification:</strong> Angle accuracy shall have ± 2 degrees maximum error.</p>
+<p><strong>Rationale (self-imposed):</strong> As shown in Figure 3.1, a survey of golf players found that a large majority of respondents rated accuracy as the most critical aspect of a putting assistance device. Therefore, when creating a solution for golf green readers, it is essential to make sure that the product is accurate and has minimal error.</p>
+<figure class="fig" id="img-c-3-1">
+<div class="frame"><img src="c-3-1.jpg" data-img="c-3-1" data-pdf="Element C Outline - NPC" data-cap="Figure 3.1: Results of Surveyors&#x27; Ranking for Aspects" alt="Figure Appendix A1: Results of Surveyors&#x27; Ranking for Aspects" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix A1: Results of Surveyors' Ranking for Aspects</figcaption>
+</figure>
+<h4>2. Size</h4>
+<p><strong>Specification:</strong> The golf green reading device must not exceed 700 cubic centimeters in volume.</p>
+<p><strong>Rationale:</strong> The device must be convenient for golfers to carry; therefore, a compact, portable form factor is a primary criterion. This keeps it relatively portable for golfers, giving them the ability to keep the putting device in their golf bag or golf cart.</p>
+<h4>3. Price</h4>
+<p><strong>Specification:</strong> The build price shall not exceed $100</p>
+<p><strong>Rationale:</strong> A survey found that about 70% of respondents want a product under $100. This is shown in Figure 3.2 below.</p>
+<figure class="fig">
+<div class="frame"><img src="c-3-2.jpg" data-img="c-3-2" data-pdf="Element C Outline - NPC" data-cap="Figure 3.2: Results of Surveyors&#x27; Choosing Prices" alt="Figure Appendix A2: Results of Surveyors&#x27; Choosing Prices" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix A2: Results of Surveyors' Choosing Prices</figcaption>
+</figure>
+<h4>4. Weight</h4>
+<p><strong>Specification:</strong> The device shall have a maximum weight of 400 grams.</p>
+<p><strong>Rationale:</strong> Existing products, such as the BreakMaster Digital Green Reader, have a mass of approximately 130 grams.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> These devices, however, are much less complex than the technological components the solution being created will have. To account for the multitude of extra components, the device must be around 400 grams, keeping it relatively light.</p>
+<h4>5. Range</h4>
+<p><strong>Specification:</strong> This device shall work for putts 20 ft or less.</p>
+<p><strong>Rationale:</strong> It is recommended that golfers spend the majority of their time practicing putts 20ft and in, with an emphasis on putts around 10ft.<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></p>
+<h4>6. Includes Digital Display</h4>
+<p><strong>Specification:</strong> This device shall include a digital display.</p>
+<p><strong>Rationale:</strong> A digital display allows for a better user interface and experience. This leads to an easier-to-understand device and can also increase the performance of our device. Additionally, many current products have digital displays.<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
+<h4>7. Operating Environment</h4>
+<p><strong>Specification:</strong> This device shall be able to withstand light rain and any outdoor temperatures (-35 °C to 50 °C)</p>
+<p><strong>Rationale:</strong> This device is being used outside and therefore must be able to withstand the elements. Being water-resistant ensures accurate and safe usage in all weather conditions, thereby maintaining the device's quality.</p>
+<h4>8. Product Life</h4>
+<p><strong>Specification:</strong> The device shall have a lifespan of at least 3 years under normal outdoor conditions: wind, rain, cold, heat, etc.</p>
+<p><strong>Rationale:</strong> Most golf-related products on the market have a specified 3-year warranty on electronics.<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup> To keep up with competitors, the solution shall be able to keep up with the expectations that competitors set.</p>
+<h4>9. Material</h4>
+<p><strong>Specification:</strong> The solution shall have no sharp points that can lead to injury and utilize a rubberized material.</p>
+<p><strong>Rationale:</strong> Using a rubberized material around the edges of the solution will smooth out the edges and reduce the chance of dropping the device during use.</p>
+<h4>10. Aesthetics</h4>
+<p><strong>Specification:</strong> The device shall have a professional appearance, similar to other golf products, in a neutral color.</p>
+<p><strong>Rationale:</strong> Similar products have a minimalist design, making them appealing to professionals and increasing the usability, meaning there is an industry expecting aesthetic design.</p>
+<h4>11. Maintenance</h4>
+<p><strong>Specification:</strong> This device shall require no maintenance</p>
+<p><strong>Rationale:</strong> Requiring maintenance severely diminishes the value of the product, deterring customers from purchasing.</p>
+<h4>12. Battery Life</h4>
+<p><strong>Specification:</strong> The battery life shall last at least 3 hours and be able to recharge in 1 hour or less</p>
+<p><strong>Rationale:</strong> This ensures the device can last for a golfer's entire practice routine and can be quickly recharged for continued use.</p>
+<h4>13. Global Environment</h4>
+<p><strong>Specification:</strong> The device shall not cause harm to a putting surface, any part of a golf course, or the surrounding environment.</p>
+<p><strong>Rationale:</strong> Being able to function without damage to a course would ensure golfers can use it anywhere. This results in a larger customer base and less deterring from purchasing.</p>
+<h4>14. Carrying Case</h4>
+<p><strong>Specification:</strong> This device shall have a carrying case</p>
+<p><strong>Rationale:</strong> A carrying case will provide both protection and ease of transportation. Additionally, as shown in Figure 3.3, only a few prior products include a carrying case, giving the device an advantage over the competition.</p>
+</div>
+</details>
+<details class="appendix">
+<summary>Appendix B. Brainstorming Sketches</summary>
+<div class="inner">
+<p>All of the quick, drawn sketches that can be found under here are images that were drawn with the intention of brainstorming ideas for the device and focusing on speed. Starting with creating extremely simplified sketches allows for the overall design process to be more efficient and easier to improve. The drawings that were brainstormed are listed as Figures below here.</p>
+<div class="fig-grid">
+<figure class="fig" id="img-d-b01">
+<div class="frame"><img src="d-b01.jpg" data-img="d-b01" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B1: Oval Design with Rubber Ring" alt="Figure Appendix B1: Oval Design with Rubber Ring" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B1: Oval Design with Rubber Ring</figcaption>
+</figure>
+<figure class="fig" id="img-d-b02">
+<div class="frame"><img src="d-b02.jpg" data-img="d-b02" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B2: Rectangular Design with Bubble Level" alt="Figure Appendix B2: Rectangular Design with Bubble Level" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B2: Rectangular Design with Bubble Level</figcaption>
+</figure>
+<figure class="fig">
+<div class="frame"><img src="d-b03.jpg" data-img="d-b03" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 2.3: Rectangular Design with Elevated Border" alt="Figure Appendix B3: Rectangular Design with Elevated Border" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B3: Rectangular Design with Elevated Border</figcaption>
+</figure>
+<figure class="fig" id="img-d-b04">
+<div class="frame"><img src="d-b04.jpg" data-img="d-b04" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B4: Rectangular Design with Bubble Level" alt="Figure Appendix B4: Rectangular Design with Bubble Level" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B4: Rectangular Design with Bubble Level</figcaption>
+</figure>
+<figure class="fig" id="img-d-b05">
+<div class="frame"><img src="d-b05.jpg" data-img="d-b05" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B5: Hollowed Design with Direction Indicators" alt="Figure Appendix B5: Hollowed Design with Direction Indicators" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B5: Hollowed Design with Direction Indicators</figcaption>
+</figure>
+<figure class="fig" id="img-d-b06">
+<div class="frame"><img src="d-b06.jpg" data-img="d-b06" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B6: Spherical Design with Illuminated Leveler" alt="Figure Appendix B6: Spherical Design with Illuminated Leveler" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B6: Spherical Design with Illuminated Leveler</figcaption>
+</figure>
+<figure class="fig" id="img-d-b07">
+<div class="frame"><img src="d-b07.jpg" data-img="d-b07" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B7: Rectangular Design with Gel Corner Guards" alt="Figure Appendix B7: Rectangular Design with Gel Corner Guards" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B7: Rectangular Design with Gel Corner Guards</figcaption>
+</figure>
+<figure class="fig">
+<div class="frame"><img src="d-b08.jpg" data-img="d-b08" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 2.4: Attachable Clip-on Mount for Device" alt="Figure Appendix B8: Attachable Clip-on Mount" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B8: Attachable Clip-on Mount</figcaption>
+</figure>
+<figure class="fig" id="img-d-b09">
+<div class="frame"><img src="d-b09.jpg" data-img="d-b09" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B9: Contour Plot for Device" alt="Figure Appendix B9: Contour Plot for Device" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B9: Contour Plot for Device</figcaption>
+</figure>
+<figure class="fig" id="img-d-b10">
+<div class="frame"><img src="d-b10.jpg" data-img="d-b10" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B10: Device with Raised Rubber Feet" alt="Figure Appendix B10: Device with Raised Rubber Feet" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B10: Device with Raised Rubber Feet</figcaption>
+</figure>
+<figure class="fig" id="img-d-b11">
+<div class="frame"><img src="d-b11.jpg" data-img="d-b11" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B11: Screen Lip on Device" alt="Figure Appendix B11: Screen Lip on Device" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B11: Screen Lip on Device</figcaption>
+</figure>
+<figure class="fig" id="img-d-b12">
+<div class="frame"><img src="d-b12.jpg" data-img="d-b12" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B12: Lightweight Plastic Shell for Device" alt="Figure Appendix B12: Lightweight Plastic Shell for Device" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B12: Lightweight Plastic Shell for Device</figcaption>
+</figure>
+<figure class="fig" id="img-d-b13">
+<div class="frame"><img src="d-b13.jpg" data-img="d-b13" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B13: Slope Percentage Number on Display Screen" alt="Figure Appendix B13: Slope Percentage Number on Display Screen" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B13: Slope Percentage Number on Display Screen</figcaption>
+</figure>
+<figure class="fig" id="img-d-b14">
+<div class="frame"><img src="d-b14.jpg" data-img="d-b14" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B14: Distance Adjustment Feature on Display Screen" alt="Figure Appendix B14: Distance Adjustment Feature on Display Screen" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B14: Distance Adjustment Feature on Display Screen</figcaption>
+</figure>
+<figure class="fig" id="img-d-b15">
+<div class="frame"><img src="d-b15.jpg" data-img="d-b15" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B15: Ergonomic Design with Hand Grip" alt="Figure Appendix B15: Ergonomic Design with Hand Grip" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B15: Ergonomic Design with Hand Grip</figcaption>
+</figure>
+<figure class="fig" id="img-d-b16">
+<div class="frame"><img src="d-b16.jpg" data-img="d-b16" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B16: Tilted Screen Angle without any Glare" alt="Figure Appendix B16: Tilted Screen Angle without any Glare" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B16: Tilted Screen Angle without any Glare</figcaption>
+</figure>
+<figure class="fig" id="img-d-b17">
+<div class="frame"><img src="d-b17.jpg" data-img="d-b17" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B17: Protective Cover for Case" alt="Figure Appendix B17: Protective Cover for Case" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B17: Protective Cover for Case</figcaption>
+</figure>
+<figure class="fig">
+<div class="frame"><img src="d-b18.jpg" data-img="d-b18" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B18: Sleek Grey Design for Device" alt="Figure Appendix B18: Sleek Grey Design for Device" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B18: Sleek Grey Design for Device</figcaption>
+</figure>
+<figure class="fig" id="img-d-b19">
+<div class="frame"><img src="d-b19.jpg" data-img="d-b19" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B19: Simplified Design with Power Button" alt="Figure Appendix B19: Simplified Design with Power Button" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B19: Simplified Design with Power Button</figcaption>
+</figure>
+<figure class="fig" id="img-d-b20">
+<div class="frame"><img src="d-b20.jpg" data-img="d-b20" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B20: Rounded Edges Design with Green Assist" alt="Figure Appendix B20: Rounded Edges Design with Green Assist" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B20: Rounded Edges Design with Green Assist</figcaption>
+</figure>
+<figure class="fig" id="img-d-b21">
+<div class="frame"><img src="d-b21.jpg" data-img="d-b21" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B21: Arrow Pointing Towards Direction" alt="Figure Appendix B21: Arrow Pointing Towards Direction" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B21: Arrow Pointing Towards Direction</figcaption>
+</figure>
+<figure class="fig" id="img-d-b22">
+<div class="frame"><img src="d-b22.jpg" data-img="d-b22" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B22: USB Port Design with Charge Option" alt="Figure Appendix B22: USB Port Design with Charge Option" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B22: USB Port Design with Charge Option</figcaption>
+</figure>
+<figure class="fig" id="img-d-b23">
+<div class="frame"><img src="d-b23.jpg" data-img="d-b23" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B23: Accelerometer+Distance Input to Showcase Putt Line" alt="Figure Appendix B23: Accelerometer+Distance Input to Showcase Putt Line" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B23: Accelerometer+Distance Input to Showcase Putt Line</figcaption>
+</figure>
+<figure class="fig" id="img-d-b24">
+<div class="frame"><img src="d-b24.jpg" data-img="d-b24" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B24: Same as Previous, but with a Stronger Aluminium Frame" alt="Figure Appendix B24: Same as Previous, but with a Stronger Aluminium Frame" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B24: Same as Previous, but with a Stronger Aluminium Frame</figcaption>
+</figure>
+<figure class="fig" id="img-d-b25">
+<div class="frame"><img src="d-b25.jpg" data-img="d-b25" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B25: Same as Previous, but with One Interface (Simplicity)" alt="Figure Appendix B25: Same as Previous, but with One Interface (Simplicity)" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B25: Same as Previous, but with One Interface (Simplicity)</figcaption>
+</figure>
+<figure class="fig" id="img-d-b26">
+<div class="frame"><img src="d-b26.jpg" data-img="d-b26" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B26: Same as Previous, but with Rubberized Edges (Safety)" alt="Figure Appendix B26: Same as Previous, but with Rubberized Edges (Safety)" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B26: Same as Previous, but with Rubberized Edges (Safety)</figcaption>
+</figure>
+<figure class="fig" id="img-d-b27">
+<div class="frame"><img src="d-b27.jpg" data-img="d-b27" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B27: Same as Previous, but Rechargeable" alt="Figure Appendix B27: Same as Previous, but Rechargeable" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B27: Same as Previous, but Rechargeable</figcaption>
+</figure>
+<figure class="fig" id="img-d-b28">
+<div class="frame"><img src="d-b28.jpg" data-img="d-b28" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B28: Uses a Physical Level and Personal Interpretation to Understand the Slope" alt="Figure Appendix B28: Uses a Physical Level and Personal Interpretation to Understand the Slope" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B28: Uses a Physical Level and Personal Interpretation to Understand the Slope</figcaption>
+</figure>
+<figure class="fig">
+<div class="frame"><img src="d-b29.jpg" data-img="d-b29" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B29: Both Accelerometer/Secondary Device Calculates Distance (Radio Waves)" alt="Figure Appendix B29: Both Accelerometer/Secondary Device Calculates Distance (Radio Waves)" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B29: Both Accelerometer/Secondary Device Calculates Distance (Radio Waves)</figcaption>
+</figure>
+<figure class="fig" id="img-d-b30">
+<div class="frame"><img src="d-b30.jpg" data-img="d-b30" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B30: Same as Previous Designs, but in Puck Shape to Match Prior Solutions" alt="Figure Appendix B30: Same as Previous Designs, but in Puck Shape to Match Prior Solutions" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B30: Same as Previous Designs, but in Puck Shape to Match Prior Solutions</figcaption>
+</figure>
+<figure class="fig" id="img-d-b31">
+<div class="frame"><img src="d-b31.jpg" data-img="d-b31" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B31: Same as Previous Designs, now Includes Laser Level to Show Putt Line" alt="Figure Appendix B31: Same as Previous Designs, now Includes Laser Level to Show Putt Line" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B31: Same as Previous Designs, now Includes Laser Level to Show Putt Line</figcaption>
+</figure>
+<figure class="fig" id="img-d-b32">
+<div class="frame"><img src="d-b32.jpg" data-img="d-b32" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B32: Same as Previous, Laser now Motorized to Pivot to Ideal Angle" alt="Figure Appendix B32: Same as Previous, Laser now Motorized to Pivot to Ideal Angle" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B32: Same as Previous, Laser now Motorized to Pivot to Ideal Angle</figcaption>
+</figure>
+<figure class="fig" id="img-d-b33">
+<div class="frame"><img src="d-b33.jpg" data-img="d-b33" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B33: Same as Previous, Laser now Comes in Multiple Colors to Contrast Green" alt="Figure Appendix B33: Same as Previous, Laser now Comes in Multiple Colors to Contrast Green" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B33: Same as Previous, Laser now Comes in Multiple Colors to Contrast Green</figcaption>
+</figure>
+<figure class="fig" id="img-d-b34">
+<div class="frame"><img src="d-b34.jpg" data-img="d-b34" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B34: Simplifies Previous Design, Rids of Screen" alt="Figure Appendix B34: Simplifies Previous Design, Rids of Screen" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B34: Simplifies Previous Design, Rids of Screen</figcaption>
+</figure>
+<figure class="fig" id="img-d-b35">
+<div class="frame"><img src="d-b35.jpg" data-img="d-b35" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B35: On Wheels to Calculate Putt Angle by Wheeling Along the Line" alt="Figure Appendix B35: On Wheels to Calculate Putt Angle by Wheeling Along the Line" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B35: On Wheels to Calculate Putt Angle by Wheeling Along the Line</figcaption>
+</figure>
+<figure class="fig" id="img-d-b36">
+<div class="frame"><img src="d-b36.jpg" data-img="d-b36" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B36: Calculates Distance Via a Range Finder" alt="Figure Appendix B36: Calculates Distance Via a Range Finder" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B36: Calculates Distance Via a Range Finder</figcaption>
+</figure>
+<figure class="fig" id="img-d-b37">
+<div class="frame"><img src="d-b37.jpg" data-img="d-b37" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B37: Shows Ideal Putt Line on a Screen" alt="Figure Appendix B37: Shows Ideal Putt Line on a Screen" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B37: Shows Ideal Putt Line on a Screen</figcaption>
+</figure>
+<figure class="fig" id="img-d-b38">
+<div class="frame"><img src="d-b38.jpg" data-img="d-b38" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B38: Elevated Design Diagram with Levelers" alt="Figure Appendix B38: Elevated Design Diagram with Levelers" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B38: Elevated Design Diagram with Levelers</figcaption>
+</figure>
+<figure class="fig" id="img-d-b39">
+<div class="frame"><img src="d-b39.jpg" data-img="d-b39" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B39: Cubic Design with Digital Display" alt="Figure Appendix B39: Cubic Design with Digital Display" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B39: Cubic Design with Digital Display</figcaption>
+</figure>
+<figure class="fig" id="img-d-b40">
+<div class="frame"><img src="d-b40.jpg" data-img="d-b40" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B40: Tube Design with Contour Plot" alt="Figure Appendix B40: Tube Design with Contour Plot" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B40: Tube Design with Contour Plot</figcaption>
+</figure>
+<figure class="fig" id="img-d-b41">
+<div class="frame"><img src="d-b41.jpg" data-img="d-b41" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B41: Triangular Design with Arrows" alt="Figure Appendix B41: Triangular Design with Arrows" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B41: Triangular Design with Arrows</figcaption>
+</figure>
+<figure class="fig" id="img-d-b42">
+<div class="frame"><img src="d-b42.jpg" data-img="d-b42" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B42: Rectangular Box with Distance Measure" alt="Figure Appendix B42: Rectangular Box with Distance Measure" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B42: Rectangular Box with Distance Measure</figcaption>
+</figure>
+<figure class="fig" id="img-d-b43">
+<div class="frame"><img src="d-b43.jpg" data-img="d-b43" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix B43: Rectangular Box with Laser Leveler" alt="Figure Appendix B43: Rectangular Box with Laser Leveler" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix B43: Rectangular Box with Laser Leveler</figcaption>
+</figure>
+</div>
+</div>
+</details>
+<details class="appendix">
+<summary>Appendix C. Product Concepts</summary>
+<div class="inner">
+<h3>Concept #1</h3>
+<p><strong>Designer(s):</strong> Tegan Clancy</p>
+<p><strong>Product Description:</strong> This product is known as the model called DF1. Overall, there are several different uses for this product. These uses consist of illuminated bubble levels, digital displays that output percent slopes, elevated edges that support green health, and an input for distance between ball and hole on putting green. The definite purpose of this product is to provide novice golfers the ability to understand the percent slope of their putts which then helps golfers practice putting and the direction the ball rolls. To specify each portion of the product, the bubble level specifically is each glow in the dark which allows the user to use the product in any condition. Additionally, there are two bubble levels, so when the display shows the percent slope it takes the average between the two measurements. Lastly, the overall appearance of the product consists of a black design that has engraved writing on the edges which is designed for each specific user.</p>
+<p><strong>Operation:</strong> Similarly to what was mentioned above, the product works by taking the percent slope of the putting green based on the two bubble levels that are used in the device. In addition to this, the digital display provides the direction that the golfer should put by taking into consideration both the percent slope and the distance from the hole to the ball that the golfer inputs. Another thing to mention is the power button above the digital display which would work by providing power to the internals of the display. The main inputs would be the distance between hole to ball which would either be in units of feet, yards, or meters. Then the output would simply be the percent slope and ideal aim for the given putt.</p>
+<p><strong>Justification:</strong> This specific design accomplishes several different things that each individually meet the stakeholders expectations. The first being portability, as the device would roughly be around 300 grams and the size of a range finder (thus easily fitting in golf bags). Secondly, the device would promote practicing of putting rather than reducing the hassle that golfers may feel when debating to practice their putting. Another thing to mention, is that some golfers may find that watching putting videos on social media or receiving lessons from coaches may not be the putting service that they need; simply meaning that a putting device such as this would suffice to their expectations. Lastly, this is better than the other alternative solutions since it takes into consideration all of the variables like not damaging the greens, being portable, and accurate to the user.</p>
+<figure class="fig" id="img-d-c1">
+<div class="frame"><img src="d-c1.jpg" data-img="d-c1" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix C1: Rectangular Design with Elevated Edges &amp; 2 Bubble Levels" alt="Figure Appendix C1: Rectangular Design with Elevated Edges &amp; 2 Bubble Levels" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix C1: Rectangular Design with Elevated Edges &amp; 2 Bubble Levels</figcaption>
+</figure>
+<h3>Concept #2</h3>
+<p><strong>Designer(s):</strong> Tegan Clancy</p>
+<p><strong>Product Description:</strong> The second product that was listed here is known as the DF2 and has some similarities and a few differences to the DF1 version. To start, this product does a similar thing, which consists of incorporating the percent slope to provide assistance in reading the putt on putting greens. The purpose of the final concept is more of a boxy style rather than the rectangular design that was supposed to mimic a rangefinder in the DF1. In the DF2 design, the appearance is a similar color of black, but is slightly bigger and heavier compared to DF1. Also, rather than incorporating an elevating option in the DF1 model, the DF2 has gel-like corner guards on each one of the edges of the box to stop any sort of damage from happening on the green when the device is being used. Lastly, the overall appearance could be more appealing to customers rather than DF1, as it can be used more often for practicing / training rather than on the course.</p>
+<p><strong>Operation:</strong> This product specifically works by using a centered bubble level on the top portion of the square box and then has two separate direction indicators. The first one is a “L” or “R”, which indicates the specific direction that the putt is going to turn into. The other indicators are two arrows which will adjust to the direction based on where the actual golfer should aim their putter. As for the inputs, they consist of a slider on the side of the DF2 where the user will slide the metric based on their needs (options are feet, yards, and meters). These will add to the other input option, which consists of the distance between the hole and the putting device. Now, based on both the distances inputted by the golfer and the readings from the bubble level, the output display will show the aim ideas and the specified percent slope. Each individual proportion of the device has some sort of significance in the overall function.</p>
+<p><strong>Justification:</strong> Last but not least, the DF2 merely solves the problems by giving golfers the opportunity to see how the putts roll and experience assistance in their putting reads. This concept was chosen as a final design since it takes into account both the contour of the green and the distances between the ball and the hole. This also meets all of the specified design specifications that many other products in this sporting world don’t meet. Specifically, by using some form of digital display that provides output for a wide range of golfers, the product exceeds many standards that novice golfers may have about their putting skills. Overall, the product known as DF2 would both reduce the hassle of trying to practice putting without any other sort of assistance and fixes the major problem in the average golfer's day to day handicap/golf game.</p>
+<figure class="fig">
+<div class="frame"><img src="d-c2.jpg" data-img="d-c2" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 2: (D4) (DF2) Cubic Design with Slider and Digital Displays" alt="Figure Appendix C2: Cubic Design with Slider &amp; Digital Displays" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix C2: Cubic Design with Slider &amp; Digital Displays</figcaption>
+</figure>
+<h3>Concept #3</h3>
+<p><strong>Designer(s):</strong> Zach Nelson</p>
+<p><strong>Product Description:</strong> The product is a compact, clip-on green reading device used as a putting aid to improve golfers' putting skills. The product has an ergonomic design to help with grip and ease of use, as well as a protective case to keep the display screen free of any damage during transportation. On the right side of the device is a simple USB port as well as a power button, making it simple to charge and turn on. The display screen displays percent slope, distance, and an arrow pointing in the correct direction to aim the golfball taking into account the slope of the green. Beside the display screen is a contour plot which can be used by the player to help them get a better understanding of the green they are playing on.</p>
+<p><strong>Operation:</strong> The product is easy to operate and handle, making it useful for golfers of all levels. On the display screen, the user is provided with arrows that can be clicked to manually enter the distance from the hole. Whenever the user places the device on the ground, it automatically senses the ground and provides a rough estimate of the percent slope on the screen. With these 2 inputs, the device's internal code can estimate the direction the ball needs to be hit, taking into account the green's slope. It then displays a number indicating how far to hit the ball to the left or right, along with an arrow pointing in the direction the ball should be hit.</p>
+<p><strong>Justification:</strong> The product solves the problem of golfers misreading the slope of greens. By providing a visual arrow and feedback, the device can remove the guesswork by deciding where to actually align and hit the ball. This device is better than alternative solutions because it costs no more than 100 dollars, making it relatively cheap, and it has a lightweight build, weighing up to 400 grams. The device provides much more data than the majority of green reading devices on the market, helping the golfer's putts be more precise and accurate. By including a clippable back and ergonomic grip, the device is easier to use and requires less effort when carrying around all day. As shown in the survey completed during the presentation and justification of the solution phase, the stakeholders place great importance on accuracy, which is why a requirement was placed that the product must have an angle accuracy of ±2 percent. With such an elaborate design and accurate code, the device will meet this requirement, making it better than most competitors on the market. It was also found that stakeholders consider the device's range to be important. By having a button on the device that the golfer can use to input the distance to the hole, the device can be accurate far beyond the minimum distance of 20 ft set as a product specification. Overall, the device is being considered as a final solution as it is extremely accurate, easy to carry around, lightweight, and has features that current products on the market do not have. The product meets the requirements that stakeholders consider of high importance and is therefore worth analysing further.</p>
+<figure class="fig" id="img-d-c3">
+<div class="frame"><img src="d-c3.jpg" data-img="d-c3" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix C3: Ergonomic Design with Contour Plot" alt="Figure Appendix C3: Ergonomic Design with Contour Plot" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix C3: Ergonomic Design with Contour Plot</figcaption>
+</figure>
+<h3>Concept #4</h3>
+<p><strong>Designer(s):</strong> Zach Nelson</p>
+<p><strong>Product Description:</strong> This product is a slim, triangular green reading device designed to provide a visual aid to golfers during putting and to help predict the slope of the green. The device has a durable black plastic shell, designed to look both professional and sleek. The center of the product features a display screen that includes percent slope, distance from the hole, and an arrow indicating which direction to aim the putt. The power button is to the right of the display screen, with the USB being on the outer side, allowing it to easily be recharged. This device also includes small legs at the bottom to prevent damage and ensure the calculated percent slope is as accurate as possible.</p>
+<p><strong>Operation:</strong> The product was created to help golfers with their putting ability and improve their scores. To operate the device, the user must first use the button on the front of the device to turn it on, then input a rough estimate as to how far the device is from the hole by using the arrows provided on the display. They then must set the device flat on the ground, aligned perpendicular to the hole they are attempting to putt at, so that internal sensors within the device can estimate the angle of the green. The device will then output an arrow on the display screen indicating where the player should aim to get the ball into the hole.</p>
+<p><strong>Justification:</strong> The product is used to fix the problem of golfers, especially novice golfers, misjudging green slopes, leading to frustration. The device lets the user avoid guessing; instead, they can simply look at the arrow guidance and aim in the direction the device is pointing. It is better than current solutions, as the design is more affordable than current devices, easily staying within the constraints of 100 dollars. It is much more durable with a hard outer shell and legs to protect the device from getting damaged. On top of that, the device focuses on simplicity and requires very little user work, providing no measurements that require interpretation. It is also very small, taking up much less than 700 cubic centimeters, making it very portable. Just like the previous device, this device meets all the specifications that the stakeholders found to be important. The product will have an accuracy of ±2 degrees and a weight below 400 grams. The range will exceed 20 ft because golfers can enter the distance on the display screen. The device has features that current devices do not, such as a triangular build and a loop to help with carrying, making it more portable and sleek than current devices on the market. Due to its small size and extremely accurate sensors, the device is worth analyzing further.</p>
+<figure class="fig">
+<div class="frame"><img src="d-c4.jpg" data-img="d-c4" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 2: (D3) (TRID2P2) Design with USB Slot and Carrying Loop" alt="Figure Appendix C4: Triangular Design with USB Slot" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix C4: Triangular Design with USB Slot</figcaption>
+</figure>
+<h3>Concept #5</h3>
+<p><strong>Designer(s):</strong> Ryan Prusak</p>
+<p><strong>Product Description:</strong> This product is to help golfers better understand and interpret the slopes of a putting green surface. This device autonomously measures both the distance to the hole and the slope in the putting surface, accurately measuring the ideal putt line a golfer must aim along in order to putt the ball into the hole. This simplistic design includes a rectangular frame to hold the brain of the device and its laser level, which showcases the putt line. Additionally, it includes a smaller puck-like device that is put in the hole to wirelessly measure the distance from the putting spot to the hole.</p>
+<p><strong>Operation:</strong> First, the main device connects to its smaller puck-like device. Connecting using Ultra-Wideband (UWB), the two devices send radio pulses to each other. Measuring the flight time of these pulses allows the device to read the distance between the putt and the hole with minimal error. After this, an accelerometer measures the slope on the putting surface, acting as a digital level to measure the percentage of slope in the green. Using this knowledge of slope and distance, a laser level will automatically turn via a servo motor to showcase the ideal putt line on the putting surface. No manual input is necessary except placing the main device at the spot of the ball, placing the smaller puck-like device in the hole, and pressing a power/run button. All of which is powered by single-use AA batteries.</p>
+<p><strong>Justification:</strong> This device allows amateur golfers to better understand how the slopes of greens affect the roll of a putt, and allows them to learn how to better take slope/distance into account when they are playing their rounds. This device accomplishes both accuracy and ease of use. This device saves time as it requires minimal setup compared to other current putting training aids. This design also reduces hassle by having a simplistic design and a straightforward procedure to use. This device also achieves the design requirements by being accurate, being less than 700cm3, being less than $100 to produce, being small and lightweight, being functional for putts of 20ft or less, including digital components, being functional outdoors, having an extended product life of 3+ years, having rounded edges for safety, being a neutral color for aesthetics, requiring no maintenance, having batteries that allow for a a battery life of up to 3 hours, not harming the operating environment, and has potential for a carrying case to make transport easier.</p>
+<figure class="fig">
+<div class="frame"><img src="d-c5.jpg" data-img="d-c5" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 2: Design (D1) (5437625) with Puck Distance Measurer" alt="Figure Appendix C5: Rectangular Design with Connectivity Distance Measure" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix C5: Rectangular Design with Connectivity Distance Measure</figcaption>
+</figure>
+<h3>Concept #6</h3>
+<p><strong>Designer(s):</strong> Ryan Prusak</p>
+<p><strong>Product Description:</strong> This product is to help golfers better understand and interpret the slopes of a putting green surface. This device autonomously measures the percent slope in the green while also taking into account distance, accurately measuring the ideal putt line a golfer must aim along in order to putt the ball into the hole. This simplistic design includes a rectangular frame to hold the brain of the device and its laser level, which showcases the putt line. Additionally, the top of the device contains a keypad that allows the user to manually input the distance(ft) to help measure this ideal putt line.</p>
+<p><strong>Operation:</strong> First, the user must manually input the putt distance, which is measured in feet. This is the distance from the ball to the hole. After this is input, the user can click the run button, which begins the operation to find the ideal putt line. The inside of the device contains an accelerometer, which automatically finds the percent slope in the green, similar to a digital level. After the distance and percent slope are found, the device can accurately calculate the ideal putt line at that given spot. A laser level can then turn via a servo motor to the correct angle that shows the putt line that the golfer should aim along. All of this is powered by single-use AA batteries.</p>
+<p><strong>Justification:</strong> This device allows amateur golfers to better understand how the slopes of greens affect the roll of a putt, and allows them to learn how to better take slope/distance into account when they are playing their rounds. This device accomplishes both accuracy and ease of use. This design was chosen for both the previous reasons and the ability to easily develop this product, given the current situation. This device saves time as it requires minimal setup compared to other current putting training aids. This design also reduces hassle by having a simplistic design and a straightforward procedure to use. This device also achieves the design requirements by being accurate, being less than 700cm3, being less than $100 to produce, being small and lightweight, being functional for putts of 20ft or less, including digital components, being functional outdoors, having an extended product life of 3+ years, having rounded edges for safety, being a neutral color for aesthetics, requiring no maintenance, having batteries that allow for a a battery life of up to 3+ hours, not harming the operating environment, and has potential for a carrying case to make transport easier.</p>
+<figure class="fig">
+<div class="frame"><img src="d-c6.jpg" data-img="d-c6" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 2: (D2) (5427626) Design with Laser Leveler and Input Keyboard" alt="Figure Appendix C6: Rectangular Design with Laser Leveler" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix C6: Rectangular Design with Laser Leveler</figcaption>
+</figure>
+</div>
+</details>
+<details class="appendix">
+<summary>Appendix D. Survey Data</summary>
+<div class="inner">
+<p>One of the most important factors in making the final decision concept for the product was taking into account the survey data from the physical market. Below here will be the free response comments that surveyors had mentioned, and also the market data based on graphical representations.</p>
+<h3>Survey Free Response Questions</h3>
+<h4>Q1: List here any aids you use that weren't mentioned.</h4>
+<ul>
+<li>“I also use a putting mat for practice.”</li>
+<li>“Orange whip”</li>
+<li>“I sometimes use a laser rangefinder for distance.”</li>
+<li>"Home putting mat"</li>
+<li>“String”</li>
+<li>"Laser Rangefinder for golf shots that are pitches or longer."</li>
+<li>"At home putting green"</li>
+<li>"Towel between arms"</li>
+<li>"Visio putting mat by Phil kenyon"</li>
+<li>"Clinometer (App on iPhone)"</li>
+<li>"Home putting green for practice"</li>
+<li>"Line on my golf ball"</li>
+<li>"Putting Matt - DJ one"</li>
+<li>"String line (often) (can act like alignment &amp; gate) Video myself (sometimes)"</li>
+<li>"Golf nets, weighted swing aid"</li>
+<li>“Tour Aid”</li>
+</ul>
+<h4>Q2: What are some of the biggest problems you have with any current training aids you use?</h4>
+<ul>
+<li>"Sometimes the aids can be bulky and hard to transport."</li>
+<li>"Some aids are bulky and difficult to carry."</li>
+<li>"Transferability to the course”</li>
+<li>"My swing unbelievably bad - need serious help physically and mentally”</li>
+<li>"Focus on alignment and face more than pace"</li>
+<li>"They don’t simulate real putting on the course &amp; don’t read the greens."</li>
+<li>"I just suck with speed"</li>
+<li>"None of my training aids have a flat surface that I can lean my putter face against to check and see if I’m aligning my putter face perfectly to my intended start line"</li>
+<li>"I need something that is portable and stays in my golf bag otherwise I’ll forget to bring it to the practice screen."</li>
+<li>“Being able to fit it in my golf bag”</li>
+<li>"Foundability in stores"</li>
+<li>"Not simple to use or require me to change my swing/setup to get used to it or use them correctly."</li>
+<li>“Being able to use it at home on a rug or carpet. It fits in my bag and is portable.”</li>
+<li>“Bulky, expensive, bad quality”</li>
+<li>"I don’t use many training aids”</li>
+<li>“They break”</li>
+</ul>
+<h4>Q3: Any extra comments?</h4>
+<ul>
+<li>"I find that practicing regularly helps me a lot in my game."</li>
+<li>"I’m always looking for new strategies to improve my putting."</li>
+<li>"I think a tool to help people learn aimpoint would be huge, combine this with a putting mirror and the tool would be great, even just adding a level with percentages to the normal putting mirror."</li>
+<li>"Putting in golf in general is hard, I will take any help I can find."</li>
+<li>"I also struggle with short putts that have a lot of break &amp; downhill lie. Should I play the break or hit it harder to take the break out???"</li>
+<li>“I always end up taking extra shots on the green because of inaccuracy"</li>
+<li>"Note: I average 1 3 putt every 2 rounds”</li>
+<li>"Putting is all about speed control and then alignment along with reading greens"</li>
+<li>"I barely get to play anymore but sold putters as a job for a little while. Most people need to work on hitting a consistently straight putt (putting gate). After that, they need to control speed and read break."</li>
+</ul>
+<h3>Survey Graphical Diagrams</h3>
+<div class="fig-grid">
+<figure class="fig" id="img-d-d1">
+<div class="frame"><img src="d-d1.jpg" data-img="d-d1" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix D1: How Often Play Golf Based on Respondents" alt="Figure Appendix D1: How Often Play Golf Based on Respondents" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix D1: How Often Play Golf Based on Respondents</figcaption>
+</figure>
+<figure class="fig" id="img-d-d2">
+<div class="frame"><img src="d-d2.jpg" data-img="d-d2" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix D2: How Much Willing to Spend" alt="Figure Appendix D2: How Much Willing to Spend" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix D2: How Much Willing to Spend</figcaption>
+</figure>
+<figure class="fig" id="img-d-d3">
+<div class="frame"><img src="d-d3.jpg" data-img="d-d3" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix D3: Rank Aspect Most to Least Important" alt="Figure Appendix D3: Rank Aspect Most to Least Important" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix D3: Rank Aspect Most to Least Important</figcaption>
+</figure>
+<figure class="fig" id="img-d-d4">
+<div class="frame"><img src="d-d4.jpg" data-img="d-d4" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix D4: Graph of Roles in Golf Based on Respondents" alt="Figure Appendix D4: Graph of Roles in Golf Based on Respondents" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix D4: Graph of Roles in Golf Based on Respondents</figcaption>
+</figure>
+<figure class="fig">
+<div class="frame"><img src="d-d5.jpg" data-img="d-d5" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 2: Ideal Measurement based on Golfers&#x27; Preference" alt="Figure Appendix D5: Ideal Measurement based on Golfers&#x27; Preference" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix D5: Ideal Measurement based on Golfers' Preference</figcaption>
+</figure>
+<figure class="fig">
+<div class="frame"><img src="d-d6.jpg" data-img="d-d6" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 2: Pie Chart of Manual or Automatic Input" alt="Figure Appendix D6: Pie Chart of Manual or Automatic Input" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix D6: Pie Chart of Manual or Automatic Input</figcaption>
+</figure>
+<figure class="fig">
+<div class="frame"><img src="d-d7.jpg" data-img="d-d7" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 2.1: Respondents&#x27; Chart of Ranked Design Based on Suitability" alt="Figure Appendix D7: Respondents&#x27; Chart of Ranked Design Based on Suitability" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix D7: Respondents' Chart of Ranked Design Based on Suitability</figcaption>
+</figure>
+<figure class="fig" id="img-d-d8">
+<div class="frame"><img src="d-d8.jpg" data-img="d-d8" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix D8: Respondents&#x27; Chart of Ranked Design Based on Feasibility to Understand" alt="Figure Appendix D8: Respondents&#x27; Chart of Ranked Design Based on Feasibility to Understand" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix D8: Respondents' Chart of Ranked Design Based on Feasibility to Understand</figcaption>
+</figure>
+<figure class="fig" id="img-d-d9">
+<div class="frame"><img src="d-d9.jpg" data-img="d-d9" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix D9: Respondents Chart of Ranked Design Based on Aesthetics" alt="Figure Appendix D9: Respondents Chart of Ranked Design Based on Aesthetics" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix D9: Respondents Chart of Ranked Design Based on Aesthetics</figcaption>
+</figure>
+<figure class="fig">
+<div class="frame"><img src="d-d10.jpg" data-img="d-d10" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 2.1: Pie Chart of Respondents&#x27; Preferred Shape of the Frame" alt="Figure Appendix D10: Pie Chart of Respondents&#x27; Preferred Shape of the Frame" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix D10: Pie Chart of Respondents' Preferred Shape of the Frame</figcaption>
+</figure>
+<figure class="fig">
+<div class="frame"><img src="d-d11.jpg" data-img="d-d11" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 2.1: Chart of Respondents Preferred Power Method" alt="Figure Appendix D11: Chart of Respondents&#x27; Preferred Power Method" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix D11: Chart of Respondents' Preferred Power Method</figcaption>
+</figure>
+<figure class="fig" id="img-d-d12">
+<div class="frame"><img src="d-d12.jpg" data-img="d-d12" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix D12: Pie Chart of Respondents Second Preferred Price" alt="Figure Appendix D12: Pie Chart of Respondents Second Preferred Price" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix D12: Pie Chart of Respondents Second Preferred Price</figcaption>
+</figure>
+</div>
+</div>
+</details>
+<details class="appendix">
+<summary>Appendix E. Decision Matrix</summary>
+<div class="inner">
+<p>The decision matrix below shows the analysis of every single specified solution and design. There were several different pieces of criteria that were taken into account and led to the final decision as to what the best solution/design was. Based on the rankings for each specification, the design that ended up having the highest score was Design (5437626), which ranked the highest in the category known as “product life” and consistently scored 4’s in “ease to build, ease of use, accuracy, range, weather condition, green protection”. All specified are key notes that will provide the future product to stand out across the rest of the golf market.</p>
+<figure class="fig">
+<div class="frame"><img src="d-e1.jpg" data-img="d-e1" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 2: Decision Matrix Chart of Potential Designs Ranked" alt="Figure Appendix E1: Decision Matrix Chart of Potential Designs Ranked" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix E1: Decision Matrix Chart of Potential Designs Ranked</figcaption>
+</figure>
+</div>
+</details>
+<details class="appendix">
+<summary>Appendix F. Individual Components</summary>
+<div class="inner">
+<p>All components below here have been created using Fusion and Multisim. The components were each individually heavily considered with the respondents' answers, and each was created with the idea of creating the ideal putting green assistance device.</p>
+<div class="fig-grid">
+<figure class="fig">
+<div class="frame"><img src="d-f1.jpg" data-img="d-f1" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 3.1: Wiring Diagram For All Electronic Components" alt="Figure Appendix F1: Wiring Diagram For All Electronic Components" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix F1: Wiring Diagram For All Electronic Components</figcaption>
+</figure>
+<figure class="fig">
+<div class="frame"><img src="d-f2.jpg" data-img="d-f2" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 3.2: Fusion Diagram for Green Reading Device" alt="Figure Appendix F2: Diagram of All Components" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix F2: Diagram of All Components</figcaption>
+</figure>
+<figure class="fig">
+<div class="frame"><img src="d-f3.jpg" data-img="d-f3" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 3.3: Exploded View of Different Parts in Device" alt="Figure Appendix F3: Exploded View of All Components" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix F3: Exploded View of All Components</figcaption>
+</figure>
+<figure class="fig">
+<div class="frame"><img src="d-f4.jpg" data-img="d-f4" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 3.4: Material / Parts List with Sketch" alt="Figure Appendix F4: Bill of Materials for all Components" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix F4: Bill of Materials for all Components</figcaption>
+</figure>
+<figure class="fig" id="img-d-f5">
+<div class="frame"><img src="d-f5.jpg" data-img="d-f5" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix F5: Exploded View of Gyroscope" alt="Figure Appendix F5: Exploded View of Gyroscope" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix F5: Exploded View of Gyroscope</figcaption>
+</figure>
+<figure class="fig" id="img-d-f6">
+<div class="frame"><img src="d-f6.jpg" data-img="d-f6" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix F6: Exploded View of Distance Input Button" alt="Figure Appendix F6: Exploded View of Distance Input Button" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix F6: Exploded View of Distance Input Button</figcaption>
+</figure>
+<figure class="fig" id="img-d-f7">
+<div class="frame"><img src="d-f7.jpg" data-img="d-f7" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix F7: Exploded View of Battery Pack" alt="Figure Appendix F7: Exploded View of Battery Pack" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix F7: Exploded View of Battery Pack</figcaption>
+</figure>
+<figure class="fig" id="img-d-f8">
+<div class="frame"><img src="d-f8.jpg" data-img="d-f8" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix F8: Exploded View of Laser Transmitter" alt="Figure Appendix F8: Exploded View of Laser Transmitter" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix F8: Exploded View of Laser Transmitter</figcaption>
+</figure>
+<figure class="fig" id="img-d-f9">
+<div class="frame"><img src="d-f9.jpg" data-img="d-f9" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix F9: Exploded View of Oled Display" alt="Figure Appendix F9: Exploded View of Oled Display" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix F9: Exploded View of Oled Display</figcaption>
+</figure>
+<figure class="fig" id="img-d-f10">
+<div class="frame"><img src="d-f10.jpg" data-img="d-f10" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix F10: Exploded View of Arduino" alt="Figure Appendix F10: Exploded View of Arduino" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix F10: Exploded View of Arduino</figcaption>
+</figure>
+<figure class="fig" id="img-d-f11">
+<div class="frame"><img src="d-f11.jpg" data-img="d-f11" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix F11: Exploded View of PCB Board" alt="Figure Appendix F11: Exploded View of PCB Board" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix F11: Exploded View of PCB Board</figcaption>
+</figure>
+<figure class="fig" id="img-d-f12">
+<div class="frame"><img src="d-f12.jpg" data-img="d-f12" data-pdf="Element D Outline - NPC - 1" data-cap="Figure Appendix F12: Exploded View of Servo Motor" alt="Figure Appendix F12: Exploded View of Servo Motor" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure Appendix F12: Exploded View of Servo Motor</figcaption>
+</figure>
+</div>
+</div>
+</details>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Cunningham, Kevin. “Here’s How Your Handicap Index Stacks up against Golfers in the United States.” <em>Golf</em>, 9 Sept. 2020, <a href="https://golf.com/news/how-your-handicap-index-compares/">golf.com/news/how-your-handicap-index-compares/</a>.&#160;<a class="footnote-backref" href="#fnref:1" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Shops, Worldwide Golf. “Breakmaster Digital Green Reader - Worldwide Golf Shops - Your Golf Store for Golf Clubs, Golf Shoes &amp; More.” <em>Worldwide Golf Shops</em>, <a href="https://www.worldwidegolfshops.com/breakmaster-digital-green-reader-10535144/p">www.worldwidegolfshops.com/breakmaster-digital-green-reader-10535144/p</a>. Accessed 16 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:2" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Marksbury, Jessica. "This is the optimal putt length to practice, according to a golf analytics expert." <em>Golf.com</em>, 19 Dec. 2021, <a href="https://golf.com/instruction/putting/optimal-putt-length-to-practice-lou-stagner/">golf.com/instruction/putting/optimal-putt-length-to-practice-lou-stagner/</a>.&#160;<a class="footnote-backref" href="#fnref:3" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>"Digital Green Reading." <em>Old Duffer Golf</em>, <a href="https://oldduffergolf.com/digital-green-reading/">oldduffergolf.com/digital-green-reading/</a>.&#160;<a class="footnote-backref" href="#fnref:4" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>“NX10 Slope Rangefinder.” <em>Precision Pro Golf</em>, <a href="https://precisionprogolf.com/products/nx10-slope-rangefinder">precisionprogolf.com/products/nx10-slope-rangefinder</a>. Accessed 16 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:5" title="Back to text">&#8617;</a></p>
+</li>
+</ol>
+</div><nav class="pager"><a class="prev" href="element-c.html"><small>&larr; Previous</small>Element C: Requirements</a><a class="next" href="element-ef.html"><small>Next &rarr;</small>Element E/F: STEM &amp; Market</a></nav>
+</article>
+</div>
+<footer class="site"><div class="inner">
+  <span>&copy; 2026 Tegan Clancy</span>
+  <span>Neuqua Valley High School &middot; PLTW Engineering Design &amp; Development</span>
+</div></footer>
+</body>
+</html>

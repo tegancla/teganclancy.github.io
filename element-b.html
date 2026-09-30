@@ -1,0 +1,516 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Element B: Documentation &amp; Analysis of Prior Solution Attempts | Tegan Clancy</title>
+<meta name="description" content="Digital Green Reader capstone - Element B: Documentation &amp;amp; Analysis of Prior Solution Attempts">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+function imgFallback(el) {
+  var tries = ["png", "jpeg", "webp"], n = +(el.dataset.try || 0);
+  if (n < tries.length) { el.dataset.try = n + 1; el.src = el.src.replace(/\.[a-z]+$/, "." + tries[n]); return; }
+  var d = el.dataset, ph = document.createElement("div"); ph.className = "ph";
+  ph.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 17-5-5-9 8"/></svg>'
+    + '<strong>Add image here</strong>'
+    + (d.pdf ? '<span class="ph-row"><em>From PDF</em>' + d.pdf + '</span>' : '')
+    + (d.cap ? '<span class="ph-row"><em>Figure</em>' + d.cap + '</span>' : '')
+    + '<span class="ph-row"><em>Save as</em><code>' + d.img + '.jpg</code></span>';
+  el.replaceWith(ph);
+}
+</script>
+</head>
+<body>
+<header class="topbar"><div class="topbar-inner">
+  <a class="brand" href="index.html">Tegan <span>Clancy</span></a>
+  <nav class="topnav">
+    <a href="index.html">Home</a>
+    <a href="project.html" class="active">Capstone</a>
+  </nav>
+</div></header>
+<div class="layout">
+<aside class="sidebar">
+<a class="back" href="project.html">&larr; Project overview</a>
+<p class="label">Project elements</p>
+<ol>
+<li><a href="element-a.html"><span class="letter">A</span><span class="name">The Problem</span></a></li>
+<li><a href="element-b.html" class="current" aria-current="page"><span class="letter">B</span><span class="name">Prior Solutions</span></a></li>
+<li><a href="element-c.html"><span class="letter">C</span><span class="name">Requirements</span></a></li>
+<li><a href="element-d.html"><span class="letter">D</span><span class="name">Concept Selection</span></a></li>
+<li><a href="element-ef.html"><span class="letter">E/F</span><span class="name">STEM &amp; Market</span></a></li>
+<li><a href="element-g.html"><span class="letter">G</span><span class="name">Prototype Build</span></a></li>
+<li><a href="element-h.html"><span class="letter">H</span><span class="name">Test Plan</span></a></li>
+<li><a href="element-i.html"><span class="letter">I</span><span class="name">Results</span></a></li>
+</ol>
+</aside>
+<article class="page-b">
+<p class="eyebrow">Element B</p>
+<h1>Documentation &amp; Analysis of Prior Solution Attempts</h1>
+<h2>I. Introduction</h2>
+<h3>Problem Statement</h3>
+<div class="callout">
+<p>In the United States, 44.13% of amateur golfers have 14.9+ handicaps (not including players who don’t keep score) and experience difficulties when reading the slopes of greens.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> These difficulties arise from novice golfers lacking experience with reading breaks and from courses having different types of cuts for the greens. This problem leaves high-handicap golfers unsatisfied with themselves, as they consistently average four to five three-putts per 18 holes and end up shooting high scores.</p>
+</div>
+<p>Several other existing solutions on the market were heavily researched with the intention of determining how useful the products are for this problem. Additionally, multiple different patents of similar issues were found and analyzed, leading to a better understanding and comprehension of prior solution attempts.</p>
+<h2>II. Current Solutions</h2>
+<p>The current solutions section reviews and analyzes several of the existing green reading tools that are available to all golfers. By examining the works and pros/cons of each product, the section provides the understanding of where solutions fall short &amp; opportunities of improvement.</p>
+<h3>1. Sure Putt Pro Golf Green Reader</h3>
+<p>The Sure Putt golf aid is an extremely compact version of a bubble level. The putting aid is only half an inch thick with a diameter of two inches. Not to mention, incorporating aluminum as the material of the chip decreases the likelihood of the paint fading or chipping. Additionally, the markings on the green reader (which tells the golfer where the ball moves) are all machine-engraved rather than painted on. Due to the usage of aluminum, the aid is heavy enough to lay flat on the ground, meaning it can’t be slanted, which would provide inaccurate readings.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+<div class="fig-grid">
+<figure class="fig" id="img-b-2-1">
+<div class="frame"><img src="b-2-1.jpg" data-img="b-2-1" data-pdf="Element B Outline - NPC" data-cap="Figure 2.1: The Sure Putt Green Reader with Markings" alt="Figure 2.1: The Sure Putt Green Reader with Markings" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.1: The Sure Putt Green Reader with Markings<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup></figcaption>
+</figure>
+<figure class="fig" id="img-b-2-2">
+<div class="frame"><img src="b-2-2.jpg" data-img="b-2-2" data-pdf="Element B Outline - NPC" data-cap="Figure 2.2: Golf Aid Chip along with Carry Bag" alt="Figure 2.2: Golf Aid Chip along with Carry Bag" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.2: Golf Aid Chip along with Carry Bag<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></figcaption>
+</figure>
+</div>
+<div class="proscons">
+<div class="col">
+<h4>Pros</h4>
+<ul>
+<li>Extremely durable and compact</li>
+<li>Engraved writing rather than painted</li>
+<li>Includes carry bag</li>
+<li>Good weight/feel to the aid</li>
+<li>It can easily fit in the pockets of golfers</li>
+</ul>
+</div>
+<div class="col">
+<h4>Cons</h4>
+<ul>
+<li>Cost is relatively high given the size ($40 w/o tax)</li>
+<li>No electronics, purely analog</li>
+<li>Easy to lose given size</li>
+<li>Requires the golfer's interpretation</li>
+<li>Doesn’t recommend aiming automatically</li>
+</ul>
+</div>
+</div>
+<div class="facts">
+<div><b>Price</b>Ranges from $29.95 to $39.95</div>
+<div><b>Places to purchase</b>Amazon &amp; Leadbetter Swing Aids</div>
+<div><b>Manufacturers</b>Sure Putt Golf</div>
+</div>
+<h3>2. EEZ-READ Green Reader</h3>
+<p>The EEZ-READ (short for easy read) is a portable bubble level that provides readings for green contours. Gives golfers the ability to read breaks on putts by placing the reader halfway between the ball and the hole. Overall, it is very compact and lightweight, as seen in Figure 2.3 below. Also incorporates a stainless steel disc, which offers sturdiness to the general design. Stated that the reader strictly works best during the moments where the distance between the ball and the hole is less than 20 feet.<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup></p>
+<div class="fig-grid">
+<figure class="fig" id="img-b-2-3">
+<div class="frame"><img src="b-2-3.jpg" data-img="b-2-3" data-pdf="Element B Outline - NPC" data-cap="Figure 2.3: The Easy Read Putting Aid" alt="Figure 2.3: The Easy Read Putting Aid" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.3: The Easy Read Putting Aid<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup></figcaption>
+</figure>
+<figure class="fig" id="img-b-2-4">
+<div class="frame"><img src="b-2-4.jpg" data-img="b-2-4" data-pdf="Element B Outline - NPC" data-cap="Figure 2.4: Image of Reader Compared to Hand Size" alt="Figure 2.4: Image of Reader Compared to Hand Size" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.4: Image of Reader Compared to Hand Size<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup></figcaption>
+</figure>
+</div>
+<div class="proscons">
+<div class="col">
+<h4>Pros</h4>
+<ul>
+<li>Cost is slightly affordable, being ($20 w/o tax)</li>
+<li>Very portable and pocket-friendly</li>
+<li>Stainless steel is durable and high quality</li>
+<li>A bubble level provides quick readings</li>
+</ul>
+</div>
+<div class="col">
+<h4>Cons</h4>
+<ul>
+<li>Not very precise outside 20 20-foot range</li>
+<li>Doesn’t have any markings on the aid</li>
+<li>Completely requires the golfer's interpretation of the bubble</li>
+<li>Also easy to forget and misplace</li>
+<li>Zero usage of technology or electronics</li>
+</ul>
+</div>
+</div>
+<div class="facts">
+<div><b>Price</b>Ranges from $18.99 to $19.99</div>
+<div><b>Places to purchase</b>Golf Supershop, Ebay &amp; MyGolfChoice</div>
+<div><b>Manufacturers</b>Momentous Golf</div>
+</div>
+<h3>3. BreakMaster Digital Green Reader</h3>
+<p>This green reader is a small portable digital level that is used to find the slope of greens. It then indicates the direction of the break, and then the display shows the specific amount in degrees. Particularly used by being placed onto the putting green and then calibrated through the use of the system inside the device. Overall is a detailed electronic device that can easily be used during rounds of golf or practicing, but is not allowed usage in tournament play.<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup></p>
+<figure class="fig" id="img-b-2-5">
+<div class="frame"><img src="b-2-5.jpg" data-img="b-2-5" data-pdf="Element B Outline - NPC" data-cap="Figure 2.5: Image of BreakMaster Green Reader" alt="Figure 2.5: Image of BreakMaster Green Reader" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.5: Image of BreakMaster Green Reader<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup></figcaption>
+</figure>
+<div class="proscons">
+<div class="col">
+<h4>Pros</h4>
+<ul>
+<li>Accurate slope reading</li>
+<li>Analyzes both direction and degree</li>
+<li>Easy to use</li>
+<li>Lightweight and portable</li>
+<li>Durable</li>
+</ul>
+</div>
+<div class="col">
+<h4>Cons</h4>
+<ul>
+<li>Expensive ($150)</li>
+<li>It may be hard for new users to use</li>
+<li>Not legal in tournament play</li>
+</ul>
+</div>
+</div>
+<div class="facts">
+<div><b>Price</b>Typically around $120-150</div>
+<div><b>Places to purchase</b>Amazon, BreakMaster.com, Golf Tees</div>
+<div><b>Manufacturers</b>Created for BreakMaster by Exelys LLC</div>
+</div>
+<h3>4. Mosey Golf Green Reader</h3>
+<p>This simple, easy-to-use device is suitable for golfers of all levels. It includes a detachable magnetic ball marker on the back of the level aid, an iron storage box, and a portable design. To use the device, it must be placed on the green, leveled, and from there it will read the green's slope and profile.<sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup></p>
+<figure class="fig" id="img-b-2-6">
+<div class="frame"><img src="b-2-6.jpg" data-img="b-2-6" data-pdf="Element B Outline - NPC" data-cap="Figure 2.6: Image of Mosey Green Reader" alt="Figure 2.6: Image of Mosey Green Reader" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.6: Image of Mosey Green Reader<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">11</a></sup></figcaption>
+</figure>
+<div class="proscons">
+<div class="col">
+<h4>Pros</h4>
+<ul>
+<li>Cheap, only costing 11 dollars</li>
+<li>Pocket-sized, making it easy to carry around</li>
+<li>Lightweight</li>
+<li>Simple and very straightforward use</li>
+<li>Can be used as a ball marker</li>
+</ul>
+</div>
+<div class="col">
+<h4>Cons</h4>
+<ul>
+<li>Low precision, giving an idea of direction without the use of accurate technology</li>
+<li>Would be ineffective against irregular greens</li>
+<li>Not tournament legal</li>
+<li>Requires interpretation without actually telling the golfer where to put.</li>
+</ul>
+</div>
+</div>
+<div class="facts">
+<div><b>Price</b>Typically around $11.50</div>
+<div><b>Places to purchase</b>Walmart</div>
+<div><b>Manufacturers</b>Mosey Manufacturing</div>
+</div>
+<h3>5. JEK Digital Level</h3>
+<p>This device acts as an ordinary bubble level, except it takes an ordinary slope measurement and converts it to percent slope. This allows golfers who use AimPoint to accurately predict the percent slope of a putting green.<sup id="fnref:12"><a class="footnote-ref" href="#fn:12">12</a></sup></p>
+<figure class="fig" id="img-b-2-7">
+<div class="frame"><img src="b-2-7.jpg" data-img="b-2-7" data-pdf="Element B Outline - NPC" data-cap="Figure 2.7: Image of JEK digital level" alt="Figure 2.7: Image of JEK digital level" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.7: Image of JEK digital level<sup id="fnref:13"><a class="footnote-ref" href="#fn:13">13</a></sup></figcaption>
+</figure>
+<div class="proscons">
+<div class="col">
+<h4>Pros</h4>
+<ul>
+<li>Provides accurate readings</li>
+<li>Compact in size</li>
+<li>Ease of use</li>
+<li>Good quality</li>
+</ul>
+</div>
+<div class="col">
+<h4>Cons</h4>
+<ul>
+<li>No assistance on how to actually aim</li>
+<li>Not tournament legal</li>
+<li>Doesn’t take distance into account</li>
+</ul>
+</div>
+</div>
+<div class="facts">
+<div><b>Price</b>$40</div>
+<div><b>Places to purchase</b>Amazon</div>
+<div><b>Manufacturers</b>eOUTIL</div>
+</div>
+<h3>6. Tour Read App</h3>
+<p>This app is downloadable on any IOS or Android phone. This app is able to walk a golfer through the putting process and uses the phone to calculate slope in the green. After it calculates the slope, the app then walks the golfer through the process of setting up, aiming, and hitting the putt.<sup id="fnref:14"><a class="footnote-ref" href="#fn:14">14</a></sup></p>
+<figure class="fig" id="img-b-2-8">
+<div class="frame"><img src="b-2-8.jpg" data-img="b-2-8" data-pdf="Element B Outline - NPC" data-cap="Figure 2.8: Image of Tour Read App" alt="Figure 2.8: Image of Tour Read App" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.8: Image of Tour Read App<sup id="fnref:15"><a class="footnote-ref" href="#fn:15">15</a></sup></figcaption>
+</figure>
+<div class="proscons">
+<div class="col">
+<h4>Pros</h4>
+<ul>
+<li>Very accessible as it’s used on a phone</li>
+<li>Provides aid beyond just a slope reading</li>
+<li>Ease of use</li>
+<li>Gives a large plethora of data</li>
+</ul>
+</div>
+<div class="col">
+<h4>Cons</h4>
+<ul>
+<li>Reading may be slightly inaccurate</li>
+<li>Expensive and requires a membership to use the app</li>
+<li>Not tournament legal</li>
+<li>Depends on the type of phone</li>
+</ul>
+</div>
+</div>
+<div class="facts">
+<div><b>Price</b>$100 a year subscription</div>
+<div><b>Places to purchase</b>On the majority of smartphones</div>
+<div><b>Manufacturers</b>Turbo Buzzer Inc. &amp; Callaway Golf</div>
+</div>
+<h2>III. Patent Research</h2>
+<p>The patent research section explores the different patents that past inventors have approached through the correlation to green reading technology. The patents provide a development to a more advanced reliable solution by reviewing the mechanisms, and technological weaknesses.</p>
+<h3>Patent 1: Device for measuring inclination of green in golf course</h3>
+<div class="facts">
+<div><b>Patent Number</b>US9874442B2</div>
+<div style="grid-column: span 2"><b>Source (APA format)</b>OH, J. W. (2018, January 23). Device for measuring inclination of green in golf course.</div>
+</div>
+<h4>Patent Summary</h4>
+<p>A measuring system that captures the distances of the surfaces on putting greens. Uses multiple different aspects of an angular orientation, then uses a rotation member to rely on gravity to rotate on the given shaft. The member is marked by measurement lines both horizontally and vertically, indicating the direction and magnitude of the inclination /slope. The interior portion of the device has two separate casings, one part supporting the ability to rotate and the other part including the graduations/lines used to judge measurement.</p>
+<figure class="fig" id="img-b-3-1">
+<div class="frame"><img src="b-3-1.jpg" data-img="b-3-1" data-pdf="Element B Outline - NPC" data-cap="Figure 3.1: General Diagram of Measuring Device and Components" alt="Figure 3.1: General Diagram of Measuring Device and Components" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 3.1: General Diagram of Measuring Device and Components<sup id="fnref:16"><a class="footnote-ref" href="#fn:16">16</a></sup></figcaption>
+</figure>
+<h4>Patent Critique</h4>
+<p>This design has a clear mechanical layout that does not require any form of technology or power. Most components seem to be very cost-effective, thus keeping the device affordable. However, Figure 3.1 lacks simplicity as there are several different pieces for casings and parts. The rotation member has to be aligned perfectly for the measurements to be accurate. The design also isn’t very portable.</p>
+<figure class="fig" id="img-b-3-2">
+<div class="frame"><img src="b-3-2.jpg" data-img="b-3-2" data-pdf="Element B Outline - NPC" data-cap="Figure 3.2: Exploded Side View of Inclination Reader" alt="Figure 3.2: Exploded Side View of Inclination Reader" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 3.2: Exploded Side View of Inclination Reader<sup id="fnref:17"><a class="footnote-ref" href="#fn:17">17</a></sup></figcaption>
+</figure>
+<h4>Patent Critique</h4>
+<p>This diagram offers an understanding of the mechanics of the system while at an angle. Allows a visualization of how the slope and magnitude are interpreted through the graphics of the flag and golf ball. Many of the weaknesses are derived from the potential friction of the environment, specifically when placed at an angle. Also, the interior rotation member may be vulnerable to dragging if the casing compresses over long periods of time.</p>
+<figure class="fig" id="img-b-3-3">
+<div class="frame"><img src="b-3-3.jpg" data-img="b-3-3" data-pdf="Element B Outline - NPC" data-cap="Figure 3.3: Visual of Unfolded Mid-Section Perspective" alt="Figure 3.3: Visual of Unfolded Mid-Section Perspective" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 3.3: Visual of Unfolded Mid-Section Perspective<sup id="fnref:18"><a class="footnote-ref" href="#fn:18">18</a></sup></figcaption>
+</figure>
+<h4>Patent Critique</h4>
+<p>The visual clearly shows the simplicity of reading the circular markings. The unfolded view makes it easy to quickly glance at the direction of the rotation member and interpret slope direction. Markings revolve around the circular device, allowing the measurement to be read from any angle. On the contrary, the degree markings are extremely small, resulting in the device being hard to read from afar. Potential opportunity for human error by causing the member to over-rotate if the device is not cared for properly.</p>
+<h3>Patent 2: Golf putting aid</h3>
+<div class="facts">
+<div><b>Patent Number</b>US6165083A</div>
+<div style="grid-column: span 2"><b>Source (APA format)</b>Stenger, S. L., &amp; Moody, E. R. (2000, December 26). Golf putting aid.</div>
+</div>
+<h4>Patent Summary</h4>
+<p>A full electronic powered putting aid which uses a leveling sensor to offer guidance for golfers looking for aim recommendations. Not only does it give the ability to read the slope at different locations, but it also indicates the ideal aim golfers need to predict the break. Several different components within the system, each having unique purposes. The display gives the visuals for slope angles and can also audibly announce the potential aim points for the golfer. Overall, the aid relies heavily on proper electronics and adaptations to putting distances, yet is much more advanced compared to traditional bubble-level designs.</p>
+<figure class="fig" id="img-b-3-4">
+<div class="frame"><img src="b-3-4.jpg" data-img="b-3-4" data-pdf="Element B Outline - NPC" data-cap="Figure 3.4: Detailed Image of Putting Aid with Components" alt="Figure 3.4: Detailed Image of Putting Aid with Components" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 3.4: Detailed Image of Putting Aid with Components<sup id="fnref:19"><a class="footnote-ref" href="#fn:19">19</a></sup></figcaption>
+</figure>
+<h4>Patent Critique</h4>
+<p>The image above clearly shows the clip of design specifically on both ends of the aid. This allows for quick attachment to any form or type of shafts for putters. The integrated display is very clear and is simple for golfers. On the contrary, there is a high chance that the clip mechanism can become loose over time due to constant clipping and unclipping. Also, because of the high amount of electrical components within the system, the possibility arises for components to fail during rounds of golf.</p>
+<figure class="fig" id="img-b-3-5">
+<div class="frame"><img src="b-3-5.jpg" data-img="b-3-5" data-pdf="Element B Outline - NPC" data-cap="Figure 3.5: Exploded View of Display for Device" alt="Figure 3.5: Exploded View of Display for Device" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 3.5: Exploded View of Display for Device<sup id="fnref:20"><a class="footnote-ref" href="#fn:20">20</a></sup></figcaption>
+</figure>
+<h4>Patent Critique</h4>
+<p>The visual has multiple forms of data on the LCD screen. Some options consisted of units, slope measurements, and encouragement phrases. Figure 3.5 also highlights a real-life application, illustrating how the device interacts with the slope and provides a line for the putt. Weaknesses consist of the accessibility and visibility of the device. Accessibility specifically due to the aid strictly being attached to the putter and then placed on the ground. This results in the putter grip being wet while the greens are either wet from dew, weather, or even sprinklers. Additionally, visibility as the numeric display may be difficult to visualize from the glare of the sun.</p>
+<h3>Patent 3: Green reader device</h3>
+<div class="facts">
+<div><b>Patent Number</b>US5662535A</div>
+<div style="grid-column: span 2"><b>Source (APA format)</b>Smith, G. E. (1997, September 2). Green reader device.</div>
+</div>
+<h4>Patent Summary</h4>
+<p>This is a design for a reader device to determine the correct putting direction based on the green's slope. The device uses a green viewing area and a bubble level on the body to help the reader analyze the green while making sure the device is level. It also has an adjustable pivot indicator that points toward the putting direction while properly taking into account the slope.</p>
+<div class="fig-grid">
+<figure class="fig" id="img-b-3-6">
+<div class="frame"><img src="b-3-6.jpg" data-img="b-3-6" data-pdf="Element B Outline - NPC" data-cap="Figure 3.6: Front View of the Green Reader Device" alt="Figure 3.6: Front View of the Green Reader Device" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 3.6: Front View of the Green Reader Device<sup id="fnref:21"><a class="footnote-ref" href="#fn:21">21</a></sup></figcaption>
+</figure>
+<figure class="fig" id="img-b-3-7">
+<div class="frame"><img src="b-3-7.jpg" data-img="b-3-7" data-pdf="Element B Outline - NPC" data-cap="Figure 3.7: Side View of the Green Reading Device" alt="Figure 3.7: Side View of the Green Reading Device" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 3.7: Side View of the Green Reading Device<sup id="fnref:22"><a class="footnote-ref" href="#fn:22">22</a></sup></figcaption>
+</figure>
+<figure class="fig" id="img-b-3-8">
+<div class="frame"><img src="b-3-8.jpg" data-img="b-3-8" data-pdf="Element B Outline - NPC" data-cap="Figure 3.8: Frontal View of Aid Showing it in Proper Operation" alt="Figure 3.8: Frontal View of Aid Showing it in Proper Operation" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 3.8: Frontal View of Aid Showing it in Proper Operation<sup id="fnref:23"><a class="footnote-ref" href="#fn:23">23</a></sup></figcaption>
+</figure>
+</div>
+<h4>Patent Critique</h4>
+<p>The design is limited by its simplicity and lack of technology. Without using devices that can confirm its accuracy, the device is limited by the user's steadiness and judgment, leading to many inconsistencies. The device also does not address problems that could affect putts, such as green moisture and grain, thereby limiting its potential. What the device gained in compactness and affordability, it lost in accuracy and effectiveness. The design does have some pros, however, as it is lightweight and pretty simple in design and build. Therefore, it would be easy to create and sell on the market.</p>
+<h3>Patent 4: Golf green slope indicating device</h3>
+<div class="facts">
+<div><b>Patent Number</b>US4260151A</div>
+<div style="grid-column: span 2"><b>Source (APA format)</b>Weaver, H. J. (1981, April 7). Golf green slope indicating device.</div>
+</div>
+<h4>Patent Summary</h4>
+<p>The patent is for a handheld golfer's sighting aid used to determine putting directions using the slope of the green. It is a box-shaped transparent device that is compact enough to fit in someone's pocket. Inside the device is a pointer to the lower end, which is weighted to act as a plumb bob. Another side has a vertical line and horizontal lines, with the pointer pivot axis lying at the intersection of the central vertical line and a lower horizontal line.</p>
+<div class="fig-grid">
+<figure class="fig" id="img-b-3-9">
+<div class="frame"><img src="b-3-9.jpg" data-img="b-3-9" data-pdf="Element B Outline - NPC" data-cap="Figure 3.9: View of Golfer Using the Device on Green" alt="Figure 3.9: View of Golfer Using the Device on Green" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 3.9: View of Golfer Using the Device on Green<sup id="fnref:24"><a class="footnote-ref" href="#fn:24">24</a></sup></figcaption>
+</figure>
+<figure class="fig" id="img-b-3-10">
+<div class="frame"><img src="b-3-10.jpg" data-img="b-3-10" data-pdf="Element B Outline - NPC" data-cap="Figure 3.10: Enlarged Diagram of Device and how it Operates" alt="Figure 3.10: Enlarged Diagram of Device and how it Operates" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 3.10: Enlarged Diagram of Device and how it Operates<sup id="fnref:25"><a class="footnote-ref" href="#fn:25">25</a></sup></figcaption>
+</figure>
+<figure class="fig" id="img-b-3-11">
+<div class="frame"><img src="b-3-11.jpg" data-img="b-3-11" data-pdf="Element B Outline - NPC" data-cap="Figure 3.11: Enlarged Front Display of the Putting Device" alt="Figure 3.11: Enlarged Front Display of the Putting Device" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 3.11: Enlarged Front Display of the Putting Device<sup id="fnref:26"><a class="footnote-ref" href="#fn:26">26</a></sup></figcaption>
+</figure>
+<figure class="fig" id="img-b-3-12">
+<div class="frame"><img src="b-3-12.jpg" data-img="b-3-12" data-pdf="Element B Outline - NPC" data-cap="Figure 3.12: Vertical View of the Green Slope Indicating Device" alt="Figure 3.12: Vertical View of the Green Slope Indicating Device" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 3.12: Vertical View of the Green Slope Indicating Device<sup id="fnref:27"><a class="footnote-ref" href="#fn:27">27</a></sup></figcaption>
+</figure>
+<figure class="fig" id="img-b-3-13">
+<div class="frame"><img src="b-3-13.jpg" data-img="b-3-13" data-pdf="Element B Outline - NPC" data-cap="Figure 3.13: Detailed View of the Pivotal Mounting for the Pointer" alt="Figure 3.13: Detailed View of the Pivotal Mounting for the Pointer" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 3.13: Detailed View of the Pivotal Mounting for the Pointer<sup id="fnref:28"><a class="footnote-ref" href="#fn:28">28</a></sup></figcaption>
+</figure>
+</div>
+<h4>Patent Critique</h4>
+<p>The device is limited due to how basic it is, relying on gravity and visuals rather than technology or sensors. Without even a bubble level, the device is minimal in its effectiveness. The box itself requires a lot of work to set up and could end up failing due to user error. It also only measures slope direction without taking into account other putting factors, and would be awkward to use often, most likely slowing down play a drastic amount. However the detailed drawings portraying how simple it is to use and thoroughly detailing the product itself is a big positive.</p>
+<h3>Patent 5: Device for indicating slope of green on golf course</h3>
+<div class="facts">
+<div><b>Patent Number</b>US3751819A</div>
+<div style="grid-column: span 2"><b>Source (APA format)</b>Dixon, H. F. (1973). Device for indicating slope of green on golf course (U.S. Patent No. 3,751,819). U.S. Patent and Trademark Office</div>
+</div>
+<h4>Patent Summary</h4>
+<p>A device that can be carried by a golfer during their putting routine to determine the slope between their ball and the hole on any given putt. It incorporates a bubble level with wheels and a shaft to be wheeled along the surface of the green. The bubble shifts depending on the amount of slope, lining up with the appropriate number to indicate the amount of slope/pitch in the putting surface.</p>
+<figure class="fig" id="img-b-3-14">
+<div class="frame"><img src="b-3-14.jpg" data-img="b-3-14" data-pdf="Element B Outline - NPC" data-cap="Figure 3.14: All Angles of Patent with Components and Uses" alt="Figure 3.14: All Angles of Patent with Components and Uses" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 3.14: All Angles of Patent with Components and Uses<sup id="fnref:29"><a class="footnote-ref" href="#fn:29">29</a></sup></figcaption>
+</figure>
+<h4>Patent Critique</h4>
+<p>These visuals showcase the main body of the device from all angles. It incorporates a close-up of the bubble level, showing each number that indicates to the golfer the amount of slope on a green. It also showcases the wheels and how they are attached, allowing the device to roll smoothly across the green, providing ease of use and accuracy.</p>
+<figure class="fig" id="img-b-3-15">
+<div class="frame"><img src="b-3-15.jpg" data-img="b-3-15" data-pdf="Element B Outline - NPC" data-cap="Figure 3.15: Image Showcasing the Device in Action" alt="Figure 3.15: Image Showcasing the Device in Action" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 3.15: Image Showcasing the Device in Action<sup id="fnref:30"><a class="footnote-ref" href="#fn:30">30</a></sup></figcaption>
+</figure>
+<h4>Patent Critique</h4>
+<p>This image shows how one would be able to use this device on a green. It showcases the handle piece, allowing a golfer to easily roll it along a putt line. This picture also showcases the positioning of the level. The level is pointed upward to allow the golfer to see the slope index while simultaneously rolling it along their putt line.</p>
+<h3>Patent 6: Golf green reader and putting aid</h3>
+<div class="facts">
+<div><b>Patent Number</b>US8449409B1</div>
+<div style="grid-column: span 2"><b>Source (APA format)</b>Barkley, J. C., &amp; Pemberton, B. G. (2013, May 28). Golf green reader and putting aid.</div>
+</div>
+<h4>Patent Summary</h4>
+<p>This device allows a golfer to see topographical data in an easier-to-understand format. It takes in the distance between the device and the green while also gathering the angle of the green’s slope. After gathering such data, the device computes a topographic view of the putting green. It then displays an accurate putting aid to the golfer.</p>
+<figure class="fig" id="img-b-3-16">
+<div class="frame"><img src="b-3-16.jpg" data-img="b-3-16" data-pdf="Element B Outline - NPC" data-cap="Figure 3.16: Image of Green Reader and Components on Top" alt="Figure 3.16: Image of Green Reader and Components on Top" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 3.16: Image of Green Reader and Components on Top<sup id="fnref:31"><a class="footnote-ref" href="#fn:31">31</a></sup></figcaption>
+</figure>
+<h4>Patent Critique</h4>
+<p>This image showcases the device as a whole. This device contains both distance sensors and a tilt sensor to gather adequate data. From there, it processes this information and outputs it onto the display seen in the image above. This display is then used by a golfer to understand the topography of a putting surface and to correctly predict the line needed on a given putt.</p>
+<figure class="fig" id="img-b-3-17">
+<div class="frame"><img src="b-3-17.jpg" data-img="b-3-17" data-pdf="Element B Outline - NPC" data-cap="Figure 3.17: Diagram of Mathematics Interpreting Slope" alt="Figure 3.17: Diagram of Mathematics Interpreting Slope" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 3.17: Diagram of Mathematics Interpreting Slope<sup id="fnref:32"><a class="footnote-ref" href="#fn:32">32</a></sup></figcaption>
+</figure>
+<h4>Patent Critique</h4>
+<p>This diagram shows the method for gathering topographical data. The device measures along the selected distance that needs to be measured. From there, it collects the data for the slope itself, using the angle of the pitch in the green. This is then the data that is displayed on the actual device itself.</p>
+<h2>IV. Solutions Matrix</h2>
+<figure class="fig" id="img-b-4-1">
+<div class="frame"><img src="b-4-1.jpg" data-img="b-4-1" data-pdf="Element B Outline - NPC" data-cap="Figure 2.4: Similar Solutions Matrix for 6 Different Products" alt="Figure 2.4: Similar Solutions Matrix for 6 Different Products" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.4: Similar Solutions Matrix for 6 Different Products</figcaption>
+</figure>
+<h3>Matrix Analysis</h3>
+<p>In the realm of products, there has already been a large number of green reading solutions, all of which have differing methods of calculating the percent slope and providing advice to golfers. The Solutions Matrix in figure 2.4 shows the products analyzed, green meaning yes, it has that specification, and red meaning no, it does not. As seen in the matrix, many of these products share the most specifications in the following categories: does not damage the green, requires no power, and is weather resistant. A design for a similar future product must therefore contain these specifications in order to compete against existing products. On the other hand, not many of the tested products have the specifications of measuring distance, attaching to a putter, and measuring multiple different things. These are key notes to highlight as they could make a future product stand out above the rest.</p>
+<h2>V. Conclusion</h2>
+<p>The solutions listed above are among the most effective currently available on the given market. Current solutions, such as the EEZ-READ Green Reader and the Mosey Golf Green Reader, are either inexpensive and inaccurate or expensive and do not provide guidance on aiming. Overall, the solutions that were researched and analyzed all clearly indicate a requirement for a product solution that is not only reliable but also precise. In addition, the patents listed are for various putting aid components and include proper summaries and critiques of what is good and bad about each patent. These individual patents address both the benefits and limitations of inventors' approach to a golf green reading device. Furthermore, to analyze the effectiveness of each solution, an appropriate matrix of solutions was created, including products such as the Tour Read App and JEK Digital Level. The solutions matrix will be helpful throughout the rest of the project when figuring out new solutions and what components should be added to the final product. The specifications portion of the matrix is a key criteria to the element due to the specifications having a significant impact in the months to come. Specifically, as the criteria will separate a new solution from prior solutions and patents that have had issues in the past. This research was an essential step toward developing a solution to the green reading problem. Utilizing experts in engineering, these solutions can be further analyzed to create a solution to the green reading problem by analyzing past ideas already on the market.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Cunningham, Kevin. “Here’s How Your Handicap Index Stacks up against Golfers in the United States.” <em>Golf</em>, 9 Sept. 2020, <a href="https://golf.com/news/how-your-handicap-index-compares/">golf.com/news/how-your-handicap-index-compares/</a>.&#160;<a class="footnote-backref" href="#fnref:1" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>“Sure Putt Pro Golf Green Reader - Gunmetal.” <em>Sureputtgolf.com</em>, 18 Sept. 2024, <a href="https://sureputtgolf.com/products/sure-putt-pro-golf-green-reader-gunmetal/">sureputtgolf.com/products/sure-putt-pro-golf-green-reader-gunmetal/</a>. Accessed 6 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:2" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>“Sure Putt Pro Golf Green Reader - Gunmetal.” <em>Sureputtgolf.com</em>, 18 Sept. 2024, <a href="https://sureputtgolf.com/products/sure-putt-pro-golf-green-reader-gunmetal/">sureputtgolf.com/products/sure-putt-pro-golf-green-reader-gunmetal/</a>. Accessed 6 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:3" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>“Sure Putt Pro Golf Green Reader - Gunmetal.” <em>Sureputtgolf.com</em>, 18 Sept. 2024, <a href="https://sureputtgolf.com/products/sure-putt-pro-golf-green-reader-gunmetal/">sureputtgolf.com/products/sure-putt-pro-golf-green-reader-gunmetal/</a>. Accessed 6 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:4" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>“EEZ-READ Green Reader – Momentus Sports.” <em>Momentussports.com</em>, 19 June 2017, <a href="https://www.momentussports.com/product/eez-read-green-reader/">www.momentussports.com/product/eez-read-green-reader/</a>. Accessed 6 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:5" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>“EEZ-READ Green Reader – Momentus Sports.” <em>Momentussports.com</em>, 19 June 2017, <a href="https://www.momentussports.com/product/eez-read-green-reader/">www.momentussports.com/product/eez-read-green-reader/</a>. Accessed 6 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:6" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p>“EEZ-READ Green Reader – Momentus Sports.” <em>Momentussports.com</em>, 19 June 2017, <a href="https://www.momentussports.com/product/eez-read-green-reader/">www.momentussports.com/product/eez-read-green-reader/</a>. Accessed 6 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:7" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p>“Breakmaster Digital Green Reader.” <em>BreakMaster</em>, <a href="https://breakmaster.com/shop/ols/products/breakmaster-digital-green-reader">breakmaster.com/shop/ols/products/breakmaster-digital-green-reader</a>. Accessed 7 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:8" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p>“Breakmaster Digital Green Reader.” <em>BreakMaster</em>, <a href="https://breakmaster.com/shop/ols/products/breakmaster-digital-green-reader">breakmaster.com/shop/ols/products/breakmaster-digital-green-reader</a>. Accessed 7 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:9" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p>“Mosey Golf Green Reader with Iron Box Magnetic Ball Marker High Precision Level Aid Bubble Tool Golf Putting Training Accessories.” <em>Walmart</em>, <a href="https://www.walmart.com/ip/Mosey-Golf-Green-Reader-with-Iron-Box-Magnetic-Ball-Marker-High-Precision-Level-Aid-Bubble-Tool-Golf-Putting-Training-Accessories/5198752463">www.walmart.com/ip/5198752463</a>. Accessed 7 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:10" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:11">
+<p>“Mosey Golf Green Reader with Iron Box Magnetic Ball Marker High Precision Level Aid Bubble Tool Golf Putting Training Accessories.” <em>Walmart</em>, <a href="https://www.walmart.com/ip/Mosey-Golf-Green-Reader-with-Iron-Box-Magnetic-Ball-Marker-High-Precision-Level-Aid-Bubble-Tool-Golf-Putting-Training-Accessories/5198752463">www.walmart.com/ip/5198752463</a>. Accessed 7 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:11" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:12">
+<p>"Digital Green Reading." <em>Old Duffer Golf</em>, <a href="https://oldduffergolf.com/digital-green-reading/">oldduffergolf.com/digital-green-reading/</a>.&#160;<a class="footnote-backref" href="#fnref:12" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:13">
+<p>"Digital Green Reading." <em>Old Duffer Golf</em>, <a href="https://oldduffergolf.com/digital-green-reading/">oldduffergolf.com/digital-green-reading/</a>.&#160;<a class="footnote-backref" href="#fnref:13" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:14">
+<p>"Tour Read Golf - green reading system." <em>MyGolfSpy Forum</em>, 8 May 2025, <a href="https://forum.mygolfspy.com/topic/70106-tour-read-golf-green-reading-system/">forum.mygolfspy.com/topic/70106-tour-read-golf-green-reading-system/</a>.&#160;<a class="footnote-backref" href="#fnref:14" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:15">
+<p>"Ralph Bauer Tour Read Golf." <em>Foresight Sports</em>, 2025, <a href="https://golf.foresightsports.com/ralph-bauer-tour-read-golf">golf.foresightsports.com/ralph-bauer-tour-read-golf</a>.&#160;<a class="footnote-backref" href="#fnref:15" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:16">
+<p>“US9874442B2 - Device for Measuring Inclination of Green in Golf Course - Google Patents.” <em>Google.com</em>, 27 Mar. 2014, <a href="https://patents.google.com/patent/US9874442B2/en">patents.google.com/patent/US9874442B2/en</a>. Accessed 5 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:16" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:17">
+<p>“US9874442B2 - Device for Measuring Inclination of Green in Golf Course - Google Patents.” <em>Google.com</em>, 27 Mar. 2014, <a href="https://patents.google.com/patent/US9874442B2/en">patents.google.com/patent/US9874442B2/en</a>. Accessed 5 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:17" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:18">
+<p>“US9874442B2 - Device for Measuring Inclination of Green in Golf Course - Google Patents.” <em>Google.com</em>, 27 Mar. 2014, <a href="https://patents.google.com/patent/US9874442B2/en">patents.google.com/patent/US9874442B2/en</a>. Accessed 6 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:18" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:19">
+<p>“US6165083A - Golf Putting Aid - Google Patents.” <em>Google.com</em>, 22 Mar. 1999, <a href="https://patents.google.com/patent/US6165083A/en">patents.google.com/patent/US6165083A/en</a>. Accessed 6 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:19" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:20">
+<p>“US6165083A - Golf Putting Aid - Google Patents.” <em>Google.com</em>, 22 Mar. 1999, <a href="https://patents.google.com/patent/US6165083A/en">patents.google.com/patent/US6165083A/en</a>. Accessed 6 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:20" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:21">
+<p>“US5662535A - Green Reader Device.” <em>Google Patents</em>, Google, <a href="https://patents.google.com/patent/US5662535A/en">patents.google.com/patent/US5662535A/en</a>. Accessed 7 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:21" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:22">
+<p>“US5662535A - Green Reader Device.” <em>Google Patents</em>, Google, <a href="https://patents.google.com/patent/US5662535A/en">patents.google.com/patent/US5662535A/en</a>. Accessed 7 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:22" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:23">
+<p>“US5662535A - Green Reader Device.” <em>Google Patents</em>, Google, <a href="https://patents.google.com/patent/US5662535A/en">patents.google.com/patent/US5662535A/en</a>. Accessed 7 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:23" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:24">
+<p>“US4260151A - Golf Green Slope Indicating Device.” <em>Google Patents</em>, Google, <a href="https://patents.google.com/patent/US4260151A/en">patents.google.com/patent/US4260151A/en</a>. Accessed 7 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:24" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:25">
+<p>“US4260151A - Golf Green Slope Indicating Device.” <em>Google Patents</em>, Google, <a href="https://patents.google.com/patent/US4260151A/en">patents.google.com/patent/US4260151A/en</a>. Accessed 7 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:25" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:26">
+<p>“US4260151A - Golf Green Slope Indicating Device.” <em>Google Patents</em>, Google, <a href="https://patents.google.com/patent/US4260151A/en">patents.google.com/patent/US4260151A/en</a>. Accessed 7 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:26" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:27">
+<p>“US4260151A - Golf Green Slope Indicating Device.” <em>Google Patents</em>, Google, <a href="https://patents.google.com/patent/US4260151A/en">patents.google.com/patent/US4260151A/en</a>. Accessed 7 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:27" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:28">
+<p>“US4260151A - Golf Green Slope Indicating Device.” <em>Google Patents</em>, Google, <a href="https://patents.google.com/patent/US4260151A/en">patents.google.com/patent/US4260151A/en</a>. Accessed 7 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:28" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:29">
+<p>Dixon, Harry F. <em>Device for Indicating Slope of Green on Golf Course</em>. U.S. Patent 3,751,819A, 14 Aug. 1973. Google Patents, <a href="https://patents.google.com/patent/US3751819A/en">patents.google.com/patent/US3751819A/en</a>.&#160;<a class="footnote-backref" href="#fnref:29" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:30">
+<p>Dixon, Harry F. <em>Device for Indicating Slope of Green on Golf Course</em>. U.S. Patent 3,751,819A, 14 Aug. 1973. Google Patents, <a href="https://patents.google.com/patent/US3751819A/en">patents.google.com/patent/US3751819A/en</a>.&#160;<a class="footnote-backref" href="#fnref:30" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:31">
+<p>Barkley, John Clinton, and Benjamin Gerald Pemberton. <em>Golf Green Reader and Putting Aid</em>. U.S. Patent 8,449,409 B1, 28 May 2013. Google Patents, <a href="https://patents.google.com/patent/US8449409B1/en">patents.google.com/patent/US8449409B1/en</a>.&#160;<a class="footnote-backref" href="#fnref:31" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:32">
+<p>Barkley, John Clinton, and Benjamin Gerald Pemberton. <em>Golf Green Reader and Putting Aid</em>. U.S. Patent 8,449,409 B1, 28 May 2013. Google Patents, <a href="https://patents.google.com/patent/US8449409B1/en">patents.google.com/patent/US8449409B1/en</a>.&#160;<a class="footnote-backref" href="#fnref:32" title="Back to text">&#8617;</a></p>
+</li>
+</ol>
+</div><nav class="pager"><a class="prev" href="element-a.html"><small>&larr; Previous</small>Element A: The Problem</a><a class="next" href="element-c.html"><small>Next &rarr;</small>Element C: Requirements</a></nav>
+</article>
+</div>
+<footer class="site"><div class="inner">
+  <span>&copy; 2026 Tegan Clancy</span>
+  <span>Neuqua Valley High School &middot; PLTW Engineering Design &amp; Development</span>
+</div></footer>
+</body>
+</html>

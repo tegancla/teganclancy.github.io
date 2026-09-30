@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tegan Clancy | Computer Engineering at UIUC</title>
+<meta name="description" content="Tegan Clancy - Computer Engineering, University of Illinois Urbana-Champaign">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+function imgFallback(el) {
+  var tries = ["png", "jpeg", "webp"], n = +(el.dataset.try || 0);
+  if (n < tries.length) { el.dataset.try = n + 1; el.src = el.src.replace(/\.[a-z]+$/, "." + tries[n]); return; }
+  var d = el.dataset, ph = document.createElement("div"); ph.className = "ph";
+  ph.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 17-5-5-9 8"/></svg>'
+    + '<strong>Add image here</strong>'
+    + (d.pdf ? '<span class="ph-row"><em>From PDF</em>' + d.pdf + '</span>' : '')
+    + (d.cap ? '<span class="ph-row"><em>Figure</em>' + d.cap + '</span>' : '')
+    + '<span class="ph-row"><em>Save as</em><code>' + d.img + '.jpg</code></span>';
+  el.replaceWith(ph);
+}
+</script>
+</head>
+<body>
+<header class="topbar"><div class="topbar-inner">
+  <a class="brand" href="index.html">Tegan <span>Clancy</span></a>
+  <nav class="topnav">
+    <a href="index.html">Home</a>
+    <a href="project.html" class="">Capstone</a>
+  </nav>
+</div></header>
+<main>
+<section class="wrap hero">
+  <p class="eyebrow">Portfolio</p>
+  <h1>Tegan Clancy</h1>
+  <p class="lede">Computer Engineering student at the University of Illinois Urbana-Champaign (Grainger College of Engineering), minoring in Mathematics.</p>
+  <div class="meta">
+    <span class="chip">Computer Engineering</span>
+    <span class="chip">Mathematics minor</span>
+    <span class="chip">University of Illinois Urbana-Champaign</span>
+  </div>
+  <!-- Add your links here, e.g.:
+  <p style="margin-top:20px"><a class="btn" href="https://www.linkedin.com/in/YOUR-NAME">LinkedIn</a> <a class="btn ghost" href="mailto:you@example.com">Email</a></p>
+  -->
+</section>
+
+<section class="wrap section">
+  <h2>Projects</h2>
+  <a class="project-card" href="project.html">
+    <div class="art">
+      <svg width="140" height="140" viewBox="0 0 140 140" fill="none" aria-hidden="true">
+        <ellipse cx="70" cy="100" rx="58" ry="18" fill="#ffffff" fill-opacity=".12"/>
+        <line x1="70" y1="24" x2="70" y2="100" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+        <path d="M70 24 L102 34 L70 44 Z" fill="#fff"/>
+        <path d="M24 108 Q52 74 70 100" stroke="#9be3b8" stroke-width="2.5" stroke-dasharray="5 5" fill="none"/>
+        <circle cx="24" cy="108" r="6" fill="#fff"/>
+      </svg>
+    </div>
+    <div class="body">
+      <span class="eyebrow">PLTW EDD Capstone &middot; 2025&ndash;2026</span>
+      <h3>Digital Green Reader</h3>
+      <p style="color:var(--ink-2)">An Arduino-based training aid that measures green slope with an accelerometer and aims a servo-driven laser along the ideal putt line. 95% success rate in accuracy testing.</p>
+      <span class="btn ghost" style="margin-top:6px">View project &rarr;</span>
+    </div>
+  </a>
+</section>
+</main>
+<footer class="site"><div class="inner">
+  <span>&copy; 2026 Tegan Clancy</span>
+  <span>Neuqua Valley High School &middot; PLTW Engineering Design &amp; Development</span>
+</div></footer>
+</body>
+</html>

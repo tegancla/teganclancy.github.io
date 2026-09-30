@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Element E/F: Application of STEM Principles and Practices | Tegan Clancy</title>
+<meta name="description" content="Digital Green Reader capstone - Element E/F: Application of STEM Principles and Practices">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+function imgFallback(el) {
+  var tries = ["png", "jpeg", "webp"], n = +(el.dataset.try || 0);
+  if (n < tries.length) { el.dataset.try = n + 1; el.src = el.src.replace(/\.[a-z]+$/, "." + tries[n]); return; }
+  var d = el.dataset, ph = document.createElement("div"); ph.className = "ph";
+  ph.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 17-5-5-9 8"/></svg>'
+    + '<strong>Add image here</strong>'
+    + (d.pdf ? '<span class="ph-row"><em>From PDF</em>' + d.pdf + '</span>' : '')
+    + (d.cap ? '<span class="ph-row"><em>Figure</em>' + d.cap + '</span>' : '')
+    + '<span class="ph-row"><em>Save as</em><code>' + d.img + '.jpg</code></span>';
+  el.replaceWith(ph);
+}
+</script>
+</head>
+<body>
+<header class="topbar"><div class="topbar-inner">
+  <a class="brand" href="index.html">Tegan <span>Clancy</span></a>
+  <nav class="topnav">
+    <a href="index.html">Home</a>
+    <a href="project.html" class="active">Capstone</a>
+  </nav>
+</div></header>
+<div class="layout">
+<aside class="sidebar">
+<a class="back" href="project.html">&larr; Project overview</a>
+<p class="label">Project elements</p>
+<ol>
+<li><a href="element-a.html"><span class="letter">A</span><span class="name">The Problem</span></a></li>
+<li><a href="element-b.html"><span class="letter">B</span><span class="name">Prior Solutions</span></a></li>
+<li><a href="element-c.html"><span class="letter">C</span><span class="name">Requirements</span></a></li>
+<li><a href="element-d.html"><span class="letter">D</span><span class="name">Concept Selection</span></a></li>
+<li><a href="element-ef.html" class="current" aria-current="page"><span class="letter">E/F</span><span class="name">STEM &amp; Market</span></a></li>
+<li><a href="element-g.html"><span class="letter">G</span><span class="name">Prototype Build</span></a></li>
+<li><a href="element-h.html"><span class="letter">H</span><span class="name">Test Plan</span></a></li>
+<li><a href="element-i.html"><span class="letter">I</span><span class="name">Results</span></a></li>
+</ol>
+</aside>
+<article class="page-ef">
+<p class="eyebrow">Element E/F</p>
+<h1>Application of STEM Principles and Practices</h1>
+<h2>I. Introduction</h2>
+<h3>Problem Statement</h3>
+<div class="callout">
+<p>In the United States, 44.13% of amateur golfers have 14.9+ handicaps and experience difficulty when reading the slopes of greens.<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup> This difficulty arises from novice golfers lacking experience with reading breaks and from courses having different types of cuts for the greens. This problem leaves high-handicap golfers unsatisfied with themselves, as they consistently average four to five three-putts per 18 holes and end up shooting high scores. Addressing this issue requires that golf stakeholders, performance criteria, and functional requirements be accounted for. These different pieces of criteria ensure that the solution is extremely accurate, consistently reliable, and applicable to a large portion of the golfing industry. Additionally, several different designs were sketched and analyzed with the goal of finding a singular concept that will outcompete the current solutions on the market. Further completing the ideal objective of creating a fully functional and efficient test plan that is thoroughly put into action, with a result of a large collection of data to be used for analysis. Thus demonstrating the importance of addressing the STEM principles incorporated into the final design by going through the different types of analysis, evaluation, and design of the most accurate &amp; efficient prototype.</p>
+</div>
+<h2>II. STEM</h2>
+<p>The STEM section consists of an in-depth analysis of how the final prototype integrates science, technology, engineering, and mathematics into assisting novice golfers through the ability to read slope on a putting green. By applying each of these principles individually into the design process, a solution is created that is viable to a large variety of amateur golfers. Each principle has a certain significance to the project with science ensuring correct materials, technology determining the correct software, engineering checking if the structure &amp; usability is correct and mathematics to ensure correct device performance.</p>
+<h3>Science</h3>
+<p>This science section consists of the different materials used for the final prototype, with the addition of the hypothesis that was incorporated into determining how efficient and accurate the device could be.</p>
+<h4>Hypothesis</h4>
+<div class="callout">
+<p>If the prototype is constructed perfectly with a full structured frame, an accurate/functional accelerometer, and a complete operational digital display that provides slope output, then a prototype will be finalized that can measure green slope with a +/- 2 degree accuracy and will provide golfers with putting feedback.</p>
+</div>
+<h4>Materials</h4>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Material</th>
+<th>Pros</th>
+<th>Cons</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PLA (Polylactic Acid)</td>
+<td>Relatively lightweight compared to other types of materials for 3D printing filament<br>Easy to use (meaning efficient 3D printing)<br>Cost-effective when contrasted to other filaments</td>
+<td>The filament is partially brittle when used on hard materials outdoors, such as concrete<br>Filament causes the device to be limited to being used on grass<br>Very small chance, but it can deform if temperatures are extreme</td>
+</tr>
+<tr>
+<td>Arduino Microcontroller</td>
+<td>Not difficult to code compared to devices such as raspberry pi<br>Supports multiple other electronic components at the same time (being the servo motor, digital display, and accelerometer)</td>
+<td>Slightly sensitive to harsh weather conditions and water<br>Requires some form of prior coding knowledge within the Arduino software</td>
+</tr>
+<tr>
+<td>Accelerometer MPU6050</td>
+<td>Provides real-time feedback on the slope and angle that the component is at<br>Easily functions with Arduino</td>
+<td>Could be sensitive to sudden shaking and quick movements from things such as vibrations</td>
+</tr>
+<tr>
+<td>Wiring and Connectors for Arduino</td>
+<td>Many different types of wiring that can be easily used<br>Very flexible and easy to replace if damaged</td>
+<td>Pins can easily be damaged since the metal ends are fragile<br>Exposed wires cause clutter within the device and messiness</td>
+</tr>
+<tr>
+<td>Digital Display</td>
+<td>Electronically provides the real-time output of the specific slope based on data from the Arduino microcontroller<br>Enhances the overall experience of the user</td>
+<td>Lighting may make it difficult to read what the display is showing, while outside in the sun<br>Can also be damaged by water or materials</td>
+</tr>
+</tbody>
+</table></div>
+<h3>Technology</h3>
+<p>The technology sections consist of the different online software that were used during both the design and testing phases for the prototype. Also further describes the application that the technology has on the other principles and the real-world examples.</p>
+<h4>Tools Used</h4>
+<p><strong>Fusion 360</strong> - Incorporated during the designing and brainstorming process, where the diagrams of the components are selected and finalized. Also used during the building process, where a 3D case is needed to store all of the electronic components within the putting aid device. A diagram used during the brainstorming process is shown below using the Fusion 360 software.</p>
+<figure class="fig" id="img-d-f2">
+<div class="frame"><img src="d-f2.jpg" data-img="d-f2" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 3.2: Fusion Diagram for Green Reading Device" alt="Figure 2.1: Fusion Diagram for Green Reading Device" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.1: Fusion Diagram for Green Reading Device</figcaption>
+</figure>
+<p><strong>Multisim</strong> - Another piece of technology software that was used to ensure that the systems for the Arduino, OLED display, accelerometer, and laser would fully function after being physically assembled. In addition, using Multisim provided the ability to virtually test the electronic components without having access to the parts in real life. The wiring diagram is shown below with the directions of the voltage, ground, and wiring.</p>
+<figure class="fig" id="img-d-f1">
+<div class="frame"><img src="d-f1.jpg" data-img="d-f1" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 3.1: Wiring Diagram For All Electronic Components" alt="Figure 2.2: Wiring Diagram For All Electronic Components" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.2: Wiring Diagram For All Electronic Components</figcaption>
+</figure>
+<p><strong>Google Drive</strong> - This website has been constantly used during the research and design process and has provided organization and access to data in real time. Also allows all members of the team to have access to inputting information into the reports, and is accessible from anywhere on the internet.</p>
+<figure class="fig" id="img-ef-2-3">
+<div class="frame"><img src="ef-2-3.jpg" data-img="ef-2-3" data-pdf="Element E_F Outline - Tegan" data-cap="Figure 2.3: Screenshot of Folders for Google Drive" alt="Figure 2.3: Screenshot of Folders for Google Drive" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.3: Screenshot of Folders for Google Drive</figcaption>
+</figure>
+<p><strong>Google Sheets/Docs</strong> - Another website that has frequently been incorporated into the engineering process and has been the main source of technology for decision matrices. Below can be seen a screenshot of the Google Sheets being used for a decision matrix, with the addition that the Google Docs are always used for the outline reports.</p>
+<figure class="fig" id="img-ef-2-4">
+<div class="frame"><img src="ef-2-4.jpg" data-img="ef-2-4" data-pdf="Element E_F Outline - Tegan" data-cap="Figure 2.4: Screenshot of Decision Matrix in Google Sheets" alt="Figure 2.4: Screenshot of Decision Matrix in Google Sheets" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.4: Screenshot of Decision Matrix in Google Sheets</figcaption>
+</figure>
+<p><strong>iPhone Digital Angle App</strong> - This technology resource incorporates the accelerometer inside the iPhone to measure the precise angle that the phone is at. Thus, having the ability to be used on putting greens to compare against the device prototype that will be constructed.</p>
+<div class="fig-grid">
+<figure class="fig" id="img-ef-2-5">
+<div class="frame"><img src="ef-2-5.jpg" data-img="ef-2-5" data-pdf="Element E_F Outline - Tegan" data-cap="Figure 2.5: Screenshot of iPhone Measure App Icon" alt="Figure 2.5: Screenshot of iPhone Measure App Icon" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.5: Screenshot of iPhone Measure App Icon</figcaption>
+</figure>
+<figure class="fig" id="img-ef-2-6">
+<div class="frame"><img src="ef-2-6.jpg" data-img="ef-2-6" data-pdf="Element E_F Outline - Tegan" data-cap="Figure 2.6: Screenshot of iPhone Measure App in Use" alt="Figure 2.6: Screenshot of iPhone Measure App in Use" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.6: Screenshot of iPhone Measure App in Use</figcaption>
+</figure>
+</div>
+<p><strong>3D Printer</strong> - Another significant technological resource that is used to construct the final prototype is 3D printers, specifically the models through the company UltiMaker known as the 2+, 3, and S7. Every 3D printer model has a flexible build plate and offers an extremely reliable 3D printing experience.<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup> Below can be seen all three different screenshots of the models used to construct the 3D printing case for the putting aid device.</p>
+<div class="fig-grid">
+<figure class="fig" id="img-ef-2-7">
+<div class="frame"><img src="ef-2-7.jpg" data-img="ef-2-7" data-pdf="Element E_F Outline - Tegan" data-cap="Figure 2.7: Image of UltiMaker 2+ Model" alt="Figure 2.7: Image of UltiMaker 2+ Model" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.7: Image of UltiMaker 2+ Model</figcaption>
+</figure>
+<figure class="fig" id="img-ef-2-8">
+<div class="frame"><img src="ef-2-8.jpg" data-img="ef-2-8" data-pdf="Element E_F Outline - Tegan" data-cap="Figure 2.8: Image of UltiMaker 3 Model" alt="Figure 2.8: Image of UltiMaker 3 Model" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.8: Image of UltiMaker 3 Model</figcaption>
+</figure>
+<figure class="fig" id="img-ef-2-9">
+<div class="frame"><img src="ef-2-9.jpg" data-img="ef-2-9" data-pdf="Element E_F Outline - Tegan" data-cap="Figure 2.9: Image of UltiMaker S7 Model" alt="Figure 2.9: Image of UltiMaker S7 Model" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.9: Image of UltiMaker S7 Model</figcaption>
+</figure>
+</div>
+<p><strong>Arduino IDE</strong> - Microcontroller programming also plays a significant role in the assembly of the prototype, as it provides the ability for the user to change the input and the output. The IDE specifically will provide feedback from the accelerometer, coordinated laser direction (being a servo motor), and overall program coding. Below can be seen a screenshot of the Arduino IDE that shows how the coding will be both inputted and outputted into the device.</p>
+<figure class="fig" id="img-ef-2-10">
+<div class="frame"><img src="ef-2-10.jpg" data-img="ef-2-10" data-pdf="Element E_F Outline - Tegan" data-cap="Figure 2.10: Screenshot of Arduino IDE Code" alt="Figure 2.10: Screenshot of Arduino IDE Code" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.10: Screenshot of Arduino IDE Code</figcaption>
+</figure>
+<h3>Engineering</h3>
+<p>The engineering process allows for a smooth and successful production of this device. Following all steps along the way, from brainstorming to designing to the actual development, is detrimental to achieving a successful prototype.</p>
+<h4>1) Problem statement</h4>
+<p>The problem statement was the first step in the engineering process. During the Presentation and Justification of the Problem, it was determined what the problem was, how it affects people, and how a solution could make a difference to the golf community (the problem statement is above under the introduction).</p>
+<h4>2) Design</h4>
+<p>The design process is where all brainstorming and initial planning begin. This is where sketches and 3D modeling is used to form an idea for a potential solution. Figure 2.11 and Figure 2.12 show some of the designs made during this process.</p>
+<div class="fig-grid">
+<figure class="fig" id="img-ef-2-11">
+<div class="frame"><img src="ef-2-11.jpg" data-img="ef-2-11" data-pdf="Element E_F Outline - Tegan" data-cap="Figure 2.11: Sketch Made During Design Process" alt="Figure 2.11: Sketch Made During Design Process" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.11: Sketch Made During Design Process</figcaption>
+</figure>
+<figure class="fig" id="img-ef-2-12">
+<div class="frame"><img src="ef-2-12.jpg" data-img="ef-2-12" data-pdf="Element E_F Outline - Tegan" data-cap="Figure 2.12: 3D Design of Prototype" alt="Figure 2.12: 3D Design of Prototype" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.12: 3D Design of Prototype</figcaption>
+</figure>
+</div>
+<h4>3) Decision</h4>
+<p>After all the brainstorming was done and there was a large variety of designs, a decision must be made to choose the best design to accomplish the solution to the problem statement. To choose the best decision, it was checked that all solutions met the design requirements, ensuring a solution that achieves a fix to the stated problem statement. Additionally, a decision matrix (see Figure 2.13) was used to finalize the pick for a solution.</p>
+<figure class="fig" id="img-d-e1">
+<div class="frame"><img src="d-e1.jpg" data-img="d-e1" data-pdf="Element D Outline - NPC - 1" data-cap="Figure 2: Decision Matrix Chart of Potential Designs Ranked" alt="Figure 2.13: Decision Matrix to Choose Design" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.13: Decision Matrix to Choose Design</figcaption>
+</figure>
+<h4>4) Development</h4>
+<p>The next step in the production of this device is its actual development. This is where the previous design is taken and understood when building the first prototype. A bill of materials was first created, which ensured all necessary parts/components were accounted for in the build process. This includes any tools needed to construct these parts/components into the final prototype. Additionally, a build plan was developed to ensure no hiccups during the build process. This accounted for all steps in the build process: 3D printing, wiring, and coding.</p>
+<h4>5) Testing</h4>
+<p>Finally, testing is done to ensure the success of the prototype. A testing plan was created to highlight what specifically needs to be tested, where it will be tested, and who will be testing it. This testing plan highlights all initial conditions/constants, dependent, and independent variables. It is also highlighted what qualitative and quantitative data must be gathered from the specific test. Overall, this ensures a device that achieves the solution to the problem statement and that meets all design requirements.</p>
+<h3>Mathematics</h3>
+<p>Lastly, the mathematical process was consistently applied throughout the course of the project and was one of the key principles to ensure that the prototype was accurate, reliable, and functioned/operated correctly.</p>
+<h4>Slope of Green Calculations</h4>
+<ul>
+<li>By far the most important aspect regarding mathematics for the final prototype is ensuring that the accelerometer correctly measures the tilt of the device (being the slope of the green).</li>
+<li>By using the slope formula shown below<ul>
+<li>Theta = arctan (ay/az)</li>
+<li>Given that ay is the acceleration along the slope direction and az is the acceleration perpendicular to the slope</li>
+<li>Shown below is the calculation in action, given ay=0.17g and az=0.98g</li>
+<li>Theta = arctan(0.17/0.98) = 9.8 degrees</li>
+</ul>
+</li>
+<li>Current expectations for the final prototype are that this number calculated above is at worst, within 2 degrees of error when compared to the iPhone digital angle app. This app also provides very similar results, but rather a higher model of an accelerometer due to the iPhone's measurement being of better quality and thus more likely to be more accurate.</li>
+<li>In addition, in an ideal world where the device is perfectly flat, the final prototype would be expected to produce the outputs of az=1.00g and ay=0.00g, further giving the arctan of both numbers, with the final theta being 0 degrees (flat).</li>
+<li>The current assumption is that a typical putting green will only have the degree ranges of slope between 1 and 5 degrees. If between this range, it would be given that the number of g for ay would be sin(theta) which thus is simply theta (in radians).</li>
+<li>One ideal calculation of the final prototype with 3 degrees of slope.<ul>
+<li>3 degrees is converted to 0.0524 radians</li>
+<li>Meaning that ay=0.0524g</li>
+<li>When comparing to the sensor accuracy, can do the relative error calculation using a +/- g of 0.01 by doing this calculation</li>
+<li>Relative error = 0.01 / 0.052, which converted into a percentage is around 19</li>
+</ul>
+</li>
+</ul>
+<h4>Distance to Hole Calculations</h4>
+<ul>
+<li>Without having to use some sort of measuring tape or ruler, the distance between the hole and the putting device can be solved using mathematics.</li>
+<li>Distance can be calculated with this formula:<ul>
+<li>Distance = square root ( (x2-x1)^2 + (y2-y1)^2 )</li>
+<li>Here is a calculation given, x1=0feet and y1=0feet with the x2=12feet and y2=16feet</li>
+<li>D = square root ( (12-0)^2 + (16-0)^2 ) = square root (400) = 20 feet</li>
+</ul>
+</li>
+<li>The intended goal for the final prototype would be for the device to provide accurate data with this margin of error shown above (basically given 20 feet and under).</li>
+</ul>
+<h4>Battery Life Calculations</h4>
+<ul>
+<li>The final design is required to function properly for a minimum of three hours at a time, given the battery.</li>
+<li>The battery can be calculated with the formula below:<ul>
+<li>Battery Life (in hours) = Battery Capacity (mAh) / Device Current Draw (mA)</li>
+<li>Example shown here, given that the Battery Capacity = 2000mAh, Device Current = 500mA</li>
+<li>B = 2000 / 500 = 4 hours</li>
+</ul>
+</li>
+<li>Golf Prototype will require 2 AA batteries<ul>
+<li>Standard AA battery : Voltage = 1.5V &amp; Capacity = 2000-2500mAh</li>
+<li>In the final prototype design: Calculations below</li>
+<li>1.5V + 1.5V = 3.0V</li>
+<li>Capacity remains at 2000mAh</li>
+</ul>
+</li>
+<li>Approximately (all are estimates), total device (based on components), current drawn in battery shown below<ul>
+<li>Arduino: 50mA</li>
+<li>Accelerometer: 5mA</li>
+<li>LCD Display: 150mA</li>
+<li>Laser Module: 100mA</li>
+<li>Total current drawn = 50+5+150+100 = 305mA</li>
+</ul>
+</li>
+<li>Now for total battery life (hours) calculated for the approximate final design shown below<ul>
+<li>Battery Life = 2000mAh / 305mA = 6.56</li>
+<li>Ultimate (ESTIMATE) battery life = 6.56 hours</li>
+</ul>
+</li>
+</ul>
+<h4>Volume and Dimensions Calculations</h4>
+<ul>
+<li>The prototype device is required to have some form of portability, with the maximum volume being at 700 cubic centimeters.</li>
+<li>Volume calculated with this formula:<ul>
+<li>Length x Width x Height</li>
+<li>Showing of calculation in works being Length = 5cm, Width = 2cm, Height = 9cm</li>
+<li>V = 5 x 2 x 9 = 90 cubic centimeters</li>
+</ul>
+</li>
+<li>Golf Prototype Dimensions based on Fusion 360<ul>
+<li>Length = 148mm converted to cm is 14.8cm</li>
+<li>Width = 69mm converted to cm is 6.8mm</li>
+<li>Height = 48.5mm converted to cm is 4.85mm</li>
+</ul>
+</li>
+<li>The final calculation to find the exact volume that is expected to be the exact same on the final prototype (being a 3D printed case)<ul>
+<li>V = L x W x H</li>
+<li>V = 14.8 x 6.9 x 4.85 = 495.282 cubic centimeters</li>
+<li>Proof of final prototype with correct final device parameters shown below in the diagram from Fusion 360.</li>
+</ul>
+</li>
+</ul>
+<figure class="fig" id="img-ef-2-14">
+<div class="frame"><img src="ef-2-14.jpg" data-img="ef-2-14" data-pdf="Element E_F Outline - Tegan" data-cap="Figure 2.14: Diagram of 3D Printed Case with Dimensions" alt="Figure 2.14: Diagram of 3D Printed Case with Dimensions" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 2.14: Diagram of 3D Printed Case with Dimensions</figcaption>
+</figure>
+<ul>
+<li>Dimensions of the prototype will be carefully measured to ensure that the design meets the requirements and has enough space to store all of the components inside.</li>
+</ul>
+<h2>III. Rules and Regulations</h2>
+<p>Rules and regulations are put in place to ensure the safety of both the producers and users. Rules and regulations must meet all legal requirements, achieving both the quality of a device and the protection of its users. It must be ensured that all components are safe and secure.</p>
+<h3>FDA</h3>
+<p>The FDA ensures the safety of lasers used in different products (this is done through their Center for Devices and Radiological Health (CDRH)). The FDA examines both the hazard classification and enforces the mandatory labeling.<sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup> It must also be ensured that all components function safely and correctly in the desired operating environment.</p>
+<ul>
+<li>This device’s laser falls under class 3R (&lt;5mW)</li>
+<li>This device requires the warning label shown in Figure 3.1</li>
+</ul>
+<figure class="fig" id="img-ef-3-1">
+<div class="frame"><img src="ef-3-1.jpg" data-img="ef-3-1" data-pdf="Element E_F Outline - Tegan" data-cap="Figure 3.1: Laser Warning Label" alt="Figure 3.1: Laser Warning Label" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 3.1: Laser Warning Label</figcaption>
+</figure>
+<ul>
+<li>Since the laser is being moved by a servo, there must be a failsafe to shut down the device in an emergency where the laser could be stuck concentrated at one point.</li>
+<li>With the use of PLA plastic, ensure it is safe from melting/warping in the heat</li>
+<li>Additionally, ensure no batteries or other electronic components overheat during operation</li>
+</ul>
+<h3>USGA</h3>
+<p>The USGA ensures all rules of golf are met and maintained in accordance with the United States Golf Association (USGA). USGA Rule 4.3 (Equipment), it highlights what is and is not allowed on the golf course. These rules directly impact a golfer's success on the course; any difficulty meeting these requirements leads to the penalization of the golfer.<sup id="fnref:4"><a class="footnote-ref" href="#fn:4">4</a></sup></p>
+<ul>
+<li>Must emphasize this device’s use as solely a training aid (not to be used during a golfer's round)</li>
+</ul>
+<h2>IV. Understanding the Market</h2>
+<p>In this section, the team analyzed past solutions as well as the demand for golfing aids to get a better understanding of the market for the product. By doing so, it became clear how the solution would fit within the current market of golfing aids, helping the team better understand what is necessary for the device and who the device should be marketed toward.</p>
+<h3>Market Research, Analysis, and Barriers to Entry</h3>
+<p>The Global Golf training aids market was evaluated at $1.5 billion as of 2024 and is expected to reach $4.6 billion by 2033.<sup id="fnref:5"><a class="footnote-ref" href="#fn:5">5</a></sup> The market has a forecasted Compound Annual Growth Rate of 5.7% over the period 2024-2033.<sup id="fnref2:5"><a class="footnote-ref" href="#fn:5">5</a></sup> Lately, there has been a growing emphasis on integrating technology into training aids, primarily through sensors and data analytics. A strong emphasis has been placed on the portability of these training aids, enabling the product to be used anywhere, as well as on their sustainability.<sup id="fnref:6"><a class="footnote-ref" href="#fn:6">6</a></sup></p>
+<p>There is a range of products that address green reading, with notable examples including SurePuttLite Golf Reader, SurePuttPro Green Reader, and Progidora SlopeMaster ProGreenReader. All of these products are very basic slope reading disks with a price tag of around 25 dollars. The solution being created would be able to compete with these devices, as, instead of just showing the slope, it would compute the exact aimpoint and maintain a higher accuracy due to more complex technology. Current devices are very limited in precision on actual greens, require manual input, and have a long setup time. Entry into the market will be moderately hard due to the established trust of long-standing cheap green readers and the USGA rule restrictions forcing the green reader to be more of a practice-only tool. The main barrier, however, would be the difficulty of gaining precise slope measurements while maintaining competitiveness with the price of the cheaper low-tech options.</p>
+<h3>Users and Buyers</h3>
+<div class="proscons">
+<div class="col">
+<h4>Users</h4>
+<ul>
+<li>Amateur Golfers</li>
+<li>Golf Coaches/Instructors</li>
+<li>Indoor golf studio players</li>
+</ul>
+</div>
+<div class="col">
+<h4>Buyers</h4>
+<ul>
+<li>Individual golfers</li>
+<li>Parents of Junior Golfers</li>
+<li>Golf coaches</li>
+<li>Golf courses and practice facilities</li>
+</ul>
+</div>
+</div>
+<p>Users and buyers mostly overlap, but in some cases, the buyer is not the user. These cases include parents, coaches, and practice facilities. The majority of users will be amateur golfers seeking a putting aid to improve all green-reading skills as the expertise is developed.</p>
+<h3>Target Market</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Attribute</th>
+<th>Target</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Golf Skill</td>
+<td>Novice, yet dedicated to the sport</td>
+</tr>
+<tr>
+<td>Income</td>
+<td>$70,000+</td>
+</tr>
+<tr>
+<td>Age</td>
+<td>30-55 years old</td>
+</tr>
+<tr>
+<td>Education Level</td>
+<td>College degree</td>
+</tr>
+<tr>
+<td>Geographic Location</td>
+<td>United States, especially warm states such as Texas, Florida, and Arizona.</td>
+</tr>
+<tr>
+<td>Gender</td>
+<td>Male</td>
+</tr>
+</tbody>
+</table></div>
+<h4>Why is this the target Market?</h4>
+<ul>
+<li>Most golfers are in the middle to high income bracket, making an average household income of $125,000,<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">7</a></sup> and marketing to high income golfers is helpful as they are oftentimes more likely to be willing to purchase the product.</li>
+<li>Nearly 1 out of every 4 golfers is a woman,<sup id="fnref:8"><a class="footnote-ref" href="#fn:8">8</a></sup> meaning that the large majority of golfers are male, and the product should be marketed toward men.</li>
+<li>Novice golfers would be more likely to purchase the item, as the golfers commonly have less experience with green reading.</li>
+<li>Golfers in warm climates are more likely to purchase the item, as those golfers have a longer period of time where it is golf weather, making the device more appealing and useful.</li>
+<li>The average age of a golfer is 43.5;<sup id="fnref:9"><a class="footnote-ref" href="#fn:9">9</a></sup> marketing to the age group that has the most possible users is the most effective way to sell the product.</li>
+</ul>
+<h3>Market Size and Share</h3>
+<p>The Global Golf training aids market was evaluated at $1.5 billion as of 2024 and is expected to reach $4.6 billion by 2033.<sup id="fnref:10"><a class="footnote-ref" href="#fn:10">10</a></sup> The market has a forecasted Compound Annual Growth Rate of 5.7% over the period 2024-2033.<sup id="fnref2:10"><a class="footnote-ref" href="#fn:10">10</a></sup> Lately, there has been a growing emphasis on integrating technology into training aids, primarily through sensors and data analytics. A strong emphasis has been placed on the portability of these training aids, enabling them to be used anywhere, as well as on their sustainability.<sup id="fnref3:10"><a class="footnote-ref" href="#fn:10">10</a></sup></p>
+<p>Considering that there are 28.1 million golfers in the US,<sup id="fnref:11"><a class="footnote-ref" href="#fn:11">11</a></sup> and most likely around 10% of golfers would be interested in buying a putting aid, there are roughly 2.81 million potential buyers. The team is estimating that around 0.3% of those buyers would end up buying the product in the first year, leading to 8,430 units being sold. As the product grows in popularity, it will likely obtain a much larger percentage of the market, surpassing all other similar products.</p>
+<h3>Price Breakdown of Prior Solutions</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Golf Putting Aid Product</th>
+<th>Price</th>
+<th>Picture</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sure Putt Pro Golf Green Reader</td>
+<td>Ranges from $29.95 to $39.95.<sup id="fnref:12"><a class="footnote-ref" href="#fn:12">12</a></sup></td>
+<td><img class="thumb" src="ef-price-1.jpg" alt="Sure Putt Pro Golf Green Reader" loading="lazy"></td>
+</tr>
+<tr>
+<td>EEZ-READ Green Reader</td>
+<td>Ranges from $18.99 to $19.99.<sup id="fnref:13"><a class="footnote-ref" href="#fn:13">13</a></sup></td>
+<td><img class="thumb" src="ef-price-2.jpg" alt="EEZ-READ Green Reader" loading="lazy"></td>
+</tr>
+<tr>
+<td>BreakMaster Digital Green Reader</td>
+<td>Typically around $120-150<sup id="fnref:14"><a class="footnote-ref" href="#fn:14">14</a></sup></td>
+<td><img class="thumb" src="ef-price-3.jpg" alt="BreakMaster Digital Green Reader" loading="lazy"></td>
+</tr>
+<tr>
+<td>JEK Digital Level</td>
+<td>$40<sup id="fnref:15"><a class="footnote-ref" href="#fn:15">15</a></sup></td>
+<td><img class="thumb" src="ef-price-4.jpg" alt="JEK Digital Level" loading="lazy"></td>
+</tr>
+<tr>
+<td>Mosey Golf Green Reader</td>
+<td>Typically around $11.50<sup id="fnref:16"><a class="footnote-ref" href="#fn:16">16</a></sup></td>
+<td><img class="thumb" src="ef-price-5.jpg" alt="Mosey Golf Green Reader" loading="lazy"></td>
+</tr>
+</tbody>
+</table></div>
+<p>Current solutions have a wide range of prices, with some costing as low as $11 and some going for as high as $150. Products that are on the lower price range do not have the proper technology to be accurate and as effective at green reading as the green reader the group is creating, which is why the green reader being created is going to be priced on the higher end of that range.</p>
+<h3>Product Usability/How will the product fit into the market</h3>
+<p>The solution would fit into the market very well, helping golfers improve their putting game. Golfers, practice facilities, and golf coaches all could take advantage of and benefit from this solution. This solution will be a more accurate and efficient solution than existing solutions, utilizing laser technology to show the golfer exactly where to putt rather than just simply having a less accurate arrow point the golfer in the correct direction. The product may be of higher price, but it has components that current solutions do not have.</p>
+<h3>Product Manufacture / Distribution</h3>
+<h4>Manufacturing Cost per Unit: $68.88</h4>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Cost per unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Arduino Uno R4 Minima 32 Bit Microcontroller</td>
+<td>$19.99 per unit.<sup id="fnref:17"><a class="footnote-ref" href="#fn:17">17</a></sup></td>
+</tr>
+<tr>
+<td>Inland KS0209 9g Servo Motor</td>
+<td>$6.99 per unit.<sup id="fnref:18"><a class="footnote-ref" href="#fn:18">18</a></sup></td>
+</tr>
+<tr>
+<td>0.96 Inch LED Display 3 PCS (Enough to make 3 Units) $10</td>
+<td>$3.33 per unit.<sup id="fnref:19"><a class="footnote-ref" href="#fn:19">19</a></sup></td>
+</tr>
+<tr>
+<td>Accelerometer Sensor Module</td>
+<td>$9.00 per unit.<sup id="fnref:20"><a class="footnote-ref" href="#fn:20">20</a></sup></td>
+</tr>
+<tr>
+<td>Switch Tactile Push Button 20 PCS (Enough to make 10 Units) $7</td>
+<td>$0.70 per unit.<sup id="fnref:21"><a class="footnote-ref" href="#fn:21">21</a></sup></td>
+</tr>
+<tr>
+<td>6V Power Box Battery Holder Case</td>
+<td>$6.99 per unit.<sup id="fnref:22"><a class="footnote-ref" href="#fn:22">22</a></sup></td>
+</tr>
+<tr>
+<td>520 nm Laser Module</td>
+<td>$16.99 per unit.<sup id="fnref:23"><a class="footnote-ref" href="#fn:23">23</a></sup></td>
+</tr>
+<tr>
+<td>Mini Micro Slide Toggle Switch 20 pcs (Enough to make 20 Units) $5.99</td>
+<td>$0.30 per unit.<sup id="fnref:24"><a class="footnote-ref" href="#fn:24">24</a></sup></td>
+</tr>
+<tr>
+<td>Mini Breadboard kit 6 Pcs, including 400 wires (Enough for 3 Units) $8.99</td>
+<td>$3.00 per unit.<sup id="fnref:25"><a class="footnote-ref" href="#fn:25">25</a></sup></td>
+</tr>
+<tr>
+<td>5 Volt Regulator (Enough to make 10 units) $12.99</td>
+<td>$1.30 per unit.<sup id="fnref:26"><a class="footnote-ref" href="#fn:26">26</a></sup></td>
+</tr>
+<tr>
+<td>Screws and Spacers kit 260 pcs (Enough for 26 units) $7.58</td>
+<td>$0.29 per unit.<sup id="fnref:27"><a class="footnote-ref" href="#fn:27">27</a></sup></td>
+</tr>
+</tbody>
+</table></div>
+<h4>Estimated Wholesale price: $48.22</h4>
+<ul>
+<li>The items listed above are bought mostly individually and from Amazon.</li>
+<li>Wholesale prices are typically at least 30% cheaper, sometimes reaching around 50-60% when items are bought in bulk.</li>
+<li>The product, 30% cheaper, would be around $50 dollars, so the group is confident that if the parts are bought wholesale, the price of the product will be at a maximum of $50.</li>
+</ul>
+<h4>Suggested retail price: $100</h4>
+<ul>
+<li>To maintain a profitable margin, the product will be sold at $100, keeping it not above 100 dollars, while still maintaining a sizable profit when considering what the wholesale price of the product will be.</li>
+<li>As shown in the figure below, 70% of respondents did not want the product to exceed $100, making it clear that stakeholders and golfers want the product to be affordable.</li>
+</ul>
+<figure class="fig" id="img-c-3-2">
+<div class="frame"><img src="c-3-2.jpg" data-img="c-3-2" data-pdf="Element C Outline - NPC" data-cap="Figure 3.2: Results of Surveyors&#x27; Choosing Prices" alt="Figure 4.1: Results of Surveyors&#x27; Choosing Prices" loading="lazy" onerror="imgFallback(this)"></div>
+<figcaption>Figure 4.1: Results of Surveyors' Choosing Prices</figcaption>
+</figure>
+<h4>How will the product be marketed?</h4>
+<ul>
+<li>The product will be marketed initially through social media, as using social media will keep marketing prices at essentially zero.</li>
+<li>The product will be sold through an online storefront as well as locally, costing the team a very minimal amount of money so that all of the profit can be invested back into the company</li>
+<li>As the product attracts attention, the team will begin to sell the product at large developed stores such as Dicks Sporting Goods and PGA Tour Superstore, as this is where golfers of all skill levels buy a multitude of products.</li>
+</ul>
+<h2>V. Conclusion</h2>
+<p>The development of this digital green reader is a viable and achievable solution to the problem of amateur golfers reading greens. The market for this solution is very large. With the golf population growing, more and more people will be open to purchasing anything that could aid in the development of their game, especially a product that is unlike anything currently on the market. As for the development, all necessary tools and information have been acquired. All components and materials necessary for the physical build are ready and available, along with any tools/software needed to produce a prototype. Additionally, the team is educated on all necessary principles needed to build a prototype. Foundations on the engineering process, scientific principles, and all mathematical topics needed to form a prototype are available. There is immense organization within the team, ensuring the success of the development of this device, avoiding any miscommunication or confusion. Finally, it has been ensured that this product meets all necessary legal rules and regulations. Taking into account both government laws (FDA) and the rules of golf (USGA), ensuring a product that can be sold on the public market.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Cunningham, Kevin. “Here’s How Your Handicap Index Stacks up against Golfers in the United States.” <em>Golf</em>, 9 Sept. 2020, <a href="https://golf.com/news/how-your-handicap-index-compares/">golf.com/news/how-your-handicap-index-compares/</a>.&#160;<a class="footnote-backref" href="#fnref:1" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>“S7.” <em>Indicate Technologies</em>, <a href="https://indicatetechnologies.com/products/s7">indicatetechnologies.com/products/s7</a>. Accessed 2 Mar. 2026.&#160;<a class="footnote-backref" href="#fnref:2" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>“Laser Products and Instruments.” <em>U.S. Food and Drug Administration</em>, 13 Nov. 2024, <a href="https://www.fda.gov/radiation-emitting-products/home-business-and-entertainment-products/laser-products-and-instruments">www.fda.gov/radiation-emitting-products/home-business-and-entertainment-products/laser-products-and-instruments</a>.&#160;<a class="footnote-backref" href="#fnref:3" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:4">
+<p>“Part 5 – Rule 1: Distance-Measuring Devices.” <em>United States Golf Association</em>, 2019, <a href="https://www.usga.org/equipment-standards/equipment-rules-2019/equipment-rules/part-5-rule-1.html">www.usga.org/equipment-standards/equipment-rules-2019/equipment-rules/part-5-rule-1.html</a>.&#160;<a class="footnote-backref" href="#fnref:4" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:5">
+<p>Kharrati, Katelin. “Custom Market Insights.” <em>Custom Market Insights</em>, 26 Mar. 2024, <a href="https://www.custommarketinsights.com/press-releases/golf-training-aids-market-size/">www.custommarketinsights.com/press-releases/golf-training-aids-market-size/</a>.&#160;<a class="footnote-backref" href="#fnref:5" title="Back to text">&#8617;</a><a class="footnote-backref" href="#fnref2:5" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:6">
+<p>Kharrati, Katelin. “Custom Market Insights.” <em>Custom Market Insights</em>, 26 Mar. 2024, <a href="https://www.custommarketinsights.com/press-releases/golf-training-aids-market-size/">www.custommarketinsights.com/press-releases/golf-training-aids-market-size/</a>.&#160;<a class="footnote-backref" href="#fnref:6" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:7">
+<p>“Demographics: Bench Craft Company.” <em>Demographics | Bench Craft Company</em>, <a href="https://www.benchcraftcompany.com/demographics">www.benchcraftcompany.com/demographics</a>. Accessed 4 Mar. 2026.&#160;<a class="footnote-backref" href="#fnref:7" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p>“Demographics: Bench Craft Company.” <em>Demographics | Bench Craft Company</em>, <a href="https://www.benchcraftcompany.com/demographics">www.benchcraftcompany.com/demographics</a>. Accessed 4 Mar. 2026.&#160;<a class="footnote-backref" href="#fnref:8" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:9">
+<p>NGF. “A New Age in Golf?” <em>National Golf Foundation</em>, 10 Oct. 2024, <a href="https://www.ngf.org/short-game/a-new-age-in-golf/">www.ngf.org/short-game/a-new-age-in-golf/</a>.&#160;<a class="footnote-backref" href="#fnref:9" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:10">
+<p>Kharrati, Katelin. “Custom Market Insights.” <em>Custom Market Insights</em>, 26 Mar. 2024, <a href="https://www.custommarketinsights.com/press-releases/golf-training-aids-market-size/">www.custommarketinsights.com/press-releases/golf-training-aids-market-size/</a>.&#160;<a class="footnote-backref" href="#fnref:10" title="Back to text">&#8617;</a><a class="footnote-backref" href="#fnref2:10" title="Back to text">&#8617;</a><a class="footnote-backref" href="#fnref3:10" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:11">
+<p>Admin. “Latest Golf Stats. How Many People Play Golf in the U.S.?” <em>Great Gorge Golf Club</em>, 11 Dec. 2025, <a href="https://greatgorgegolfclub.com/latest-golf-stats-us/">greatgorgegolfclub.com/latest-golf-stats-us/</a>.&#160;<a class="footnote-backref" href="#fnref:11" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:12">
+<p>“Sure Putt Pro Golf Green Reader - Gunmetal.” <em>Sureputtgolf.com</em>, 18 Sept. 2024, <a href="https://sureputtgolf.com/products/sure-putt-pro-golf-green-reader-gunmetal/">sureputtgolf.com/products/sure-putt-pro-golf-green-reader-gunmetal/</a>. Accessed 6 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:12" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:13">
+<p>“EEZ-READ Green Reader – Momentus Sports.” <em>Momentussports.com</em>, 19 June 2017, <a href="https://www.momentussports.com/product/eez-read-green-reader/">www.momentussports.com/product/eez-read-green-reader/</a>. Accessed 6 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:13" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:14">
+<p>“Breakmaster Digital Green Reader.” <em>BreakMaster</em>, <a href="https://breakmaster.com/shop/ols/products/breakmaster-digital-green-reader">breakmaster.com/shop/ols/products/breakmaster-digital-green-reader</a>. Accessed 7 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:14" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:15">
+<p>"Digital Green Reading." <em>Old Duffer Golf</em>, <a href="https://oldduffergolf.com/digital-green-reading/">oldduffergolf.com/digital-green-reading/</a>.&#160;<a class="footnote-backref" href="#fnref:15" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:16">
+<p>“Mosey Golf Green Reader with Iron Box Magnetic Ball Marker High Precision Level Aid Bubble Tool Golf Putting Training Accessories.” <em>Walmart</em>, <a href="https://www.walmart.com/ip/Mosey-Golf-Green-Reader-with-Iron-Box-Magnetic-Ball-Marker-High-Precision-Level-Aid-Bubble-Tool-Golf-Putting-Training-Accessories/5198752463">www.walmart.com/ip/5198752463</a>. Accessed 7 Dec. 2025.&#160;<a class="footnote-backref" href="#fnref:16" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:17">
+<p>“Arduino Uno R4 Minima - ABX00080.” <em>Micro Center</em>, <a href="https://www.microcenter.com/product/668289/arduino-uno-r4-minima-abx00080">www.microcenter.com/product/668289/arduino-uno-r4-minima-abx00080</a>. Accessed 4 Mar. 2026.&#160;<a class="footnote-backref" href="#fnref:17" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:18">
+<p>“Inland KS0209 Blue 9G Servo Motor.” <em>Micro Center</em>, <a href="https://www.microcenter.com/product/613883/inland-ks0209-blue-9g-servo-motor">www.microcenter.com/product/613883/inland-ks0209-blue-9g-servo-motor</a>. Accessed 4 Mar. 2026.&#160;<a class="footnote-backref" href="#fnref:18" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:19">
+<p>“Amazon.Com: Elegoo 3PCS 0.96 Inch OLED Display Screen Module Compact Self-Luminous SSD1306 I2C Display Mini Screens for Arduino Projects : Electronics.” <em>Amazon.com</em>, <a href="https://a.co/d/0jk2JNxY">a.co/d/0jk2JNxY</a>. Accessed 4 Mar. 2026.&#160;<a class="footnote-backref" href="#fnref:19" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:20">
+<p>“Shillehtek ADXL345 Accelerometer Sensor Module: Pre-Soldered High-Precision ADXL345 Accelerometer for Arduino Projects: Reliable Accelerometer Arduino &amp; Raspberry Pi Motion Detection Tool.” <em>Amazon.com: Industrial &amp; Scientific</em>, <a href="https://a.co/d/05jFw91k">a.co/d/05jFw91k</a>. Accessed 4 Mar. 2026.&#160;<a class="footnote-backref" href="#fnref:20" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:21">
+<p>“Chanzon Tact Switch Tactile Push Button Micro Momentary Switch 6x6 Mm x 6mm 2 Pin 20 Pcs Pushbutton Switches Breadboard Electronic Circuit Arduino PCB DIP Touch Switch Mini Buttons Electronics Board.” <em>Amazon.com: Industrial &amp; Scientific</em>, <a href="https://a.co/d/08eBDRf0">a.co/d/08eBDRf0</a>. Accessed 4 Mar. 2026.&#160;<a class="footnote-backref" href="#fnref:21" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:22">
+<p>“Amazon.Com: ZRM&amp;E 6V Power Box 4xaa Battery Holder Case with DC 5.5x2.1 Connector Mate with Barrel Jack Connector on Arduino : Electronics.” <em>Amazon.com</em>, <a href="https://a.co/d/0ebbsg6G">a.co/d/0ebbsg6G</a>. Accessed 4 Mar. 2026.&#160;<a class="footnote-backref" href="#fnref:22" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:23">
+<p>“Amazon.Com: 520nm Laser Module Industrial Green Laser Line Diode Adjustable Focus 5MW Line : Industrial &amp; Scientific.” <em>Amazon.com</em>, <a href="https://a.co/d/0fZpHPTJ">a.co/d/0fZpHPTJ</a>. Accessed 4 Mar. 2026.&#160;<a class="footnote-backref" href="#fnref:23" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:24">
+<p>“Amazon.Com: Mini Micro Slide Switch - 1p2t 2 Position - 20pcs SPDT Toggle Switch - Panel Mount Small High Knob Vertical for Breadboard PCB Arduino Electronic Board - (SS12F15) 5mm - Dip Miniature Slide Switch : Industrial &amp; Scientific.” <em>Amazon.com</em>, <a href="https://a.co/d/07GoZHd9">a.co/d/07GoZHd9</a>. Accessed 4 Mar. 2026.&#160;<a class="footnote-backref" href="#fnref:24" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:25">
+<p>“Amazon.Com: BOJACK 1pcs 803 Tie Points and 1 Pcs 400 Tie Points Solderless Breadboard and 65 Pcs Flexible Breadboard Jumper Wires and 6PCS 170 Points Mini Solderless Breadboard : Industrial &amp; Scientific.” <em>Amazon.com</em>, <a href="https://a.co/d/0bmtYr0y">a.co/d/0bmtYr0y</a>. Accessed 4 Mar. 2026.&#160;<a class="footnote-backref" href="#fnref:25" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:26">
+<p>“BOJACK 10 Values 50 Pcs LM317 L7805 L7806 L7808 L7809 L7810 L7812 L7815 L7818 L7824 To-220 Package High Current Positive Voltage Regulator Assortment Kit.” <em>Amazon.com: Industrial &amp; Scientific</em>, <a href="https://a.co/d/07aXfP6E">a.co/d/07aXfP6E</a>. Accessed 4 Mar. 2026.&#160;<a class="footnote-backref" href="#fnref:26" title="Back to text">&#8617;</a></p>
+</li>
+<li id="fn:27">
+<p>“Wugongshan 260 Pcs M3 Male Female Nylon Hex Spacer Standoffs Screws Nuts, Nylon Hex Threaded Pillar Spacer Standoffs Screws Nuts Assortment Kit for PCB Motherboard Circuit Board - Black.” <em>Amazon.com: Industrial &amp; Scientific</em>, <a href="https://a.co/d/0fIt3duF">a.co/d/0fIt3duF</a>. Accessed 4 Mar. 2026.&#160;<a class="footnote-backref" href="#fnref:27" title="Back to text">&#8617;</a></p>
+</li>
+</ol>
+</div><nav class="pager"><a class="prev" href="element-d.html"><small>&larr; Previous</small>Element D: Concept Selection</a><a class="next" href="element-g.html"><small>Next &rarr;</small>Element G: Prototype Build</a></nav>
+</article>
+</div>
+<footer class="site"><div class="inner">
+  <span>&copy; 2026 Tegan Clancy</span>
+  <span>Neuqua Valley High School &middot; PLTW Engineering Design &amp; Development</span>
+</div></footer>
+</body>
+</html>
